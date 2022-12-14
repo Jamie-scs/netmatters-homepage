@@ -1,3 +1,210 @@
-.partner {
+// Header
+.wrapper	{
+	width: 100vw;
+}
+
+.header__wrapper	{
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+.container__logo 	{
+	width: 100%;
+	display: inline-block;
+	padding: 1em;
+}
+
+.flex 	{
+	display: flex;
+}
+
+.right 	{
+	float: right;
+}
+
+.left 	{
+	float: left;
+}
+
+.clearfix	{
+	clear: both;
+}
+
+.logo 	{
+	height: 3rem;
+}
+
+.menu	{
+	color: $white;
+	background-color: $black;
+	padding: 14px;
+}
+
+.search	{
+	width: 100%;
+}
+
+.search-bar	{
+	width: 100%;
+	background-color: $x-light-grey;
+}
+
+.search-submit	{
+	background: none;
+	border: none;
+}
+
+// Hero slideshow
+.hero	{
+	display: flex;
+	position: relative;
+	width: 100vw;
+	height: 125vw;
+}
+
+.hero img 	{
+	width: 100%;
+	object-fit: none;
+	object-position: center;
+}
+
+.overlay 	{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.overlay .btn 	{
+	color: $white;
+	background-color: $grey-blue;
+	padding: 1em;
+	border-radius: .25em;
+	text-transform: uppercase;
+}
+
+// Our services
+
+.services	{
+	flex-direction: column;
+}
+
+.service-list	{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.service	{
+	width: 100%;
+	padding: 3em;
+	border: 1px solid black;
+	border-radius: 1rem;
+	margin: 1rem;
+	text-align: center;
+}
+
+.icon 	{
+	color: $white;
+	border-radius: 50%;
+	padding: 1em;
+	margin-top: 1em 0;
+}
+
+.software .icon 	{
+	background-color: $grey-blue;
+	padding: 1em;
+}
+
+.software .btn	{
+	color: $white;
+	background-color: $grey-blue;
+	padding: 1em;
+	border-radius: .25em;
+	text-transform: uppercase;
+}
+
+.support .icon, .support .btn	{
+	background-color: $light-blue;
+}
+
+.marketing .icon, .marketing .btn	{
+	background-color: $lime;
+}
+
+.telecoms .icon, .telecoms .btn	{
+	background-color: $light-red;
+}
+
+.web .icon, .web .btn	{
+	background-color: $purple;
+}
+
+.security .icon, .security .btn	{
+	background-color: $pink;
+}
+
+.training .icon, .training .btn	{
+	background-color: $tomato;
+}
+
+.allservices	{
+	margin: 0 auto;
+}
+// Partner carousell
+
+.banner {	
+	overflow: hidden;
+}
+
+.partner	{
+	display: inline-block;
+	position: relative;
+	width: 200px;
+	height: 100px;
+	margin-right: 1rem;
+}
+
+.partner img 	{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	transition: opacity .1s ease-in-out;
+}
+
+.partner img.greyscale:hover	{
+	opacity: 0;
+	cursor: pointer;
+}
+
+// Main content
+
+.content 	{
+	background-color: $dark-blue;
+	color: $white;
+}
+
+.btn-content 	{
+	color: $white;
+	background-color: $light-black;
+	padding: 1em;
+	border-radius: .25em;
+	margin-right: 1em;
+	text-transform: uppercase;
+}
+
+.btn-google	{
+	background-color: $skyblue;
 	display: inline;
+	margin-right: 1em;
+}
+
+.btn-trustpilot	{
+	background-color: $light-green;
+	display: inline;
+}
+
+.quote-author	{
+	color: $light-grey;
 }

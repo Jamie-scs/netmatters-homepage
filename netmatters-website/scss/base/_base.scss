@@ -8,11 +8,15 @@
 }
 
 body {
-	
+	font-family: Poppins, sans-serif;
 }
 
 // Text
 
+a 	{
+	text-decoration: none;
+	color: $black;
+}
 
 
 // Lists

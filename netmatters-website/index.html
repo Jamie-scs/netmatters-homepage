@@ -17,10 +17,10 @@
 		
 		<header>
 			<div class="header__wrapper">
-				<div class="container">
-					<img class="logo" src="img/f-logo.png" alt="Netmatters">
-					<span class="right fa-solid fa-phone-volume"></span>
-					<span class="right fa-solid fa-bars"></span>
+				<div class="container__logo">
+					<img class="left logo" src="img/f-logo.png" alt="Netmatters">
+					<span class="fa-solid fa-phone-volume"></span>
+					<span class="right menu fa-solid fa-bars"></span>
 				</div><!-- row -->
 				<div class="search">
 					<form action="index.html" action="get">
@@ -35,89 +35,96 @@
 		
 		<main>
 			
-			<header class="slideshow">
-				<div class="flex">
-					<div class="hero">
-						<picture>
-							<img src="img/hero-1.jpg" alt="Bespoke Software Hero">
-						</picture>
-						<div class="text">
-							<h2>Bespoke Software</h2>
-							<p>Bring your business togethor with<br> solutions which grow with you.</p>
-						</div><!-- text -->
-					</div><!-- hero -->
-				</div><!-- flex -->
+			<header>
+				<div class="hero">
+					<img src="img/hero-1.jpg" alt="Bespoke Software Hero">
+					<div class="overlay">
+						<h2>Bespoke Software</h2>
+						<p>Bring your business togethor with<br> solutions which grow with you.</p>
+						<span class="btn">Find out more</span>
+					</div><!-- overlay -->
+				</div><!-- hero -->
 			</header>
 			
-			<section class="services">
+			<section class="service-list">
 
 				<header>
 					<div class="container">
-						<h1 class="left">Our Services</h1>
+						<h1>Our Services</h1>
 					</div>
 				</header>
 
-				<div class="service software">
-						<a href="#">
+				<div class="flex services">
+					
+					<a href="#">
+						<div class="service software">
 							<span class="icon fa-solid fa-table-cells"></span>
 							<h3>Bespoke Software</h3>
 							<p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service support">
-						<a href="#">
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service support">
 							<span class="icon fa-solid fa-display"></span>
 							<h3>IT Support</h3>
 							<p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service marketing">
-						<a href="#">
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service marketing">
 							<span class="icon fa-solid fa-chart-simple"></span>
 							<h3>Digital Marketing</h3>
 							<p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service telecoms">
-						<a href="#">
-							<span class="icon right fa-solid fa-phone-volume"></span>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service telecoms">
+							<span class="icon fa-solid fa-phone-volume"></span>
 							<h3>Telecoms Services</h3>
 							<p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service web">
-						<a href="#">
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service web">
 							<span class="icon fa-solid fa-code"></span>
 							<h3>Web Design</h3>
 							<p>User-centric design for businesses looking to make a lasting impression.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service security">
-						<a href="#">
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service security">
 							<span class="icon fa-solid fa-shield-halved"></span>
 							<h3>Cyber Security</h3>
 							<p>Prevention, testing, consultancy & breach management services.</p>
 							<span class="btn">read more</span>
-						</a>
-				</div>
-				<div class="service training">
-						<a href="#">
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="service training">
 							<span class="icon fa-solid fa-graduation-cap"></span>
 							<h3>Developer Training</h3>
 							<p>Web design & software training courses designed to secure a job in tech.</p>
 							<span class="btn">read more</span>
-						</a>
+						</div>
+					</a>
+
 				</div>
-				<a href="#">
-					<span class="allservices">View All</span>
+				<a href="#" class="allservices">
+					<span>View All</span>
 					<span class="fa-solid fa-arrow-right"></span>
 				</a>
-			</section><!-- services -->
+			</section><!-- service list -->
 			<section class="banner">
 				<div class="partner">
 					<img src="img/partners/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth" class="greyscale">
@@ -156,35 +163,37 @@
 					<img src="img/partners/google-partner.jpg" alt="Google Partner" class="coloured">
 				</div>
 			</section><!-- banner -->
-			<section class="content">
+			<section class="content clearfix">
 				<article>
 					<h2>Welcome To Netmatters</h2>
 					<p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in <a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</strong></p>
 					<p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
 					<p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-					<div>
-						<a href="#" class="btn">Read More<span class="fa-solid fa-arrow-right"></span></a>
+					<div class="btn-content">
+						<a href="#">Read More<span class="fa-solid fa-arrow-right"></span></a>
 					</div>
 				</article>
 				<aside>
 					<div class="container__quote">
 						<h2>What Our Clients Think</h2>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<p><span class="quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</span></p>
-							<p><span class="quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</span></p>
-							<div>
-								<a href="#" class="btn"><span>Google Reviews</span>
-									<span class="fa-solid fa-arrow-right"></span>
-								</a>
-								<a href="#" class="btn"><span>TrustPilot Reviews</span>
-									<span class="fa-solid fa-arrow-right"></span>
-								</a>
-							</div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<div class="star"></div>
+						<p><span class="quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</span></p>
+						<p><span class="quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</span></p>
+						<div class="btn-google">
+							<a href="#"><span>Google Reviews</span>
+								<span class="fa-solid fa-arrow-right"></span>
+							</a>
 						</div>
+						<div class="btn-trustpilot">
+							<a href="#"><span>TrustPilot Reviews</span>
+								<span class="fa-solid fa-arrow-right"></span>
+							</a>
+						</div>
+					</div>
 				</aside>
 			</section>
 			<section class="news">
@@ -367,6 +376,6 @@
 			</div><!-- container -->
 		</footer>
 	
-	</div><!-- container -->
+	</div><!-- wrapper -->
 </body>
 </html>
