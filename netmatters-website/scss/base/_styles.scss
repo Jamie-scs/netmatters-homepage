@@ -1,18 +1,13 @@
-// Header
-.wrapper	{
-	width: 100vw;
-}
-
-.header__wrapper	{
-	width: 90%;
+// Body
+.wrapper-outer	{
+	width: 100%;
 	margin: 0 auto;
 }
 
-
-.container__logo 	{
-	width: 100%;
-	display: inline-block;
-	padding: 1em;
+.wrapper-inner	{
+	width: 100vw;
+	max-width: 1260px;
+	padding: 50px 15px;
 }
 
 .flex 	{
@@ -31,31 +26,94 @@
 	clear: both;
 }
 
+.h1, h1		{
+	font-size: 2.25rem;
+	margin: 0;
+}
+
+.btn 		{
+	padding: 1em;
+	border-radius: .25em;
+	text-transform: uppercase;
+}
+
+// Colour
+
+body 				{
+	
+}
+
+h1					{
+	color: $color-sec;
+}
+
+.h1					{
+	color: $white;
+}
+
+.header,
+.service-list,
+.partner-carousell,
+.news				{
+	background-color: $color-prim;
+}
+
+.content,
+.footer 			{
+	background-color: $color-sec;
+}
+
+.sign-up,
+.search-bar
+					{
+	background-color: $x-light-grey;
+}
+
+// Header
+
+.container 	{
+	
+}
+
+.header__wrapper,
+.search__wrapper	{
+	padding: 0 15px;
+	margin: 5px 0;
+}
+
+.container__logo,
+.container__phone,
+.container__hamburger 	{
+	display: inline-block;
+	float: left;
+}
+
 .logo 	{
 	height: 3rem;
 }
 
-.menu	{
+.hamburger	{
 	color: $white;
 	background-color: $black;
-	padding: 14px;
-}
-
-.search	{
-	width: 100%;
+	font-size: 23px;
+	padding: 5px 15px;
+	margin: 0 0 0 20px;
 }
 
 .search-bar	{
 	width: 100%;
-	background-color: $x-light-grey;
+	padding: 5px 40px 5px 15px;
 }
 
 .search-submit	{
+	position: absolute;
+	right: 15px;
 	background: none;
 	border: none;
 }
 
-// Hero slideshow
+// Hero
+
 .hero	{
 	display: flex;
 	position: relative;
@@ -87,21 +145,19 @@
 
 // Our services
 
+.service-list	{
+}
+
 .services	{
 	flex-direction: column;
 }
 
-.service-list	{
-	width: 100%;
-	margin: 0 auto;
-}
-
 .service	{
 	width: 100%;
-	padding: 3em;
-	border: 1px solid black;
+	padding: 30px;
+	border: 1px solid $xx-light-grey;
 	border-radius: 1rem;
-	margin: 1rem;
+	margin: 30px 0 0;
 	text-align: center;
 }
 
@@ -120,9 +176,6 @@
 .software .btn	{
 	color: $white;
 	background-color: $grey-blue;
-	padding: 1em;
-	border-radius: .25em;
-	text-transform: uppercase;
 }
 
 .support .icon, .support .btn	{
@@ -154,26 +207,27 @@
 }
 // Partner carousell
 
-.banner {	
+.partner-carousell {	
 	overflow: hidden;
 }
 
 .partner	{
-	display: inline-block;
-	position: relative;
-	width: 200px;
-	height: 100px;
+	display: inline;
 	margin-right: 1rem;
 }
 
-.partner img 	{
+img.coloured 	{
 	position: absolute;
-	width: 100%;
-	left: 0;
-	transition: opacity .1s ease-in-out;
+	z-index: 1;
 }
 
-.partner img.greyscale:hover	{
+img.greyscale	{
+	position: relative;
+	left: 0;
+	z-index: 2;
+}
+
+img.greyscale:hover	{
 	opacity: 0;
 	cursor: pointer;
 }
@@ -181,30 +235,71 @@
 // Main content
 
 .content 	{
-	background-color: $dark-blue;
 	color: $white;
 }
+
+.content-link 	{
+	color: $white;
+}
+
+.content-link:hover,
+.content-link:focus 	{
+	text-decoration: underline;
+}
+
 
 .btn-content 	{
 	color: $white;
 	background-color: $light-black;
-	padding: 1em;
-	border-radius: .25em;
-	margin-right: 1em;
-	text-transform: uppercase;
+}
+
+.star 	{
+	color: $orange;
+	font-size: 2.25rem;
 }
 
 .btn-google	{
+	color: $white;
 	background-color: $skyblue;
-	display: inline;
-	margin-right: 1em;
 }
 
 .btn-trustpilot	{
+	color: $white;
 	background-color: $light-green;
-	display: inline;
 }
 
 .quote-author	{
 	color: $light-grey;
 }
+
+// Latest News
+
+.news .h1	{
+	color: $color-sec;
+}
+
+
+
+.btn-news	{
+	color: $white;
+	background-color: $purple;
+}
+
+.container__content	{
+	width: 100%;
+	border-right: 1px solid $x-light-grey;
+}
+
+// Sign up
+
+
+
+// Footer
+
+.container__footer	{
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+// Copyright / Social links

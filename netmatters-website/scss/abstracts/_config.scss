@@ -43,8 +43,10 @@ $skyblue		:	#4387f6;
 $grey-blue		:	#526781;
 $x-dark-grey	:	#555555;
 
-// Color Palette Modifiers
 
+// Color Palette Modifiers
+$color-prim		: rgba($white, .5);
+$color-sec		: $dark-blue;
 
 
 // UI Colors
