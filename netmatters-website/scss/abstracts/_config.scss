@@ -15,9 +15,9 @@
 
 
 // Color Usage
-$black			:	#000000;
+$black			:	#000;
 $light-green   	: 	#00b67b;
-$dark-grey		:	#666666;
+$dark-grey		:	#666;
 $blue-grey		:	#67809f;
 $purple			:	#79539a;
 $lilac			:	#926fb1;
@@ -28,11 +28,11 @@ $red 			:	#bc2c28;
 $tomato 		:	#ce4125;
 $x-light-grey	:	#d6d6d6;
 $light-red		:	#d64541;
-$xx-light-grey	:	#dddddd;
+$xx-light-grey	:	#ddd;
 $dark-pink		:	#de093f;
 $pink			:	#f62459;
 $orange 		:	#ffa500;
-$white 			:	#ffffff;
+$white 			:	#fff;
 $green 			:	#25a25a;
 $light-black	:	#272936;
 $blue 			:	#286abd;
@@ -41,7 +41,7 @@ $dark-blue		:	#333645;
 $light-blue		:	#4183d7;
 $skyblue		:	#4387f6;
 $grey-blue		:	#526781;
-$x-dark-grey	:	#555555;
+$x-dark-grey	:	#555;
 
 
 // Color Palette Modifiers
@@ -75,6 +75,6 @@ $color-sec		: $dark-blue;
 
 // Breakpoints
 
-//768px
+//767px
 //992px
-//1260px
+//1259px

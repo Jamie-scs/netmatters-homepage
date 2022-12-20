@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/icomoon.ttf" as="font" type="font/ttf" crossorigin>
 </head>
+
 <body>
 	<div class="wrapper-outer">
 		<header class="header">
@@ -50,7 +52,9 @@
 					</div><!-- overlay -->
 				</div><!-- hero -->
 			</header>
-				
+	
+<!-- OUR SERVICES SECTION -->
+
 			<section class="service-list">
 				<div class="wrapper-inner">
 
@@ -62,75 +66,92 @@
 
 					<div class="services flex">
 						
-						<a href="#">
-							<div class="service software">
-								<span class="icon fa-solid fa-table-cells"></span>
-								<h3>Bespoke Software</h3>
-								<p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service software">
+								<span class="icon"><span class="fa-solid fa-table-cells"></span></span>
+								<span class="h2">Bespoke Software</span>
+								<span class="p">Bespoke software solutions for all your business needs including integrations and reporting.</span>
+								<span class="btn-container">
+									<span class="btn btn-software">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service support">
-								<span class="icon fa-solid fa-display"></span>
-								<h3>IT Support</h3>
-								<p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service support">
+								<span class="icon"><span class="fa-solid fa-display"></span></span>
+								<span class="h2">IT Support</span>
+								<span class="p">Fully managed IT support and consultancy packages tailored to meet your exact business needs.</span>
+								<span class="btn-container">
+									<span class="btn btn-support">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service marketing">
-								<span class="icon fa-solid fa-chart-simple"></span>
-								<h3>Digital Marketing</h3>
-								<p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service marketing">
+								<span class="icon"><span class="fa-solid fa-chart-simple"></span></span>
+								<span class="h2">Digital Marketing</span>
+								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
+								<span class="btn-container">
+									<span class="btn btn-marketing">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service telecoms">
-								<span class="icon fa-solid fa-phone-volume"></span>
-								<h3>Telecoms Services</h3>
-								<p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service telecoms">
+								<span class="icon"><span class="fa-solid fa-phone-volume"></span></span>
+								<span class="h2">Telecoms Services</span>
+								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
+								<span class="btn-container">
+									<span class="btn btn-telecoms">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service web">
-								<span class="icon fa-solid fa-code"></span>
-								<h3>Web Design</h3>
-								<p>User-centric design for businesses looking to make a lasting impression.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service web">
+								<span class="icon"><span class="fa-solid fa-code"></span></span>
+								<span class="h2">Web Design</span>
+								<span class="p">User-centric design for businesses looking to make a lasting impression.</span>
+								<span class="btn-container">
+									<span class="btn btn-web">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service security">
-								<span class="icon fa-solid fa-shield-halved"></span>
-								<h3>Cyber Security</h3>
-								<p>Prevention, testing, consultancy & breach management services.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service security">
+								<span class="icon"><span class="fa-solid fa-shield-halved"></span></span>
+								<span class="h2">Cyber Security</span>
+								<span class="p">Prevention, testing, consultancy & breach management services.</span>
+								<span class="btn-container">
+									<span class="btn btn-security">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 						
-						<a href="#">
-							<div class="service training">
-								<span class="icon fa-solid fa-graduation-cap"></span>
-								<h3>Developer Training</h3>
-								<p>Web design & software training courses designed to secure a job in tech.</p>
-								<span class="btn">read more</span>
-							</div><!-- service -->
-						</a>
+						<div class="col">
+							<a href="#" class="service training">
+								<span class="icon"><span class="fa-solid fa-graduation-cap"></span></span>
+								<span class="h2">Developer Training</span>
+								<span class="p">Web design & software training courses designed to secure a job in tech.</span>
+								<span class="btn-container">
+									<span class="btn btn-training">read more</span>
+								</span>
+							</a>
+						</div><!-- service -->
 
 					</div><!-- services -->
 					
-					<a href="#" class="allservices"><span>View All</span><span class="fa-solid fa-arrow-right"></span></a>
+					<div class="services-all"><h3><a href="#" class="services-all__view"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3></div>
 
 				</div><!-- wrapper-inner -->
 			</section><!-- service list -->
+		
+<!-- PARTNER CAROUSELL SECTION -->
+
 			<section class="partner-carousell">
 				<div class="carousell">
 					<div class="partner">
@@ -171,15 +192,18 @@
 					</div><!-- partner -->
 				</div><!-- carousell -->
 			</section><!-- partner-carousell -->
+			
+<!-- MAIN CONTENT SECTION -->
+
 			<section class="content">
-				<div class="wrapper-inner clearfix">
+				<div class="wrapper-inner">
 					<article>
-						<h2 class="h1">Welcome To Netmatters</h2>
+						<h2 class="h1"><strong>Welcome To Netmatters</strong></h2>
 						<p><strong>Netmatters is a leading <a href="#" class="content-link">Bespoke Software</a>, <a href="#" class="content-link">IT Support</a>, and <a href="#" class="content-link">Digital Marketing</a> company based in the East of England with offices in <a href="#" class="content-link">Cambridge</a>, <a href="#" class="content-link">Wymondham</a>, and <a href="#" class="content-link">Great Yarmouth</a>.</strong></p>
 						<p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
 						<p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-						<div>
-							<a href="#" class="btn btn-content">Read More<span class="fa-solid fa-arrow-right"></span></a>
+						<div class="btn-container">
+							<a href="#" class="btn btn-content">Read More <span class="fa-solid fa-arrow-right"></span></a>
 						</div>
 					</article>
 					<aside>
@@ -194,15 +218,15 @@
 							</div>
 							<p><span class="quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</span></p>
 							<p><span class="quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</span></p>
-							<div class="btn">
+							<div class="btn-container">
 								<a href="#" class="btn btn-google">
-									<span>Google Reviews</span>
+									<span>Google Reviews </span>
 									<span class="fa-solid fa-arrow-right"></span>
 								</a>
 							</div>
-							<div class="btn">
+							<div class="btn-container">
 								<a href="#" class="btn btn-trustpilot">
-									<span>TrustPilot Reviews</span>
+									<span>TrustPilot Reviews </span>
 									<span class="fa-solid fa-arrow-right"></span>
 								</a>
 							</div>
@@ -210,6 +234,9 @@
 					</aside>
 				</div><!--wrapper-inner -->
 			</section><!-- content -->
+			
+<!-- NEWS SECTION -->
+
 			<section class="news">
 				<div class="wrapper-inner">
 					
@@ -291,18 +318,31 @@
 					</a>
 				</div><!-- wrapper-inner -->
 			</section>
+
+<!-- SIGN UP SECTION -->
+
 			<section class="sign-up">
 				<div class="wrapper-inner">
 					<div class="container__sign-up">
 						<h2>Email Newsletter Sign-Up</h2>
 						<form action="index.html" action="post">
-							<label for="name">Your Name*</label>
-							<input type="text" id="user-name" name="name" class="form-control" required>
-							<label for="email">Your Email*</label>
-							<input type="email" id="user-email" name="email" class="form-control" required>
+							<div class="wrapper__input">
+								<div class="sign-up-input flex">
+									<div class="form-group">
+										<label for="name" class="required">Your Name</label>
+										<input type="text" id="user-name" name="name" class="form-control" required>
+									</div>
+								</div>
+								<div class="sign-up-input flex">
+									<div class="form-group">
+										<label for="email" class="required">Your Email</label>
+										<input type="email" id="user-email" name="email" class="form-control" required>
+									</div>
+								</div>
+							</div>
 							<input type="checkbox" id="check" name="check" class="check">
 							<label for="check">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" class="check">Privacy Policy</a> for more information on how we keep your data safe.</label>
-							<button type="submit" class="subscribe">Subscribe</button>
+							<button type="submit" class="btn subscribe">Subscribe</button>
 						</form>
 					</div><!-- container__sign-up -->
 				</div><!-- wrapper-inner -->
@@ -310,11 +350,13 @@
 
 		</main>
 			
+<!-- FOOTER SECTION -->
+
 		<footer class="footer">
 			<div class="wrapper-inner">
 				<div class="container__footer">
-					<div class="footer-content">
-						<div class="footer-services">
+					<div class="footer-content flex">
+						<div class="footer-services flex">
 							<div class="about">
 								<h4>About Netmatters</h4>
 								<ul>
@@ -340,7 +382,7 @@
 								</ul>
 							</div><!-- service-links -->
 						</div><!-- footer-services -->
-						<div class="offices">
+						<div class="offices flex">
 							<div class="office">
 								<h4>Cambridge Office</h4>
 								<ul>
@@ -379,21 +421,21 @@
 							</div><!-- office -->
 						</div><!-- offices -->
 					</div><!-- footer-content -->
-					<div class="footer-bottom">
-						<div class="copyright">
+					<div class="footer-bottom flex">
+						<div class="copyright flex">
 							&copy; Copyright Netmatters 2022.
 							<br>
 							All rights reserved.
-							<span>-</span>
+							<span>&nbsp;-&nbsp;</span>
 							<ul>
 								<li><a href="#"> Sitemap </a></li>
 							</ul>
 						</div><!-- copyright -->
-						<div class="social-media">
-							<span class="facebook__icon">&nbsp;<a class="facebook" href="#" target="_blank"><img src="img/icons/facebook_icon16px.png" alt="Facebook icon"></a>&nbsp;</span>
-							<span class="twitter__icon">&nbsp;<a class="twitter" href="#" target="_blank"><img src="img/icons/twitter_icon16px.png" alt="Twitter icon"></a>&nbsp;</span>
-							<span class="instagram__icon">&nbsp;<a class="instagram" href="#" target="_blank"><img src="img/icons/instagram_icon16px.png" alt="Instagram icon"></a>&nbsp;</span>
-							<span class="linkedin__icon">&nbsp;<a class="linkedin" href="#" target="_blank"><img src="img/icons/linkedin_icon16px.png" alt="LinkedIn icon"></a>&nbsp;</span>
+						<div class="social-media flex">
+							<span class="facebook__icon">&nbsp;<a class="facebook" href="#" target="_blank"><img src="img/icons/facebook_icon16px.png" alt="Facebook icon" class="sm-icon"></a>&nbsp;</span>
+							<span class="twitter__icon">&nbsp;<a class="twitter" href="#" target="_blank"><img src="img/icons/twitter_icon16px.png" alt="Twitter icon" class="sm-icon"></a>&nbsp;</span>
+							<span class="instagram__icon">&nbsp;<a class="instagram" href="#" target="_blank"><img src="img/icons/instagram_icon16px.png" alt="Instagram icon" class="sm-icon"></a>&nbsp;</span>
+							<span class="linkedin__icon">&nbsp;<a class="linkedin" href="#" target="_blank"><img src="img/icons/linkedin_icon16px.png" alt="LinkedIn icon" class="sm-icon"></a>&nbsp;</span>
 						</div><!-- social-media -->
 					</div><!-- footer-bottom -->
 				</div><!-- container -->

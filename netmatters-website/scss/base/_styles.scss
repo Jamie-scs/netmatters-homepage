@@ -1,11 +1,11 @@
 // Body
 .wrapper-outer	{
 	width: 100%;
-	margin: 0 auto;
 }
 
 .wrapper-inner	{
 	width: 100vw;
+	margin: 0 auto;
 	max-width: 1260px;
 	padding: 50px 15px;
 }
@@ -31,17 +31,22 @@
 	margin: 0;
 }
 
+.btn-container	{
+	display: block;
+}
+
 .btn 		{
-	padding: 1em;
-	border-radius: .25em;
+	display: inline-block;
+	height: auto;
+	line-height: 35px;
 	text-transform: uppercase;
+	text-align: center;
+	font-size: 1rem;
+	padding: 5px 15px;
+	border-radius: 3px;
 }
 
 // Colour
-
-body 				{
-	
-}
 
 h1					{
 	color: $color-sec;
@@ -70,10 +75,6 @@ h1					{
 }
 
 // Header
-
-.container 	{
-	
-}
 
 .header__wrapper,
 .search__wrapper	{
@@ -145,15 +146,15 @@ h1					{
 
 // Our services
 
-.service-list	{
-}
 
 .services	{
 	flex-direction: column;
 }
 
-.service	{
-	width: 100%;
+.services .service	{
+	display: block;
+	position: relative;
+	top: 0;
 	padding: 30px;
 	border: 1px solid $xx-light-grey;
 	border-radius: 1rem;
@@ -161,11 +162,35 @@ h1					{
 	text-align: center;
 }
 
+.services .service > span 	{
+	display: block;
+}
+
+.services .service > span.icon span 	{
+	font-size: 2rem;
+}
+
+.services .service > span.h2	{
+	font-size: 1.3rem;
+	position: relative;
+	padding: 0 0 10px;
+	margin: 0 0 11px;
+}
+
+.services .service > span.p 	{
+	font-size: .8125rem;
+	line-height: 1.375rem;
+	margin: 0 0 13px;
+}
+
 .icon 	{
+	height: 65px;
+	width: 65px;
+	display: block;
 	color: $white;
 	border-radius: 50%;
 	padding: 1em;
-	margin-top: 1em 0;
+	margin: 0 auto 17px;
 }
 
 .software .icon 	{
@@ -202,7 +227,13 @@ h1					{
 	background-color: $tomato;
 }
 
-.allservices	{
+.services-all	{
+	text-align: center;
+	margin: 0 0 15px;
+}
+
+.services-all__view	{
+	font-size: 1.625rem;
 	margin: 0 auto;
 }
 // Partner carousell
@@ -234,6 +265,11 @@ img.greyscale:hover	{
 
 // Main content
 
+article p	{
+	line-height: 1.875rem;
+	margin: 0 0 25px;
+}
+
 .content 	{
 	color: $white;
 }
@@ -247,28 +283,45 @@ img.greyscale:hover	{
 	text-decoration: underline;
 }
 
+.content .btn 	{
+	font-size: 20px;
+	padding: 10px 30px;
+	border-radius: 6px;
+}
 
 .btn-content 	{
 	color: $white;
 	background-color: $light-black;
+	margin: 0 0 50px;
 }
 
 .star 	{
 	color: $orange;
 	font-size: 2.25rem;
+	margin-bottom: 25px;
 }
 
 .btn-google	{
 	color: $white;
 	background-color: $skyblue;
+	margin: 20px 8px 0 0;
 }
 
 .btn-trustpilot	{
 	color: $white;
 	background-color: $light-green;
+	margin: 20px 0 0;
+}
+
+.quote 	{
+	font-style: italic;
+	font-size: 1.3rem;
+	font-weight: 600;
 }
 
 .quote-author	{
+	font-size: 1.1rem;
+	font-weight: 600;
 	color: $light-grey;
 }
 
@@ -276,6 +329,7 @@ img.greyscale:hover	{
 
 .news .h1	{
 	color: $color-sec;
+	margin-bottom: 30px;
 }
 
 
@@ -292,14 +346,118 @@ img.greyscale:hover	{
 
 // Sign up
 
+.container__sign-up	{
+}
 
+.container__sign-up h2	{
+	font-size: 2rem;
+	line-height: 1.1;
+	font-weight: 400;
+	color: $color-sec;
+	margin: 0 0 15px;
+}
+
+label 	{
+}
+
+.sign-up-input	{
+	flex: 1 1 450px;
+	padding: 0 15px;
+}
+
+.form-control	{
+	display: block;
+	width: 100%;
+	height: 47px;
+	background-color: $white;
+	padding: 5px 15px;
+	border: 1px solid $white;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgb(0, 0, 0 / 8%);
+}
+
+.required:after	{
+	content: " *";
+	color: $light-red;
+}
+
+.subscribe	{
+	color: $white;
+	background-color: $color-sec;
+	border-color: $color-sec;
+}
 
 // Footer
 
-.container__footer	{
-	width: 60%;
-	margin: 0 auto;
+footer * 	{
+	color: $white;
 }
 
+ul, li	{
+	list-style-type: none;
+	color: $white;
+	font-size: .8125rem;
+	line-height: 1.375rem;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+footer h4 	{
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0 0 26px;
+}
+
+footer a:hover,
+footer a:focus	{
+	text-decoration: underline;
+}
+
+li 	{
+	display: list-item;
+}
+
+.footer-content	{
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-content .footer-services	{
+	justify-content: space-between;
+}
+
+.footer-content .offices	{
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.about, .service-links, .office	{
+	width: 225px;
+	margin: 0 0 30px;
+}
 
 // Copyright / Social links
+
+.footer-bottom	{
+	justify-content: space-between;
+	font-size: .8125rem;
+	padding-top: 10px;
+	border-top: 1px solid $dark-grey;
+	margin-top: 10px;
+}
+
+.copyright	{
+	padding-top: 5px;
+}
+
+.social-media	{
+	justify-content: flex-end;
+	font-size: 1.9rem;
+	margin-top: -5px;
+}
+
+.sm-icon	{
+	color: $white;
+}
