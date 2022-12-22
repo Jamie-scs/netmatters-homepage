@@ -17,38 +17,54 @@
 <body>
 	<div class="wrapper-outer">
 		<header class="header">
-			<div class="container">
-				<div class="header__wrapper">
-					<div class="container__logo">
-						<img class="left logo" src="img/f-logo.png" alt="Netmatters">
-					</div><!-- container-logo -->
-					<div class="container__phone">
-						<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
-					</div><!-- container__phone -->
-					<div class="container__hamburger">
-						<a href="#"><span class="right hamburger fa-solid fa-bars"></span></a>
-					</div><!-- container__hamburger -->
-				</div><!-- header__wrapper -->
-				<div class="search__wrapper">
-						<form action="index.html" action="get">
-							<input class="search-bar" type="text" name="search" id="search-input" placeholder="Search...">
-							<button type="submit" class="search-submit">
+			<div class="header-inner">
+				<div class="container">
+					
+					<div class="container__top">
+						<div class="logo-wrapper">
+							<div class="container__logo">
+								<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
+							</div><!-- container__logo -->
+						</div><!-- logo-wrapper -->
+						<div class="container__phone">
+							<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
+						</div><!-- container__phone -->
+						<div class="wrapper-hamburger">
+							<div class="container__hamburger right">
+								<button type="button" class="btn hamburger"><span class="hamburger-box"><span class="fa-solid fa-bars"></span></span></button>
+							</div>
+						</div><!-- container__hamburger -->
+					</div><!-- container__top -->
+					
+					<div class="search-wrapper">
+						<form action="index.html" action="get" class="search__form">
+							<label for="search" class="hidden">Search:</label>
+							<input class="search__bar form-control" type="text" name="search" id="search-input" placeholder="Search...">
+							<button type="submit" class="search__submit">
 								<span class="fa-solid fa-magnifying-glass"></span>
 							</button>
 						</form>
-				</div><!-- search__wrapper -->
-			</div><!-- container -->
+					</div><!-- search__wrapper -->
+
+				</div><!-- container -->
+			</div><!-- header-inner -->
 		</header>
 			
 		<main>
 				
 			<header>
-				<div class="hero">
-					<img src="img/hero-1.jpg" alt="Bespoke Software Hero">
+				<div class="hero flex">
+					<div class="hero__item flex">
+						<img src="img/hero-1.jpg" alt="Bespoke Software">
+					</div><!-- hero__item -->
 					<div class="overlay">
-						<h2 class="h1">Bespoke Software</h2>
-						<p>Bring your business togethor with<br> solutions which grow with you.</p>
-						<span class="btn">Find out more</span>
+						<div class="overlay__content">
+							<div class="text">
+								<div class="h1"> Bespoke Software </div>
+								<p>Bring your business togethor with<br> solutions which grow with you.</p>
+								<span class="btn btn-software">Find out more <em class="fa-solid fa-arrow-right"></em></span>
+							</div><!-- overlay__content -->
+						</div><!-- overlay -->
 					</div><!-- overlay -->
 				</div><!-- hero -->
 			</header>
@@ -145,7 +161,9 @@
 
 					</div><!-- services -->
 					
-					<div class="services-all"><h3><a href="#" class="services-all__view"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3></div>
+					<div class="view-all">
+						<h3 class="view-all__view"><a href="#"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3>
+					</div>
 
 				</div><!-- wrapper-inner -->
 			</section><!-- service list -->
@@ -244,78 +262,81 @@
 						<h2 class="h1">Latest News</h2>
 					</header>
 				
-					<div class="item__news">
-						<a href="#">
-							<div class="container__img">
-								<img src="img/thumbnails/november-notables-2022.jpg" alt="">
-							</div>
-							<div class="container__content">
-								<h3><a href="#">November Notables 2022</a></h3>
-								<p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
-								<div class="btn">
-									<a href="#" class="btn btn-news">Read More</a>
+					<div class="news-list">
+						<div class="item__news">
+							<a class="news-link" href="#"></a>
+								<div class="container__img">
+									<a href="#" class="btn-catagory news">News</a>
+									<img src="img/thumbnails/november-notables-2022.jpg" alt="">
 								</div>
-								<div class="author">
-									<div class="avatar">
-										<img src="img/thumbnails/netmatters-ltd.png" alt="">
-									</div><!-- avatar -->
-									<div class="details">
-										<strong>Posted by Netmatters</strong>
-										<br>
-										30th November 2022
-									</div><!-- author -->
-								</div><!-- container__content -->
-							</div><!-- container__img -->
-						</a>
-					</div><!-- item__news -->
-					<div class="item__news">
-						<a href="#">
-							<div class="container__img">
-								<img src="img/thumbnails/business-development-account.jpg" alt="">
-							</div>
-							<div class="container__content">
-								<h3><a href="#">Business Development Account Manager</a></h3>
-								<p>Salary Range £35k+ per annum + Bonus + Benefits Hours 40 hours per week, Mon - Fri Location Wymondha...</p>
-								<a href="#" class="btn btn-news">Read More</a>
-								<div class="author clearfix">
-									<div class="avatar">
-										<img src="img/thumbnails/elliott-peacock.jpg" alt="">
-									</div><!-- avatar -->
-									<div class="details">
-										<strong>Posted by Elliott Peacock</strong>
-										<br>
-										30th November 2022
-									</div><!-- author -->
-								</div><!-- container__content -->
-							</div><!-- container__img -->
-						</a>
-					</div><!-- item__news -->
-					<div class="item__news">
-						<a href="#">
-							<div class="container__img">
-								<img src="img/thumbnails/in-house-vs-outsourced.png" alt="">
-							</div>
-							<div class="container__content">
-								<h3><a href="#">In-House vs Outsourced Software Development</a></h3>
-								<p>One of the most common dilemmas businesses face when embarking on a software development project is...</p>
-								<a href="#" class="btn btn-news">Read More</a>
-								<div class="author clearfix">
-									<div class="avatar">
-										<img src="img/thumbnails/netmatters-ltd.png" alt="">
-									</div><!-- avatar -->
-									<div class="details">
-										<strong>Posted by Netmatters</strong>
-										<br>
-										30th November 2022
-									</div><!-- author -->
-								</div><!-- container__content -->
-							</div><!-- container__img -->
-						</a>
-					</div><!-- item__news -->
-					<a href="#">
-						<span class="allservices">View All</span>
-						<span class="fa-solid fa-arrow-right"></span>
-					</a>
+								<div class="container__content">
+									<h3 class="news"><a href="#">November Notables 2022</a></h3>
+									<p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+									<div class="btn">
+										<a href="#" class="btn btn-news news">Read More</a>
+									</div>
+									<div class="author">
+										<div class="avatar">
+											<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
+										</div><!-- avatar -->
+										<div class="details">
+											<strong>Posted by Netmatters</strong>
+											<br>
+											30th November 2022
+										</div><!-- author -->
+									</div><!-- container__content -->
+								</div><!-- container__img -->
+							
+						</div><!-- item__news -->
+						<div class="item__news">
+							<a class="news-link" href="#"></a>
+								<div class="container__img">
+									<a href="#" class="btn-catagory careers">Careers</a>
+									<img src="img/thumbnails/business-development-account.jpg" alt="">
+								</div>
+								<div class="container__content">
+									<h3 class="careers"><a href="#">Business Development Account Manager</a></h3>
+									<p>Salary Range £35k+ per annum + Bonus + Benefits Hours 40 hours per week, Mon - Fri Location Wymondha...</p>
+									<a href="#" class="btn btn-news careers">Read More</a>
+									<div class="author">
+										<div class="avatar">
+											<img src="img/thumbnails/elliott-peacock.jpg" alt="Elliott Peacock">
+										</div><!-- avatar -->
+										<div class="details">
+											<strong>Posted by Elliott Peacock</strong>
+											<br>
+											30th November 2022
+										</div><!-- author -->
+									</div><!-- container__content -->
+								</div><!-- container__img -->
+							
+						</div><!-- item__news -->
+						<div class="item__news">
+							<a class="news-link" href="#"></a>
+								<div class="container__img">
+									<a href="#" class="btn-catagory software-news">News</a>
+									<img src="img/thumbnails/in-house-vs-outsourced.png" alt="">
+								</div>
+								<div class="container__content">
+									<h3 class="software-news"><a href="#">In-House vs Outsourced Software Development</a></h3>
+									<p>One of the most common dilemmas businesses face when embarking on a software development project is...</p>
+									<a href="#" class="btn btn-news software-news">Read More</a>
+									<div class="author">
+										<div class="avatar">
+											<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
+										</div><!-- avatar -->
+										<div class="details">
+											<strong>Posted by Netmatters</strong>
+											<br>
+											30th November 2022
+										</div><!-- author -->
+									</div><!-- container__content -->
+								</div><!-- container__img -->
+							
+						</div><!-- item__news -->
+					</div>
+					<div class="view-all">
+						<h3 class="view-all__view"><a href="#"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3></div>
 				</div><!-- wrapper-inner -->
 			</section>
 
@@ -324,25 +345,36 @@
 			<section class="sign-up">
 				<div class="wrapper-inner">
 					<div class="container__sign-up">
-						<h2>Email Newsletter Sign-Up</h2>
-						<form action="index.html" action="post">
-							<div class="wrapper__input">
-								<div class="sign-up-input flex">
+						<form action="index.html" method="post">
+							<h2>Email Newsletter Sign-Up</h2>
+							<div class="wrapper__input flex">
+								<div class="sign-up-input">
 									<div class="form-group">
 										<label for="name" class="required">Your Name</label>
 										<input type="text" id="user-name" name="name" class="form-control" required>
 									</div>
 								</div>
-								<div class="sign-up-input flex">
+								<div class="sign-up-input">
 									<div class="form-group">
 										<label for="email" class="required">Your Email</label>
 										<input type="email" id="user-email" name="email" class="form-control" required>
 									</div>
 								</div>
 							</div>
-							<input type="checkbox" id="check" name="check" class="check">
-							<label for="check">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" class="check">Privacy Policy</a> for more information on how we keep your data safe.</label>
-							<button type="submit" class="btn subscribe">Subscribe</button>
+							<div class="form-group">
+								
+								<label class="checkbox">
+									<span class="privacy">
+										<span class="privacy-check privacy-align">
+											<span class="button left">
+												<input type="checkbox" name="check">
+											</span>
+										</span>
+										<span class="privacy-body">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" class="check">Privacy Policy</a> for more information on how we keep your data safe.</span>
+									</span>
+								</label>
+							</div>
+							<button name="submit" class="btn subscribe">Subscribe</button>
 						</form>
 					</div><!-- container__sign-up -->
 				</div><!-- wrapper-inner -->
@@ -432,13 +464,13 @@
 							</ul>
 						</div><!-- copyright -->
 						<div class="social-media flex">
-							<span class="facebook__icon">&nbsp;<a class="facebook" href="#" target="_blank"><img src="img/icons/facebook_icon16px.png" alt="Facebook icon" class="sm-icon"></a>&nbsp;</span>
-							<span class="twitter__icon">&nbsp;<a class="twitter" href="#" target="_blank"><img src="img/icons/twitter_icon16px.png" alt="Twitter icon" class="sm-icon"></a>&nbsp;</span>
-							<span class="instagram__icon">&nbsp;<a class="instagram" href="#" target="_blank"><img src="img/icons/instagram_icon16px.png" alt="Instagram icon" class="sm-icon"></a>&nbsp;</span>
-							<span class="linkedin__icon">&nbsp;<a class="linkedin" href="#" target="_blank"><img src="img/icons/linkedin_icon16px.png" alt="LinkedIn icon" class="sm-icon"></a>&nbsp;</span>
+							<a class="facebook" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></a>
+							<a class="twitter" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea96;" class="icon-twitter"></span></a>
+							<a class="instagram" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea92;" class="icon-instagram"></span></a>
+							<a class="linkedin" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xeaca;" class="icon-linkedin2"></span></a>
 						</div><!-- social-media -->
 					</div><!-- footer-bottom -->
-				</div><!-- container -->
+				</div><!-- container-footer-->
 			</div><!-- wrapper-inner -->
 		</footer>
 		
