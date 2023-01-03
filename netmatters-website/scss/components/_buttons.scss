@@ -1,0 +1,132 @@
+// ========================================
+// Buttons
+// ========================================
+
+// Global
+
+.btn-container		{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.btn 				{
+	display: inline-block;
+	height: auto;
+	line-height: 35px;
+	font-size: 1.063rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	white-space: normal;
+	color: $white;
+	padding: 5px 15px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	margin-bottom: 0;
+	cursor: pointer;
+	&-software			{
+		background-color: $software;
+		@include btn($software);
+		font-size: 20px;
+		padding: 13px 20px;
+		margin: 31px 0 18px;
+	}
+	&-content 			{
+		background-color: $btn-content;
+		@include btn($btn-content);
+		margin: 0 0 50px;
+	}
+	&-google			{
+		background-color: $google;
+		@include btn($google);
+		margin: 20px 8px 0 0;
+	}
+	&-trustpilot		{
+		background-color: $trustpilot;
+		@include btn($trustpilot);
+		margin: 20px 0 0;
+	}
+}
+
+// Header
+
+.btn-it		{
+	width: 150px;
+	height: 56px;
+	background-color: $support;
+	@include btn($support);
+	@include mqx(medium)	{
+		display: none;
+	}
+}
+
+.btn-contact			{
+	width: 150px;
+	height: 56px;
+	background-color: $contact;
+	@include btn($contact);
+	margin-right: 20px;
+	@include mqx(medium)	{
+		display: none;
+	}
+}
+
+.btn-hamburger			{
+	height: 56px;
+	color: $white;
+	background-color: $color-sec;
+	@include btn($color-sec);
+	padding: 5px 15px;
+}
+
+.hamburger-box			{
+	display: block;
+	position: relative;
+	width: 33px;
+	height: 40px;
+	font-size: 1.438rem;
+	line-height: 45px;
+}
+
+// Main Content
+
+.content .btn 		{
+	font-size: 20px;
+	padding: 10px 30px;
+	border-radius: 6px;
+}
+
+// News
+
+.btn-news			{
+	&:hover,
+	&:focus				{
+		text-decoration: none;
+	}
+}
+
+// Newsletter
+
+.btn-catagory		{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	z-index: 1;
+	color: $white;
+	font-size: .75rem;
+	line-height: 1.438rem;
+	text-transform: uppercase;
+	padding: 0 10px;
+	&:hover,
+	&:focus				{
+		text-decoration: underline;
+	}
+}
+
+.btn-subscribe	{
+	color: $white;
+	background-color: $color-sec;
+	@include btn($color-sec);
+	border-color: $color-sec;
+}

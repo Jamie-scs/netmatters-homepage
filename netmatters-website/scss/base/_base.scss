@@ -1,40 +1,148 @@
-// ==========================================================================
+// ========================================
 // Base Styles
-// ==========================================================================
+// ========================================
 
-* {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
+// Body
 
-body {
+body 				{
 	font-family: Poppins, sans-serif;
 	letter-spacing: .4px;
 }
 
-// Text
+// Links
 
-a 	{
-	text-decoration: none;
+a 					{
 	color: $black;
+	text-decoration: none;
+	background: transparent;
+	&:hover,
+	&:focus 			{
+		text-decoration: underline;
+	}
 }
-
 
 // Lists
 
+ul, li				{
+	list-style-type: none;
+	color: $white;
+	font-size: .8125rem;
+	line-height: 1.375rem;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
 
+li 					{
+	display: list-item;
+}
 
 // Images
 
-
+img 				{
+	vertical-align: middle;
+	border: 0;
+}
 
 // Form elements
 
+label 				{
+	display: inline-block;
+	color: $color-sec;
+	font-weight: 600;
+	margin: 0 0 5px;
+	& a 					{
+		text-decoration: underline;
+	}
+}
 
+// ==========================================================================
+// Global Config
+// ==========================================================================
 
-// Button
+// UI Colors
 
+.header,
+.service-list,
+.partner-slideshow,
+.news				{
+	background-color: $color-prim;
+}
 
+.content,
+.footer 			{
+	background-color: $color-sec;
+}
+
+.sign-up			{
+	background-color: $news-border;
+}
+
+.software			{
+	background-color: $software;
+}
+
+.support			{
+	background-color: $support;
+}
+
+.marketing			{
+	background-color: $marketing;
+}
+
+.telecoms			{
+	background-color: $telecoms;
+}
+
+.web				{
+	background-color: $web;
+}
+
+.security			{
+	background-color: $security;
+}
+
+.training			{
+	background-color: $training;
+}
 
 // Layout
 
+.flex 	{
+	display: flex;
+}
+
+.right 	{
+	float: right;
+}
+
+.left 	{
+	float: left;
+}
+
+.clearfix	{
+	clear: both;
+}
+
+.mobile				{
+	@include mqm(small)	{
+		display: none;
+	}
+}
+
+.medium				{
+	@include mqx(small)	{
+		display: none;
+	}
+}
+
+.full 				{
+	@include mqx(medium)	{
+		display: none;
+	}
+}
+
+.hidden	{
+	display: none!important;
+	visibility: hidden!important;
+}

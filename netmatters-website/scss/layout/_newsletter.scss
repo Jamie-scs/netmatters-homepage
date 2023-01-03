@@ -1,0 +1,32 @@
+// ========================================
+// Newsletter
+// ========================================
+
+.wrapper__input			{
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.sign-up-input			{
+	flex: 1 1 450px;
+	padding: 0 15px;
+}
+
+.container-privacy		{
+	line-height: 32px;
+	cursor: pointer;
+}
+
+.privacy-check			{
+	padding-right: 0;
+	display: table-cell;
+	vertical-align: top;
+}
+
+[type=checkbox]			{
+	display: none;
+	line-height: normal;
+	padding: 0;
+	margin: 4px 0 0;
+}

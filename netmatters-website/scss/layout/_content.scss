@@ -1,0 +1,45 @@
+// ========================================
+// Main
+// ========================================
+
+.wrapper-content	{
+	display: flex;
+	justify-content: space-between;
+	@include mqx(medium)	{
+		flex-wrap: wrap;
+	}
+}
+
+.content-item		{
+	@include mqm(medium)	{
+		width: 50%;
+	}
+}
+
+.content 			{
+	color: $white;
+}
+
+.container__article	{
+	@include mqm(medium)	{
+		margin-right: 1rem;
+	}
+}
+
+.content-link 		{
+	color: $white;
+	&:hover,
+	&:focus 		{
+		text-decoration: underline;
+	}
+}
+
+.container__quote	{
+	@include mqm(medium)	{
+		margin-left: 1rem;
+	}
+}
+
+.stars 	{
+	margin-bottom: 25px;
+}

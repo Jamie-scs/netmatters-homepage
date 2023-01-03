@@ -1,0 +1,66 @@
+// ========================================
+// Global Containers
+// ========================================
+
+.wrapper-outer		{
+	width: 100%;
+}
+
+.wrapper-inner		{
+	max-width: 48em;
+	padding: 50px 15px;
+	margin: 0 auto;
+	@include mqm(medium)	{
+		max-width: 62em;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include mqm(large)	{
+		max-width: 78.75em;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+}
+
+
+
+.view-all			{
+	text-align: center;
+}
+
+// Partner slideshow
+
+.partner-slideshow	{
+	display: block;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.wrapper-carousel	{
+	position: relative;
+	width: 100%;
+	max-height: 70px;
+	text-align: center;
+	z-index: 1;
+}
+
+.carousel			{
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+ 
+.container__partner	{	
+	position: relative;
+	min-height: 1px;
+}
+
+.partner			{
+	position: relative;
+	width: auto;
+	height: 70px;
+	max-height: 70px;
+	vertical-align: middle;
+	align-items: center;
+	padding: 0 20px;
+}

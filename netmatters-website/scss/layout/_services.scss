@@ -1,0 +1,183 @@
+// ========================================
+// Services
+// ========================================
+
+.services-container		{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.services				{
+	flex-direction: column;
+	@include mqm(small)		{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.col-pri 				{
+	margin: 30px 0 0;
+	@include mqm(small)		{
+		width: 100%;
+	}
+	@include mqm(medium)	{
+		width: 31.125%;
+	}
+	@include mqm(large)		{
+		width: 31.5%;
+	}
+}
+
+.col-pri:nth-child(1n+2)	{
+	@include mqm(medium)		{
+		margin-left: 30px;
+	}
+}
+
+.col-sec				{
+	margin: 30px 0 0;
+	@include mqm(small)		{
+		width: 47.9%;
+	}
+	@include mqm(large)		{
+		width: 23%;
+	}
+}
+
+.col-sec:nth-child(2n+1)	{
+	@include mqm(small)			{
+		margin-left: 30px;
+	}
+}
+
+.col-sec:nth-child(1n+5)	{
+	@include mqm(large)			{
+		margin-left: 30px;
+	}
+}
+
+.service				{
+	display: block;
+	position: relative;
+	top: 0;
+	transition: .5s ease;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	background: transparent;
+	padding: 30px;
+	border: 1px solid $news-border;
+	border-radius: 15px;
+	box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+}
+
+.service-icon 			{
+	height: 65px;
+	width: 65px;
+	color: $white;
+	border-radius: 50%;
+	margin: 0 auto 17px;
+}
+
+.service-icon 			{
+	&.software				{
+		background-color: $software;
+	}
+	&.support				{
+		background-color: $support;
+	}
+	&.marketing				{
+		background-color: $marketing;
+	}
+	&.telecoms				{
+		background-color: $telecoms;
+	}
+	&.web					{
+		background-color: $web;
+	}
+	&.security				{
+		background-color: $security;
+	}
+	&.training				{
+		background-color: $training;
+	}
+}
+
+.service-icn			{
+	font-size: 2.2rem;
+	padding-top: .85rem;
+}
+
+.service > span 		{
+	display: block;
+}
+
+.service-btn .marketing	{
+	@include mqm(medium)	{
+		position: relative;
+		bottom: -22px;
+	}
+}
+
+// Transitions
+
+.service:hover,
+.service:focus			{
+	top: -10px;
+	transition: .5s ease;
+	text-decoration: none;
+	border-color: transparent;
+	.h2,
+	.p 						{
+		color: $white;
+	}
+	.service-icon,
+	.btn 					{
+		background-color: $white;
+		&.software				{
+			color: $software;
+		}
+		&.support				{
+			color: $support;
+		}
+		&.marketing				{
+			color: $marketing;
+		}
+		&.telecoms				{
+			color: $telecoms;
+		}
+		&.web					{
+			color: $web;
+		}
+		&.security				{
+			color: $security;
+		}
+		&.training				{
+			color: $training;
+		}
+	}
+	&.software				{
+		background-color: $software;
+	}
+	&.support				{
+		background-color: $support;
+	}
+	&.marketing				{
+		background-color: $marketing;
+	}
+	&.telecoms				{
+		background-color: $telecoms;
+	}
+	&.web					{
+		background-color: $web;
+	}
+	&.security				{
+		background-color: $security;
+	}
+	&.training				{
+		background-color: $training;
+	}
+}

@@ -1,0 +1,64 @@
+// ========================================
+// Colours
+// ========================================
+
+// Descriptive Base Colors
+
+$black						:	#000000;
+$white 						:	#ffffff;
+$onyx						:	#333645; // color-sec
+$gainsboro					:	#dddddd; // service-border / news-border
+$chinese-silver				:	#cccccc; // search / newsletter
+$rackley					:	#67809f; // software / news careers
+$tufts-blue					:	#4183d7; // support
+$ufo-green 					:	#2ecc71; // marketing
+$jasper						:	#d64541; // telecoms
+$dark-lavender				:	#79539a; // web
+$awesome					:	#f62459; // security
+$dark-pastel-red			:	#ce4125; // training
+$gunmetal					:	#272936; // btn-content
+$orange-web					:	#ffa500; // star
+$metalic-silver				:	#a3a8ac; // quote-author
+$blueberry					:	#4387f6; // google
+$green-munsell 				: 	#00b67b; // trustpilot
+$purple-mountain-majesty	:	#926fb1; // news
+$dark-terra-cotta			:	#d24d57; // required
+$granite-gray				:	#666666; // footer-border
+$chinese-blue 				:	#3b5998; // facebook
+$vivid-cerulean 			:	#00aced; // twitter
+$telemagenta 				:	#d93175; // instagram
+$star-command-blue			:	#0077b5; // linkedin
+$search-submit				:	#7e808a;
+$contact					:	#999aa2;
+
+// Color Usage		
+		
+$color-prim					:	rgba($white, .5);
+$color-sec					:	$onyx;
+
+$search						:	$chinese-silver;
+			
+$software					:	$rackley;
+$support					:	$tufts-blue;
+$marketing					:	$ufo-green;
+$telecoms 					:	$jasper;
+$web 						:	$dark-lavender;
+$security					:	$awesome;
+$training 					:	$dark-pastel-red;
+
+$btn-content				:	$gunmetal;
+$star 						:	$orange-web;
+$quote-author				:	$metalic-silver;
+$google						:	$blueberry;
+$trustpilot					:	$green-munsell;
+
+$news						:	$purple-mountain-majesty;
+$news-border				:	$gainsboro;
+$required					:	$dark-terra-cotta;
+
+$footer-border				:	$granite-gray;
+
+$facebook					:	$chinese-blue;
+$twitter					:	$vivid-cerulean;
+$instagram					:	$telemagenta;
+$linkedin					:	$star-command-blue;

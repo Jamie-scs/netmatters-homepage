@@ -21,34 +21,112 @@
 				<div class="container">
 					
 					<div class="container__top">
-						<div class="logo-wrapper">
+						<div class="wrapper-logo">
 							<div class="container__logo">
 								<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
 							</div><!-- container__logo -->
-						</div><!-- logo-wrapper -->
-						<div class="container__phone">
-							<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
-						</div><!-- container__phone -->
-						<div class="wrapper-hamburger">
-							<div class="container__hamburger right">
-								<button type="button" class="btn hamburger"><span class="hamburger-box"><span class="fa-solid fa-bars"></span></span></button>
+						</div><!-- wrapper-logo -->
+						
+						
+						<div class="actions">
+							<div class="container__phone mobile">
+								<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
+							</div><!-- container__phone -->
+							<div class="container__support full">
+								<button type="button" class="btn btn-it">
+									<span class="mouse fa-solid fa-mouse"></span><span>&nbsp; support</span>
+								</button>
 							</div>
-						</div><!-- container__hamburger -->
+							<div class="container__contact full">
+								<button type="button" class="btn btn-contact">
+									<span class="plane fa fa-paper-plane-o" aria-hidden="true"></span><span>&nbsp; contact</span>
+								</button>
+							</div>
+							<div class="search-wrapper medium">
+								<form action="index.html" action="get" class="search__form">
+									<label for="search" class="hidden">Search:</label>
+									<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
+									<button type="submit" class="search__submit">
+										<span class="search fa-solid fa-magnifying-glass"></span>
+									</button>
+								</form>
+							</div><!-- search__wrapper -->
+							<div class="wrapper-hamburger">
+								<div class="container__hamburger">
+									<button type="button" class="btn btn-hamburger"><div class="hamburger-box"><span class="nav-menu fa-solid fa-bars"></span></div></button>
+								</div><!-- container__hamburger -->
+							</div><!-- wrapper-hamburger -->
+						</div><!-- actions -->
 					</div><!-- container__top -->
 					
-					<div class="search-wrapper">
+					<div class="search-wrapper mobile">
 						<form action="index.html" action="get" class="search__form">
 							<label for="search" class="hidden">Search:</label>
-							<input class="search__bar form-control" type="text" name="search" id="search-input" placeholder="Search...">
+							<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
 							<button type="submit" class="search__submit">
-								<span class="fa-solid fa-magnifying-glass"></span>
+								<span class="search fa-solid fa-magnifying-glass"></span>
 							</button>
 						</form>
 					</div><!-- search__wrapper -->
-
 				</div><!-- container -->
 			</div><!-- header-inner -->
 		</header>
+
+		<nav class="full">
+			<div class="container">
+				<div class="nav-bar">
+					<div class="nav-item software">
+						<a href="#">
+							<span class="nav-icon software"><span class="nav-icn fa-solid fa-table-cells"></span></span>
+							<h3 class="h6">bespoke</h3>
+							<h3 class="h5">software</h3>
+						</a>
+					</div>
+					<div class="nav-item support">
+						<a href="#">
+							<span class="nav-icon support"><span class="nav-icn fa-solid fa-display"></span></span>
+							<h3 class="h6">it</h3>
+							<h3 class="h5">support</h3>
+						</a>
+					</div>
+					<div class="nav-item marketing">
+						<a href="#">
+							<span class="nav-icon marketing"><span class="nav-icn fa-solid fa-chart-simple"></span></span>
+							<h3 class="h6">digital</h3>
+							<h3 class="h5">marketing</h3>
+						</a>
+					</div>
+					<div class="nav-item telecoms">
+						<a href="#">
+							<span class="nav-icon telecoms"><span class="nav-icn fa-solid fa-phone-volume"></span></span>
+							<h3 class="h6">telecoms</h3>
+							<h3 class="h5">services</h3>
+						</a>
+					</div>
+					<div class="nav-item web">
+						<a href="#">
+							<span class="nav-icon web"><span class="nav-icn fa-solid fa-code"></span></span>
+							<h3 class="h6">web</h3>
+							<h3 class="h5">design</h3>
+						</a>
+					</div>
+					<div class="nav-item security">
+						<a href="#">
+							<span class="nav-icon security"><span class="nav-icn fa-solid fa-shield-halved"></span></span>
+							<h3 class="h6">cyber</h3>
+							<h3 class="h5">security</h3>
+						</a>
+					</div>
+					<div class="nav-item training">
+						<a href="#">
+							<span class="nav-icon training"><span class="nav-icn fa-solid fa-graduation-cap"></span></span>
+							<h3 class="h6">developer</h3>
+							<h3 class="h5">course</h3>
+						</a>
+					</div>
+				</div><!-- nav-bar -->
+			</div><!-- container -->
+		</nav>
 			
 		<main>
 				
@@ -57,14 +135,14 @@
 					<div class="hero__item flex">
 						<img src="img/hero-1.jpg" alt="Bespoke Software">
 					</div><!-- hero__item -->
-					<div class="overlay">
-						<div class="overlay__content">
+					<div class="overlay flex">
+						<div class="overlay__content flex">
 							<div class="text">
 								<div class="h1"> Bespoke Software </div>
 								<p>Bring your business togethor with<br> solutions which grow with you.</p>
 								<span class="btn btn-software">Find out more <em class="fa-solid fa-arrow-right"></em></span>
-							</div><!-- overlay__content -->
-						</div><!-- overlay -->
+							</div><!-- text -->
+						</div><!-- overlay__content -->
 					</div><!-- overlay -->
 				</div><!-- hero -->
 			</header>
@@ -75,308 +153,443 @@
 				<div class="wrapper-inner">
 
 					<header>
-						<div class="container">
+						<div class="services-container">
 							<h1>Our Services</h1>
-						</div><!-- container -->
+							<div class="view-all medium">
+							<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
+							</div><!-- view-all -->
+						</div><!-- heading-container -->
 					</header>
 
-					<div class="services flex">
+					<div class="services">
 						
-						<div class="col">
+						<div class="col-pri">
 							<a href="#" class="service software">
-								<span class="icon"><span class="fa-solid fa-table-cells"></span></span>
+								<span class="service-icon software"><span class="service-icn fa-solid fa-table-cells"></span></span>
 								<span class="h2">Bespoke Software</span>
 								<span class="p">Bespoke software solutions for all your business needs including integrations and reporting.</span>
-								<span class="btn-container">
-									<span class="btn btn-software">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn software">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-pri -->
 						
-						<div class="col">
+						<div class="col-pri">
 							<a href="#" class="service support">
-								<span class="icon"><span class="fa-solid fa-display"></span></span>
+								<span class="service-icon support"><span class="service-icn fa-solid fa-display"></span></span>
 								<span class="h2">IT Support</span>
 								<span class="p">Fully managed IT support and consultancy packages tailored to meet your exact business needs.</span>
-								<span class="btn-container">
-									<span class="btn btn-support">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn support">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-pri -->
 						
-						<div class="col">
+						<div class="col-pri">
 							<a href="#" class="service marketing">
-								<span class="icon"><span class="fa-solid fa-chart-simple"></span></span>
+								<span class="service-icon marketing"><span class="service-icn fa-solid fa-chart-simple"></span></span>
 								<span class="h2">Digital Marketing</span>
 								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
-								<span class="btn-container">
-									<span class="btn btn-marketing">read more</span>
+								<span class="btn-container service-btn<span></span>">
+									<span class="btn marketing">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-pri -->
 						
-						<div class="col">
+						<div class="col-sec">
 							<a href="#" class="service telecoms">
-								<span class="icon"><span class="fa-solid fa-phone-volume"></span></span>
+								<span class="service-icon telecoms"><span class="service-icn fa-solid fa-phone-volume"></span></span>
 								<span class="h2">Telecoms Services</span>
 								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
-								<span class="btn-container">
-									<span class="btn btn-telecoms">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn telecoms">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-sec -->
 						
-						<div class="col">
+						<div class="col-sec">
 							<a href="#" class="service web">
-								<span class="icon"><span class="fa-solid fa-code"></span></span>
+								<span class="service-icon web"><span class="service-icn fa-solid fa-code"></span></span>
 								<span class="h2">Web Design</span>
 								<span class="p">User-centric design for businesses looking to make a lasting impression.</span>
-								<span class="btn-container">
-									<span class="btn btn-web">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn web">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-sec -->
 						
-						<div class="col">
+						<div class="col-sec">
 							<a href="#" class="service security">
-								<span class="icon"><span class="fa-solid fa-shield-halved"></span></span>
+								<span class="service-icon security"><span class="service-icn fa-solid fa-shield-halved"></span></span>
 								<span class="h2">Cyber Security</span>
 								<span class="p">Prevention, testing, consultancy & breach management services.</span>
-								<span class="btn-container">
-									<span class="btn btn-security">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn security">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-sec -->
 						
-						<div class="col">
+						<div class="col-sec">
 							<a href="#" class="service training">
-								<span class="icon"><span class="fa-solid fa-graduation-cap"></span></span>
+								<span class="service-icon training"><span class="service-icn fa-solid fa-graduation-cap"></span></span>
 								<span class="h2">Developer Training</span>
 								<span class="p">Web design & software training courses designed to secure a job in tech.</span>
-								<span class="btn-container">
-									<span class="btn btn-training">read more</span>
+								<span class="btn-container service-btn">
+									<span class="btn training">read more</span>
 								</span>
 							</a>
-						</div><!-- service -->
+						</div><!-- col-sec -->
 
 					</div><!-- services -->
 					
-					<div class="view-all">
-						<h3 class="view-all__view"><a href="#"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3>
-					</div>
+					<div class="view-all mobile">
+						<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
+					</div><!-- view-all -->
 
 				</div><!-- wrapper-inner -->
 			</section><!-- service list -->
 		
 <!-- PARTNER CAROUSELL SECTION -->
 
-			<section class="partner-carousell">
-				<div class="carousell">
-					<div class="partner">
-						<img src="img/partners/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth" class="greyscale">
-						<img src="img/partners/investing-in-future-growth.jpg" alt="Investing in Future Growth" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter" class="greyscale">
-						<img src="img/partners/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/PPC_logo-bw.jpg" alt="PPC" class="greyscale">
-						<img src="img/partners/PPC_logo.jpg" alt="PPC" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/princess-royal-training-bw.jpg" alt="Princess Royal Training" class="greyscale">
-						<img src="img/partners/princess-royal-training.jpg" alt="Princess Royal Training" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/future-50-bw.jpg" alt="Future 50" class="greyscale">
-						<img src="img/partners/future-50.jpg" alt="Future 50" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/qms-bw.jpg" alt="QMS ISO 9001" class="greyscale">
-						<img src="img/partners/qms.jpg" alt="QMS ISO 9001" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/iso_27001-bw.jpg" alt="QMS ISO 27001" class="greyscale">
-						<img src="img/partners/iso_27001.jpg" alt="QMS ISO 27001" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow" class="greyscale">
-						<img src="img/partners/skills-of-tomorrow.jpg" alt="Skills of Tomorrow" class="coloured">
-					</div><!-- partner -->
-					<div class="partner">
-						<img src="img/partners/google-partner-bw.jpg" alt="Google Partner" class="greyscale">
-						<img src="img/partners/google-partner.jpg" alt="Google Partner" class="coloured">
-					</div><!-- partner -->
-				</div><!-- carousell -->
-			</section><!-- partner-carousell -->
+			<div class="partner-slideshow">
+				
+				<div class="wrapper-carousel">
+
+					<div class="carousel flex">
+									
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/investing-in-future-growth.jpg" alt="Investing in Future Growth">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/PPC_logo-bw.jpg" alt="PPC">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/PPC_logo.jpg" alt="PPC">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/princess-royal-training-bw.jpg" alt="Princess Royal Training">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/princess-royal-training.jpg" alt="Princess Royal Training">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/future-50-bw.jpg" alt="Future 50">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/future-50.jpg" alt="Future 50">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/qms-bw.jpg" alt="QMS ISO 9001">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/qms.jpg" alt="QMS ISO 9001">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/iso_27001-bw.jpg" alt="QMS ISO 27001">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/iso_27001.jpg" alt="QMS ISO 27001">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/skills-of-tomorrow.jpg" alt="Skills of Tomorrow">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+						
+						<div class="container__partner left">
+							<div class="partner">
+								<div class="greyscale">
+									<img src="img/partners/google-partner-bw.jpg" alt="Google Partner">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/google-partner.jpg" alt="Google Partner">
+								</div>
+							</div><!-- partner -->
+						</div><!-- container__partner -->
+					
+					</div><!-- carousel -->
+				</div><!-- wrapper-carousel -->
+			</div><!-- partner-slideshow -->
 			
 <!-- MAIN CONTENT SECTION -->
 
 			<section class="content">
 				<div class="wrapper-inner">
-					<article>
-						<h2 class="h1"><strong>Welcome To Netmatters</strong></h2>
-						<p><strong>Netmatters is a leading <a href="#" class="content-link">Bespoke Software</a>, <a href="#" class="content-link">IT Support</a>, and <a href="#" class="content-link">Digital Marketing</a> company based in the East of England with offices in <a href="#" class="content-link">Cambridge</a>, <a href="#" class="content-link">Wymondham</a>, and <a href="#" class="content-link">Great Yarmouth</a>.</strong></p>
-						<p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
-						<p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-						<div class="btn-container">
-							<a href="#" class="btn btn-content">Read More <span class="fa-solid fa-arrow-right"></span></a>
-						</div>
-					</article>
-					<aside>
-						<div class="container__quote">
-							<h2 class="h1">What Our Clients Think</h2>
-							<div class="star">
-								<span class="fa-solid fa-star"></span>
-								<span class="fa-solid fa-star"></span>
-								<span class="fa-solid fa-star"></span>
-								<span class="fa-solid fa-star"></span>
-								<span class="fa-solid fa-star"></span>
-							</div>
-							<p><span class="quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</span></p>
-							<p><span class="quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</span></p>
-							<div class="btn-container">
-								<a href="#" class="btn btn-google">
-									<span>Google Reviews </span>
-									<span class="fa-solid fa-arrow-right"></span>
-								</a>
-							</div>
-							<div class="btn-container">
-								<a href="#" class="btn btn-trustpilot">
-									<span>TrustPilot Reviews </span>
-									<span class="fa-solid fa-arrow-right"></span>
-								</a>
-							</div>
-						</div><!-- container-quote -->
-					</aside>
+					<div class="wrapper-content">
+						<div class="content-item">
+							<article>
+								<div class="container__article">
+									<h2 class="h1"><strong>Welcome To Netmatters</strong></h2>
+									<p><strong>Netmatters is a leading <a href="#" class="content-link">Bespoke Software</a>, <a href="#" class="content-link">IT Support</a>, and <a href="#" class="content-link">Digital Marketing</a> company based in the East of England with offices in <a href="#" class="content-link">Cambridge</a>, <a href="#" class="content-link">Wymondham</a>, and <a href="#" class="content-link">Great Yarmouth</a>.</strong></p>
+									<p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+									<p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+									<div class="btn-container">
+										<a href="#" class="btn btn-content">Read More <span class="fa-solid fa-arrow-right"></span></a>
+									</div><!-- btn-container -->
+								</div><!-- container__article -->
+							</article>
+						</div><!-- content-item -->
+
+						<div class="content-item">
+							<aside>
+								<div class="container__quote">
+									<h2 class="h1">What Our Clients Think</h2>
+									<div class="stars">
+										<span class="star fa-solid fa-star"></span>
+										<span class="star fa-solid fa-star"></span>
+										<span class="star fa-solid fa-star"></span>
+										<span class="star fa-solid fa-star"></span>
+										<span class="star fa-solid fa-star"></span>
+									</div><!-- stars -->
+									<p><span class="quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</span></p>
+									<p><span class="quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</span></p>
+									<div class="btn-container">
+										<a href="#" class="btn btn-google">
+											<span>Google Reviews </span>
+											<span class="fa-solid fa-arrow-right"></span>
+										</a>
+										<a href="#" class="btn btn-trustpilot">
+											<span>TrustPilot Reviews </span>
+											<span class="fa-solid fa-arrow-right"></span>
+										</a>
+									</div><!-- btn-container -->
+								</div><!-- container-quote -->
+							</aside>
+						</div><!-- content-item -->
+
+					</div><!-- wrapper-content -->
 				</div><!--wrapper-inner -->
 			</section><!-- content -->
 			
-<!-- NEWS SECTION -->
+<!-- LATEST NEWS SECTION -->
 
 			<section class="news">
 				<div class="wrapper-inner">
 					
 					<header>
-						<h2 class="h1">Latest News</h2>
+						<div class="heading-container">
+							<h2 class="h1">Latest News</h2>
+							<div class="view-all medium">
+							<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
+							</div><!-- view-all -->
+						</div><!-- heading-container -->
 					</header>
 				
 					<div class="news-list">
+						
 						<div class="item__news">
 							<a class="news-link" href="#"></a>
-								<div class="container__img">
-									<a href="#" class="btn-catagory news">News</a>
-									<img src="img/thumbnails/november-notables-2022.jpg" alt="">
-								</div>
-								<div class="container__content">
-									<h3 class="news"><a href="#">November Notables 2022</a></h3>
-									<p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
-									<div class="btn">
-										<a href="#" class="btn btn-news news">Read More</a>
-									</div>
-									<div class="author">
-										<div class="avatar">
-											<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
-										</div><!-- avatar -->
-										<div class="details">
-											<strong>Posted by Netmatters</strong>
-											<br>
-											30th November 2022
-										</div><!-- author -->
-									</div><!-- container__content -->
-								</div><!-- container__img -->
-							
+							<div class="container__img">
+								<a href="#" class="btn-catagory news">News</a>
+								<img src="img/thumbnails/november-notables-2022.jpg" alt="November Notables 2022">
+							</div><!-- container__img -->
+							<div class="container__content">
+								<h3 class="news"><a href="#">November Notables 2022</a></h3>
+								<br>
+								<p>Each month, various departments recognise those employees who have excelled in their work and helped...</p>
+								<a href="#" class="btn btn-news news">Read More</a>
+								<div class="author">
+									<div class="avatar">
+										<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
+									</div><!-- avatar -->
+									<div class="details">
+										<strong>Posted by Netmatters</strong>
+										<br>
+										30th November 2022
+									</div><!-- details -->
+								</div><!-- author -->
+							</div><!-- container__content -->
 						</div><!-- item__news -->
+						
 						<div class="item__news">
 							<a class="news-link" href="#"></a>
-								<div class="container__img">
-									<a href="#" class="btn-catagory careers">Careers</a>
-									<img src="img/thumbnails/business-development-account.jpg" alt="">
-								</div>
-								<div class="container__content">
-									<h3 class="careers"><a href="#">Business Development Account Manager</a></h3>
-									<p>Salary Range £35k+ per annum + Bonus + Benefits Hours 40 hours per week, Mon - Fri Location Wymondha...</p>
-									<a href="#" class="btn btn-news careers">Read More</a>
-									<div class="author">
-										<div class="avatar">
-											<img src="img/thumbnails/elliott-peacock.jpg" alt="Elliott Peacock">
-										</div><!-- avatar -->
-										<div class="details">
-											<strong>Posted by Elliott Peacock</strong>
-											<br>
-											30th November 2022
-										</div><!-- author -->
-									</div><!-- container__content -->
-								</div><!-- container__img -->
-							
+							<div class="container__img">
+								<a href="#" class="btn-catagory careers">Careers</a>
+								<img src="img/thumbnails/business-development-account.jpg" alt="Business Development Account Manager">
+							</div><!-- container__img -->
+							<div class="container__content">
+								<h3 class="careers"><a href="#">Business Development Account Manager</a></h3>
+								<p>Salary Range £35k+ per annum + Bonus + Benefits Hours 40 hours per week, Mon - Fri Location Wymondha...</p>
+								<a href="#" class="btn btn-news careers">Read More</a>
+								<div class="author">
+									<div class="avatar">
+										<img src="img/thumbnails/elliott-peacock.jpg" alt="Elliott Peacock">
+									</div><!-- avatar -->
+									<div class="details">
+										<strong>Posted by Elliott Peacock</strong>
+										<br>
+										30th November 2022
+									</div><!-- details -->
+								</div><!-- author -->
+							</div><!-- container__content -->
 						</div><!-- item__news -->
+						
 						<div class="item__news">
 							<a class="news-link" href="#"></a>
-								<div class="container__img">
-									<a href="#" class="btn-catagory software-news">News</a>
-									<img src="img/thumbnails/in-house-vs-outsourced.png" alt="">
-								</div>
-								<div class="container__content">
-									<h3 class="software-news"><a href="#">In-House vs Outsourced Software Development</a></h3>
-									<p>One of the most common dilemmas businesses face when embarking on a software development project is...</p>
-									<a href="#" class="btn btn-news software-news">Read More</a>
-									<div class="author">
-										<div class="avatar">
-											<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
-										</div><!-- avatar -->
-										<div class="details">
-											<strong>Posted by Netmatters</strong>
-											<br>
-											30th November 2022
-										</div><!-- author -->
-									</div><!-- container__content -->
-								</div><!-- container__img -->
-							
+							<div class="container__img">
+								<a href="#" class="btn-catagory software-news">News</a>
+								<img src="img/thumbnails/in-house-vs-outsourced.png" alt="In-House vs Outsourced Software Development">
+							</div><!-- container__img -->
+							<div class="container__content">
+								<h3 class="software-news"><a href="#">In-House vs Outsourced Software Development</a></h3>
+								<p>One of the most common dilemmas businesses face when embarking on a software development project is...</p>
+								<a href="#" class="btn btn-news software-news">Read More</a>
+								<div class="author">
+									<div class="avatar">
+										<img src="img/thumbnails/netmatters-ltd.png" alt="netmatters logo">
+									</div><!-- avatar -->
+									<div class="details">
+										<strong>Posted by Netmatters</strong>
+										<br>
+										30th November 2022
+									</div><!-- details -->
+								</div><!-- author -->
+							</div><!-- container__content -->
 						</div><!-- item__news -->
-					</div>
-					<div class="view-all">
-						<h3 class="view-all__view"><a href="#"><span>View All </span><em class="fa-solid fa-arrow-right"></em></a></h3></div>
+
+					</div><!-- news-list -->
+					
+					<div class="view-all mobile">
+						<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
+					</div><!-- view-all -->
+				
+<!-- CLIENT BANNER -->
+
+					<div class="client-banner flex medium clearfix">
+									
+							<div class="client">
+								<div class="greyscale">
+									<img src="img/clients/busseys-bw.jpg" alt="Busseys Logo">
+								</div>
+								<div class="coloured">
+									<img src="img/clients/busseys.png" alt="Busseys Logo">
+								</div>
+							</div><!-- client -->
+
+							<div class="client">
+								<div class="greyscale">
+									<img src="img/clients/crane-bw.jpg" alt="Crane Logo">
+								</div>
+								<div class="coloured">
+									<img src="img/clients/crane.png" alt="Crane Logo">
+								</div>
+							</div><!-- client -->
+
+							<div class="client">
+								<div class="greyscale">
+									<img src="img/clients/beat-bw.jpg" alt="Beat Logo">
+								</div>
+								<div class="coloured">
+									<img src="img/clients/beat.png" alt="Beat Logo">
+								</div>
+							</div><!-- client -->
+
+							<div class="client">
+								<div class="greyscale">
+									<img src="img/clients/northern-diver-bw.jpg" alt="Northern Diver Logo">
+								</div>
+								<div class="coloured">
+									<img src="img/clients/northern-diver.png" alt="Northern Diver Logo">
+								</div>
+							</div><!-- client -->
+
+					</div><!-- client-banner -->
 				</div><!-- wrapper-inner -->
-			</section>
+
+			</section><!-- news -->
 
 <!-- SIGN UP SECTION -->
 
 			<section class="sign-up">
+				
 				<div class="wrapper-inner">
-					<div class="container__sign-up">
-						<form action="index.html" method="post">
-							<h2>Email Newsletter Sign-Up</h2>
-							<div class="wrapper__input flex">
-								<div class="sign-up-input">
-									<div class="form-group">
-										<label for="name" class="required">Your Name</label>
-										<input type="text" id="user-name" name="name" class="form-control" required>
-									</div>
-								</div>
-								<div class="sign-up-input">
-									<div class="form-group">
-										<label for="email" class="required">Your Email</label>
-										<input type="email" id="user-email" name="email" class="form-control" required>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								
-								<label class="checkbox">
-									<span class="privacy">
-										<span class="privacy-check privacy-align">
-											<span class="button left">
-												<input type="checkbox" name="check">
-											</span>
-										</span>
+					
+					
+					<form action="index.html" method="post">
+						<h2>Email Newsletter Sign-Up</h2>
+						<div class="wrapper__input flex">
+							
+							<div class="sign-up-input">
+								<div class="form-group">
+									<label for="name" class="required">Your Name</label>
+									<input type="text" id="user-name" name="name" class="form-control" required>
+								</div><!-- form-group -->
+							</div><!-- sign-up-input -->
+							
+							<div class="sign-up-input">
+								<div class="form-group">
+									<label for="email" class="required">Your Email</label>
+									<input type="email" id="user-email" name="email" class="form-control" required>
+								</div><!-- form-group -->
+							</div><!-- sign-up-input -->
+						</div><!-- wrapper__input -->
+						
+						<div class="form-group">
+							<label>
+								<div class="container-privacy flex">
+									<div class="privacy">
+										<span class="privacy-check"><span class="button left"><input type="checkbox" name="check"></span></span>
+									</div><!-- privacy -->
+										
+									<div class="statement">
 										<span class="privacy-body">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#" class="check">Privacy Policy</a> for more information on how we keep your data safe.</span>
-									</span>
-								</label>
-							</div>
-							<button name="submit" class="btn subscribe">Subscribe</button>
-						</form>
-					</div><!-- container__sign-up -->
+									</div><!-- container-statement -->
+								</div><!-- container-privacy -->
+							</label>
+						</div><!-- form-group -->
+						
+						<button name="submit" class="btn btn-subscribe">Subscribe</button>
+
+					</form>
 				</div><!-- wrapper-inner -->
 			</section><!-- sign-up -->
 
@@ -387,8 +600,9 @@
 		<footer class="footer">
 			<div class="wrapper-inner">
 				<div class="container__footer">
-					<div class="footer-content flex">
+					<div class="footer-content">
 						<div class="footer-services flex">
+							
 							<div class="about">
 								<h4>About Netmatters</h4>
 								<ul>
@@ -402,6 +616,7 @@
 									<li><a href="#">Contact Us</a></li>
 								</ul>
 							</div><!-- about -->
+							
 							<div class="service-links">
 								<h4>Our Services</h4>
 								<ul>
@@ -411,10 +626,14 @@
 									<li><a href="#">Telecoms Services</a></li>
 									<li><a href="#">Web Design</a></li>
 									<li><a href="#">Cyber Security</a></li>
+									<li><a href="#">Developer Training</a></li>
 								</ul>
 							</div><!-- service-links -->
+						
 						</div><!-- footer-services -->
+						
 						<div class="offices flex">
+							
 							<div class="office">
 								<h4>Cambridge Office</h4>
 								<ul>
@@ -427,6 +646,7 @@
 									<li>Tel: <a href="#">01223 37 57 72</a></li>
 								</ul>
 							</div><!-- office -->
+							
 							<div class="office">
 								<h4>Wymondham Office</h4>
 								<ul>
@@ -439,6 +659,7 @@
 									<li>Tel: <a href="#">01603 70 40 20</a></li>
 								</ul>
 							</div><!-- office -->
+							
 							<div class="office">
 								<h4>Great Yarmouth Office</h4>
 								<ul>
@@ -451,28 +672,32 @@
 									<li>Tel: <a href="#">01493 60 32 04</a></li>
 								</ul>
 							</div><!-- office -->
+						
 						</div><!-- offices -->
 					</div><!-- footer-content -->
+					
 					<div class="footer-bottom flex">
+						
 						<div class="copyright flex">
-							&copy; Copyright Netmatters 2022.
-							<br>
-							All rights reserved.
-							<span>&nbsp;-&nbsp;</span>
+							&copy; Copyright Netmatters 2023. <br class="mobile">All rights reserved.
+							<span>&nbsp; - &nbsp;</span>
 							<ul>
 								<li><a href="#"> Sitemap </a></li>
 							</ul>
 						</div><!-- copyright -->
+						
 						<div class="social-media flex">
 							<a class="facebook" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></a>
 							<a class="twitter" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea96;" class="icon-twitter"></span></a>
 							<a class="instagram" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xea92;" class="icon-instagram"></span></a>
 							<a class="linkedin" href="#" target="_blank"><span aria-hidden="true" data-icon="&#xeaca;" class="icon-linkedin2"></span></a>
 						</div><!-- social-media -->
+					
 					</div><!-- footer-bottom -->
-				</div><!-- container-footer-->
+				
+				</div><!-- container__footer-->
 			</div><!-- wrapper-inner -->
-		</footer>
+		</footer><!-- footer -->
 		
 	</div><!-- wrapper-outer -->
 </body>

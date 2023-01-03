@@ -1,0 +1,114 @@
+// ========================================
+// Header
+// ========================================
+
+.header-inner		{
+	padding: 20px 0;
+}
+
+.container 			{
+	max-width: 48em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include mqm(medium)	{
+		max-width: 62em;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include mqm(large)	{
+		max-width: 78.75em;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+}
+
+.container__top		{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+}
+
+.wrapper-logo		{
+
+}
+
+.container__logo 	{
+	
+}
+
+.actions 			{
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+	margin-left: 40px;
+	& > *				{
+		margin-left: 20px;
+	}
+}
+
+.container__phone	{
+
+}
+
+.container__phone,
+.wrapper-hamburger	{
+}
+
+.container__hamburger	{
+}
+
+.search-wrapper		{
+	margin: 5px 0;
+}
+
+// Hero
+
+.hero				{
+	width: 100%;
+	min-height: 550px;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	&__item				{
+		@extend %overlay;
+		z-index: 2;
+	}
+}
+
+.overlay 			{
+	position: relative;
+	min-height: 550px;
+	text-align: center;
+	padding: 60px 0;
+	z-index: 3;
+	@include mqx(medium)	{
+		background: rgba(0, 0, 0, .5);
+	}
+	@include mqm(medium)	{
+		background: linear-gradient(270deg, transparent 25%, $black);
+	}
+	&__content			{
+		align-items: center;
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include mqm(medium)	{
+			margin-left: 0;
+			padding-left: 30px;
+			text-align: left;
+		}
+		@include mqm(large)		{
+			padding-left: 45px;
+		}
+	}
+}
+
+.text *				{
+	color: $white;
+}

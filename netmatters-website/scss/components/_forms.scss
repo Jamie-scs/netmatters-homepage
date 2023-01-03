@@ -1,0 +1,81 @@
+// ========================================
+// Form Elements
+// ========================================
+
+// Header
+
+.search__form	{
+	margin-top: 11px;
+	position: relative;
+}
+
+.search__bar	{
+	width: 100%;
+	position: relative;
+	height: 47px;
+	background-color: $news-border;
+	padding: 5px 40px 5px 15px;
+	border: 3px solid $search;
+	@include mqm(small)		{
+		height: 56px;
+		background-color: $white;
+		border-width: 1px;
+	}
+	@include mqm(medium)	{
+		@include mqx(large)		{
+		visibility: hidden;
+		width: 60px;
+		}
+	}
+}
+
+.search__submit		{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 5px;
+	font-size: 1em;
+	background: none;
+	border: none;
+	@include mqm(small)	{	
+		right: 0;
+		width: 60px;
+		font-size: 1em;
+		color: $white;
+		background-color: $search-submit;
+		@include btn($search-submit);
+		padding: 0;
+		border-radius: 3px;
+	}
+}
+
+// Newsletter
+
+.form-group 	{
+	margin: 0 0 15px;
+}
+
+.form-control	{
+	display: block;
+	width: 100%;
+	height: 47px;
+	background-color: $white;
+	padding: 5px 15px;
+	border: 1px solid $white;
+	border-radius: 2px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0,.075);
+}
+
+.required:after		{
+	content: " *";
+	color: $required;
+}
+
+.button	{
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: 3px solid $color-sec;
+	border-radius: 3px;
+	margin-right: 20px;
+}

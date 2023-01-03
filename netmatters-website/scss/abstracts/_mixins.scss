@@ -1,26 +1,37 @@
-// ==========================================================================
+// ========================================
 // Mixins
-// ==========================================================================
-
-// BEM selectors
-
-
+// ========================================
 
 // Media queries
 
+@mixin mqm($mq-breakpoint, $mq-breakpoints: $breakpoints) {
 
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
 
-// Generate modifier color classes
+@mixin mqx($mq-breakpoint, $mq-breakpoints: $breakpoints) {
 
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media screen and (max-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
 
-// Generating :before or :after pseudo-element shapes
+// Button Hover
 
-
-
-// Image replacement
-
-
-      
-// Adjacent sibling margins
-
-
+@mixin btn($color)  {
+    &:hover,
+    &:focus                 {
+        text-decoration: none;
+        background-color: darken($color, 10%);
+    }
+}
