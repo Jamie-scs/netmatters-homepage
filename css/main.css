@@ -913,12 +913,19 @@ article p {
   border-radius: 6px;
 }
 
-/* line 103, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
+@media screen and (min-width: 62em) {
+  /* line 94, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
+  .content .btn {
+    margin-bottom: 0;
+  }
+}
+
+/* line 106, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
 .btn-news:hover, .btn-news:focus {
   text-decoration: none;
 }
 
-/* line 111, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
+/* line 114, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
 .btn-catagory {
   position: absolute;
   top: 10px;
@@ -931,12 +938,12 @@ article p {
   padding: 0 10px;
 }
 
-/* line 121, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
+/* line 124, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
 .btn-catagory:hover, .btn-catagory:focus {
   text-decoration: underline;
 }
 
-/* line 127, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
+/* line 130, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/scss/components/_buttons.scss */
 .btn-subscribe {
   color: #ffffff;
   background-color: #333645;

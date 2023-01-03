@@ -95,6 +95,9 @@
 	font-size: 20px;
 	padding: 10px 30px;
 	border-radius: 6px;
+	@include mqm(medium)	{
+		margin-bottom: 0;
+	}
 }
 
 // News
