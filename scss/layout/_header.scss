@@ -7,18 +7,18 @@
 }
 
 .container 				{
-	max-width: 48em;
+	max-width: 48rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 15px;
 	padding-right: 15px;
 	@include mqm(medium)	{
-		max-width: 62em;
+		max-width: 62rem;
 		padding-left: 30px;
 		padding-right: 30px;
 	}
 	@include mqm(large)		{
-		max-width: 78.75em;
+		max-width: 78.75rem;
 		padding-left: 45px;
 		padding-right: 45px;
 	}
@@ -80,12 +80,13 @@
 		padding-left: 15px;
 		padding-right: 15px;
 		@include mqm(medium)	{
+			justify-content: flex-start;
 			margin-left: 0;
-			padding-left: 30px;
+			padding-left: calc((100vw - 62rem) / 2 + 30px);
 			text-align: left;
 		}
 		@include mqm(large)		{
-			padding-left: 45px;
+			padding-left: calc((100vw - 78.75rem) / 2 + 45px);
 		}
 	}
 }
