@@ -2,35 +2,35 @@
 // News
 // ========================================
 
-.heading-container		{
+.heading-container			{
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	margin-bottom: -30px;
 }
 
-.news-list			{
+.news-list					{
 	padding-bottom: 50px;
-	@include mqm(medium)	{
+	@include mqm(medium)		{
 		display: flex;
 		justify-content: space-between;
 	}
 }
 
-.item__news			{
+.item__news					{
 	font-size: .8125rem;
 	border: 1px solid $news-border;
 	border-radius: 3px;
 	margin-top: 30px;
 	box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
-	@include mqm(small)	{
+	@include mqm(small)			{
 		float: left;
 		max-width: 47%;
 	}
-	@include mqm(medium)	{
+	@include mqm(medium)		{
 		max-width: 49%;
 	}
-	@include mqm(large)	{
+	@include mqm(large)			{
 		max-width: 32%;
 	}
 }
@@ -49,21 +49,21 @@
 	}
 }
 
-.container__img		{
+.container__img				{
 	display: block;
 	position: relative;
 	border-radius: 3px 3px 0 0;
 }
 
-.container__content	{
+.container__content			{
 	display: block;
 	padding: 30px;
-	& h3>a				{
+	& h3>a						{
 		text-decoration: none;
 	}
 }
 
-.author				{
+.author						{
 	display: table;
 	width: 100%;
 	font-size: .875rem;
@@ -72,75 +72,67 @@
 	margin-top: 30px;
 }
 
-.avatar 			{
-
-}
-
-.details			{
-
-}
-
-h3.news a			{
+h3.news a					{
 	color: $news;
 }
 
 h3.careers a,
-h3.software-news a	{
+h3.software-news a			{
 	color: $software;
 }
 
-a.news				{
+a.news						{
 	background-color: $news;
 }
 
 a.careers,
-a.software-news		{
+a.software-news				{
 	background-color: $software;
 }
 
-.author>*			{
+.author>*					{
 	display: table-cell;
 	vertical-align: middle;
 }
 
-.author>.avatar 	{
+.author>.avatar 			{
 	width: 1%;
 	border-radius: 50%;
 	overflow: hidden;
 }
 
-.author>.details	{
+.author>.details			{
 	padding-left: 20px;
 	line-height: 1.375rem;
 }
 
 // Client Banner
 
-.client-banner		{
+.client-banner				{
 	flex-direction: row;
 	justify-content: space-between;
 	text-align: center;
 	padding: 50px 0 0;
 }
 
-.client 			{
+.client 					{
 	position: relative;
 	vertical-align: middle;
 	padding: 0 20px;
 }
 
-.client img 		{
+.client img 				{
 	width: 100%;
 }
 
 // Transitions
 
-.item__news			{
+.item__news					{
 	position: relative;
 	top: 0;
 	transition: .5s ease;
 	&:hover,
-	&:focus				{
+	&:focus						{
 		top: -10px;
 		transition: .5s ease;
 	}

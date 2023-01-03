@@ -592,19 +592,19 @@ article p {
 
 /* line 27, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/components/_img.scss */
 .greyscale {
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 1;
 }
 
-/* line 30, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/components/_img.scss */
+/* line 31, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/components/_img.scss */
 .greyscale:hover {
   opacity: 0;
 }
 
-/* line 35, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/components/_img.scss */
+/* line 36, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/components/_img.scss */
 .coloured {
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 0;
 }
 
@@ -1132,7 +1132,7 @@ nav {
   margin: 0;
 }
 
-/* line 42, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 34, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .actions {
   display: flex;
   justify-content: flex-end;
@@ -1140,17 +1140,17 @@ nav {
   margin-left: 40px;
 }
 
-/* line 47, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 39, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .actions > * {
   margin-left: 20px;
 }
 
-/* line 63, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 44, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .search-wrapper {
   margin: 5px 0;
 }
 
-/* line 69, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 50, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .hero {
   width: 100%;
   min-height: 550px;
@@ -1160,12 +1160,12 @@ nav {
   z-index: 1;
 }
 
-/* line 76, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 57, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .hero__item {
   z-index: 2;
 }
 
-/* line 82, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 63, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .overlay {
   position: relative;
   min-height: 550px;
@@ -1175,20 +1175,20 @@ nav {
 }
 
 @media screen and (max-width: 62em) {
-  /* line 82, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+  /* line 63, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
   .overlay {
     background: rgba(0, 0, 0, 0.5);
   }
 }
 
 @media screen and (min-width: 62em) {
-  /* line 82, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+  /* line 63, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
   .overlay {
     background: linear-gradient(270deg, transparent 25%, #000000);
   }
 }
 
-/* line 94, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 75, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .overlay__content {
   align-items: center;
   justify-content: center;
@@ -1199,7 +1199,7 @@ nav {
 }
 
 @media screen and (min-width: 62em) {
-  /* line 94, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+  /* line 75, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
   .overlay__content {
     margin-left: 0;
     padding-left: 30px;
@@ -1208,13 +1208,13 @@ nav {
 }
 
 @media screen and (min-width: 78.75em) {
-  /* line 94, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+  /* line 75, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
   .overlay__content {
     padding-left: 45px;
   }
 }
 
-/* line 112, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
+/* line 93, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_header.scss */
 .text * {
   color: #ffffff;
 }
@@ -1657,48 +1657,48 @@ nav {
   margin-top: 30px;
 }
 
-/* line 83, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 75, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 h3.news a {
   color: #926fb1;
 }
 
-/* line 87, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 79, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 h3.careers a,
 h3.software-news a {
   color: #67809f;
 }
 
-/* line 92, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 84, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 a.news {
   background-color: #926fb1;
 }
 
-/* line 96, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 88, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 a.careers,
 a.software-news {
   background-color: #67809f;
 }
 
-/* line 101, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 93, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .author > * {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 106, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 98, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .author > .avatar {
   width: 1%;
   border-radius: 50%;
   overflow: hidden;
 }
 
-/* line 112, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 104, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .author > .details {
   padding-left: 20px;
   line-height: 1.375rem;
 }
 
-/* line 119, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 111, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .client-banner {
   flex-direction: row;
   justify-content: space-between;
@@ -1706,26 +1706,26 @@ a.software-news {
   padding: 50px 0 0;
 }
 
-/* line 126, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 118, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .client {
   position: relative;
   vertical-align: middle;
   padding: 0 20px;
 }
 
-/* line 132, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 124, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .client img {
   width: 100%;
 }
 
-/* line 138, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 130, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .item__news {
   position: relative;
   top: 0;
   transition: .5s ease;
 }
 
-/* line 142, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
+/* line 134, ../../netmatters/HTML & CSS Reflection/netmatters-homepage/netmatters-website/scss/layout/_news.scss */
 .item__news:hover, .item__news:focus {
   top: -10px;
   transition: .5s ease;

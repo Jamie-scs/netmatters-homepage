@@ -2,16 +2,16 @@
 // Nav Bar
 // ========================================
 
-nav 					{
+nav 						{
 	background-color: $color-sec;
 }
 
-.nav-bar				{
+.nav-bar					{
 	display: flex;
 	flex-direction: row;
 }
 
-.nav-item				{
+.nav-item					{
 	flex-grow: 1;
 	padding: 1.1875rem 0 1.125rem;
 	margin: 5px, 15px;
@@ -19,37 +19,37 @@ nav 					{
 }
 
 
-.nav-item a				{
+.nav-item a					{
 	color: $white;
 	&:hover,
-	&:focus					{
+	&:focus						{
 		text-decoration: none;
 	}
 }
 
-.nav-item a *			{
+.nav-item a *				{
 	background: transparent;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-.nav-item a > span  	{
+.nav-item a > span  		{
 	display: block;
 }
 
-.h6						{
+.h6							{
 	font-size: .6875rem;
 	font-weight: 200;
 	margin: .5rem 0 0;
 }
 
-.h5						{
+.h5							{
 	font-size: 1.125rem;
 	font-weight: 200;
 	margin: -8px 0 0px;
 }
 
-.nav-icon 				{
+.nav-icon 					{
 	&.software					{
 		color: $software;
 	}
@@ -74,33 +74,33 @@ nav 					{
 }
 
 .nav-item:hover,
-.nav-item:focus			{
-	.nav-icon				{
+.nav-item:focus				{
+	.nav-icon					{
 		color: $white;
 	}
-	&.software					{
+	&.software						{
 		background-color: $software;
 	}
-	&.support					{
+	&.support						{
 		background-color: $support;
 	}
-	&.marketing					{
+	&.marketing						{
 		background-color: $marketing;
 	}
-	&.telecoms					{
+	&.telecoms						{
 		background-color: $telecoms;
 	}
-	&.web						{
+	&.web							{
 		background-color: $web;
 	}
-	&.security					{
+	&.security						{
 		background-color: $security;
 	}
-	&.training					{
+	&.training						{
 		background-color: $training;
 	}
 }
 
-.nav-icn				{
+.nav-icn					{
 	font-size: 1.4375rem;
 }

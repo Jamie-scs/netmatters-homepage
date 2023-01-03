@@ -2,12 +2,12 @@
 // Footer
 // ========================================
 
-footer * 			{
+footer * 				{
 	color: $white;
 }
 
-.footer-content		{
-	@include mqm(large)	{
+.footer-content			{
+	@include mqm(large)		{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -19,31 +19,31 @@ footer * 			{
 	text-decoration: underline;
 }
 
-.footer-services	{
+.footer-services		{
 	justify-content: center;
-	@include mqm(small)	{
+	@include mqm(small)		{
 		justify-content: space-evenly;
 	}
 }
 
-.offices			{
+.offices				{
 	justify-content: center;
 	flex-wrap: wrap;
-	@include mqm(small)	{
+	@include mqm(small)		{
 		justify-content: space-evenly;
 	}
 }
 
 .about,
 .service-links,
-.office				{
+.office					{
 	width: 225px;
 	margin: 0 0 30px;
 }
 
 // Copyright / Social links
 
-.footer-bottom		{
+.footer-bottom			{
 	justify-content: space-between;
 	font-size: .8125rem;
 	padding-top: 10px;
@@ -51,45 +51,45 @@ footer * 			{
 	margin-top: 10px;
 }
 
-.copyright			{
+.copyright				{
 	padding-top: 5px;
 }
 
-.social-media		{
+.social-media			{
 	justify-content: flex-end;
 	font-size: .9rem;
 	margin-top: -5px;
 }
 
-.social-media a		{
+.social-media a			{
 	display: block;
 	text-align: center;
 	text-decoration: none;
 	padding: 7px 10px 10px;
 	border-radius: 50%;
 	max-height: 38px;
-	&span 				{
+	&span 					{
 		position: relative;
 		top: 4px;
 	}
 }
 
 .facebook:hover,
-.facebook:focus	{
+.facebook:focus			{
 	background-color: $facebook;
 }
 
 .twitter:hover,
-.twitter:focus	{
+.twitter:focus			{
 	background-color: $twitter;
 }
 
 .instagram:hover,
-.instagram:focus	{
+.instagram:focus		{
 	background-color: $instagram;
 }
 
 .linkedin:hover,
-.linkedin:focus	{
+.linkedin:focus			{
 	background-color: $linkedin;
 }

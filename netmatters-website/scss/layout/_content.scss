@@ -2,7 +2,7 @@
 // Main
 // ========================================
 
-.wrapper-content	{
+.wrapper-content		{
 	display: flex;
 	justify-content: space-between;
 	@include mqx(medium)	{
@@ -10,36 +10,36 @@
 	}
 }
 
-.content-item		{
+.content-item			{
 	@include mqm(medium)	{
 		width: 50%;
 	}
 }
 
-.content 			{
+.content 				{
 	color: $white;
 }
 
-.container__article	{
+.container__article		{
 	@include mqm(medium)	{
 		margin-right: 1rem;
 	}
 }
 
-.content-link 		{
+.content-link 			{
 	color: $white;
 	&:hover,
-	&:focus 		{
+	&:focus 				{
 		text-decoration: underline;
 	}
 }
 
-.container__quote	{
+.container__quote		{
 	@include mqm(medium)	{
 		margin-left: 1rem;
 	}
 }
 
-.stars 	{
+.stars 					{
 	margin-bottom: 25px;
 }

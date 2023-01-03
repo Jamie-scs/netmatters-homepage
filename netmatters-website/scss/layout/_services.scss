@@ -1,16 +1,16 @@
-// ========================================
+	// ========================================
 // Services
 // ========================================
 
-.services-container		{
+.services-container			{
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 }
 
-.services				{
+.services					{
 	flex-direction: column;
-	@include mqm(small)		{
+	@include mqm(small)			{
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -18,15 +18,15 @@
 	}
 }
 
-.col-pri 				{
+.col-pri 					{
 	margin: 30px 0 0;
-	@include mqm(small)		{
+	@include mqm(small)			{
 		width: 100%;
 	}
-	@include mqm(medium)	{
+	@include mqm(medium)		{
 		width: 31.125%;
 	}
-	@include mqm(large)		{
+	@include mqm(large)			{
 		width: 31.5%;
 	}
 }
@@ -37,12 +37,12 @@
 	}
 }
 
-.col-sec				{
+.col-sec					{
 	margin: 30px 0 0;
-	@include mqm(small)		{
+	@include mqm(small)			{
 		width: 47.9%;
 	}
-	@include mqm(large)		{
+	@include mqm(large)			{
 		width: 23%;
 	}
 }
@@ -59,7 +59,7 @@
 	}
 }
 
-.service				{
+.service					{
 	display: block;
 	position: relative;
 	top: 0;
@@ -74,7 +74,7 @@
 	box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
 }
 
-.service-icon 			{
+.service-icon 				{
 	height: 65px;
 	width: 65px;
 	color: $white;
@@ -82,41 +82,41 @@
 	margin: 0 auto 17px;
 }
 
-.service-icon 			{
-	&.software				{
+.service-icon 				{
+	&.software					{
 		background-color: $software;
 	}
-	&.support				{
+	&.support					{
 		background-color: $support;
 	}
-	&.marketing				{
+	&.marketing					{
 		background-color: $marketing;
 	}
-	&.telecoms				{
+	&.telecoms					{
 		background-color: $telecoms;
 	}
-	&.web					{
+	&.web						{
 		background-color: $web;
 	}
-	&.security				{
+	&.security					{
 		background-color: $security;
 	}
-	&.training				{
+	&.training					{
 		background-color: $training;
 	}
 }
 
-.service-icn			{
+.service-icn				{
 	font-size: 2.2rem;
 	padding-top: .85rem;
 }
 
-.service > span 		{
+.service > span 			{
 	display: block;
 }
-
-.service-btn .marketing	{
-	@include mqm(medium)	{
+	
+.service-btn .marketing		{
+	@include mqm(medium)		{
 		position: relative;
 		bottom: -22px;
 	}
@@ -125,59 +125,59 @@
 // Transitions
 
 .service:hover,
-.service:focus			{
+.service:focus				{
 	top: -10px;
 	transition: .5s ease;
 	text-decoration: none;
 	border-color: transparent;
 	.h2,
-	.p 						{
+	.p 							{
 		color: $white;
 	}
 	.service-icon,
-	.btn 					{
+	.btn 						{
 		background-color: $white;
-		&.software				{
+		&.software					{
 			color: $software;
 		}
-		&.support				{
+		&.support					{
 			color: $support;
 		}
-		&.marketing				{
+		&.marketing					{
 			color: $marketing;
 		}
-		&.telecoms				{
+		&.telecoms					{
 			color: $telecoms;
 		}
-		&.web					{
+		&.web						{
 			color: $web;
 		}
-		&.security				{
+		&.security					{
 			color: $security;
 		}
-		&.training				{
+		&.training					{
 			color: $training;
 		}
 	}
-	&.software				{
+	&.software					{
 		background-color: $software;
 	}
-	&.support				{
+	&.support					{
 		background-color: $support;
 	}
-	&.marketing				{
+	&.marketing					{
 		background-color: $marketing;
 	}
-	&.telecoms				{
+	&.telecoms					{
 		background-color: $telecoms;
 	}
-	&.web					{
+	&.web						{
 		background-color: $web;
 	}
-	&.security				{
+	&.security					{
 		background-color: $security;
 	}
-	&.training				{
+	&.training					{
 		background-color: $training;
 	}
 }
