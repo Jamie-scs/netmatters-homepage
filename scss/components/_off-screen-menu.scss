@@ -1,0 +1,80 @@
+// nav	{
+// 	margin-top: 4rem;
+// 	padding: 1rem;
+// 	display: flex;
+// 	justify-content: flex-end;
+// 	align-items: center;
+// }
+
+.hamburger-menu	{
+	height: 3.5rem;
+	width: 3.75rem;
+	position: relative;
+	cursor: pointer;
+	padding: 1rem;
+	background-color: $color-sec;
+	margin-top: auto;
+	margin-bottom: 5px;
+	@include btn($color-sec);
+	border-radius: 0.15rem;
+	transition: ease .3s;
+}
+
+.ham-bar	{
+	width: 55%;
+	height: 0.25rem;
+	background-color: #fff;
+	border-radius: 0.15rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform .5s, opacity .6s, top .5s;
+}
+
+.bar-top	{
+	top: 32.5%;
+}
+
+.bar-bottom	{
+	top: 67.5%;
+}
+
+.hamburger-menu.active	{
+	border: none;
+	background-color: $color-sec;
+	opacity: 1;
+}
+
+.hamburger-menu.active .bar-top	{
+	transform: translate(-50%, -50%) rotate(-315deg);
+	top: 50%;
+}
+
+.hamburger-menu.active .bar-mid	{
+	transform: translate(-50%, -50%) rotate(180deg);
+	opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom	{
+	transform: translate(-50%, -50%) rotate(-225deg);
+	top: 50%;
+}
+
+.off-screen-menu	{
+	position: fixed;
+	top: 0;
+	right: -17.1875rem;
+	background-color: $color-sec;
+	height: 100dvh;
+	width: 17.1875rem;
+	transition: right ease .5s;
+	@include mqm(large)	{
+		right: -21.875rem;
+		width: 21.875rem;
+	}
+}
+
+.off-screen-menu.active	{
+	right: 0;
+}
