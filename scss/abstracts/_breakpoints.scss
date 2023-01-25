@@ -3,7 +3,12 @@
 // ========================================
 
 $breakpoints:		(
-	small: 48em,
-	medium: 62em,
-	large: 78.75em
+	small: 48rem,
+	medium: 62rem,
+	large: 78.75rem
+);
+
+$sidebar-widths:			(
+	mobile: 17.1875rem,
+	full: 21.875rem
 );

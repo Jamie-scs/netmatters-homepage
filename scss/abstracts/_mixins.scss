@@ -4,26 +4,45 @@
 
 // Media queries
 
-@mixin mqm($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+@mixin mqm($mq-breakpoint, $mq-breakpoints: $breakpoints)   {
 
-  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
-  }
+    @if map-has-key($mq-breakpoints, $mq-breakpoint)            {
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
   
-  @media screen and (min-width: #{$mq-breakpoint}) {
-    @content;
-  }
+    @media screen and (min-width: #{$mq-breakpoint})            {
+        @content;
+    }
 }
 
-@mixin mqx($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+@mixin mqx($mq-breakpoint, $mq-breakpoints: $breakpoints)   {
 
-  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
-  }
+    @if map-has-key($mq-breakpoints, $mq-breakpoint)            {
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+    }
   
-  @media screen and (max-width: #{$mq-breakpoint}) {
-    @content;
-  }
+    @media screen and (max-width: #{$mq-breakpoint})            {
+        @content;
+    }
+}
+
+// Sidebar Width Query
+
+@mixin sbw($sq-sidebar-width, $sq-sidebar-widths: $sidebar-widths) {
+
+    @if map-has-key($sq-sidebar-widths, $sq-sidebar-width) {
+        $sq-sidebar-width: map-get($sq-sidebar-widths, $sq-sidebar-width);
+    }
+    width: #{$sq-sidebar-width};
+    right:-#{$sq-sidebar-width};
+}
+
+@mixin mmw($sq-sidebar-width, $sq-sidebar-widths: $sidebar-widths) {
+
+    @if map-has-key($sq-sidebar-widths, $sq-sidebar-width) {
+        $sq-sidebar-width: map-get($sq-sidebar-widths, $sq-sidebar-width);
+    }
+    transform: translateX(-#{$sq-sidebar-width});
 }
 
 // Button Hover

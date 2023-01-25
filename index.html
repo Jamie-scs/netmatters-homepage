@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Full Service Digital Agency | Cambridgeshire & Norfolk Netmatters</title>
     <script src="https://kit.fontawesome.com/239888be0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="js/jquery/owl-carousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="js/jquery/owl-carousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +16,97 @@
 </head>
 
 <body>
-	<div class="wrapper-outer">
+	<div class="off-screen-menu">
+		<ul>
+			<li>
+				<a href="#">services</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>bespoke software</span></a></li>
+						<li><a href="#"><span>it support</span></a></li>
+						<li><a href="#"><span>digital marketing</span></a></li>
+						<li><a href="#"><span>telecoms services</span></a></li>
+						<li><a href="#"><span>web design</span></a></li>
+						<li><a href="#"><span>cyber security</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">our work</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>case studies</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">events</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>how to generate more leads through your website</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">our knowledge</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>technologies</span></a></li>
+						<li><a href="#"><span>industries</span></a></li>
+						<li><a href="#"><span>news</span></a></li>
+						<li><a href="#"><span>insights</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">training</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>train for a career in tech</span></a></li>
+						<li><a href="#"><span>skills bootcamp</span></a></li>
+						<li><a href="#"><span>scs frequently asked questions</span></a></li>
+						<li><a href="#"><span>scion collaborators</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">our company</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>why choose us?</span></a></li>
+						<li><a href="#"><span>our culture</span></a></li>
+						<li><a href="#"><span>our team</span></a></li>
+						<li><a href="#"><span>our careers</span></a></li>
+						<li><a href="#"><span>our benefits</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">contact us</a>
+				<div class="sub-menu">
+					<ul>
+						<li><a href="#"><span>cambridge office</span></a></li>
+						<li><a href="#"><span>wymondham office</span></a></li>
+						<li><a href="#"><span>great yarmouth office</span></a></li>
+					<ul>
+				</div>
+			</li>
+			<li>
+				<a href="#">covid risk assessments</a>
+			</li>
+		</ul>
+	</div><!-- off-screen-menu -->
+	<div class="tint">
+	</div><!-- tint -->
+	<div class="main">
 		<header class="header">
 			<div class="header-inner">
 				<div class="container">
 					
 					<div class="container__top">
-							<div class="container__logo">
-								<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
-							</div><!-- container__logo -->
+						<div class="container__logo">
+							<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
+						</div><!-- container__logo -->
 						
 						
 						<div class="actions">
@@ -55,9 +139,6 @@
 									<div class="ham-bar bar-bottom"></div>
 								</div><!-- hamburger-menu -->
 						</div><!-- actions -->
-						<div class="off-screen-menu">
-							<!-- menu-items -->
-						</div><!-- off-screen-menu -->
 					</div><!-- container__top -->
 					
 					<div class="search-wrapper mobile">
@@ -252,14 +333,13 @@
 		
 <!-- PARTNER CAROUSELL SECTION -->
 
-			<div class="partner-slideshow">
+			<div class="owl-carousel partner-slideshow">
 				
-				<div class="wrapper-carousel">
+				<div class="owl-stage-outer wrapper-carousel">
 
-					<div class="carousel flex">
+					<div class="owl-stage carousel">
 									
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth">
 								</div>
@@ -267,10 +347,8 @@
 									<img src="img/partners/investing-in-future-growth.jpg" alt="Investing in Future Growth">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter">
 								</div>
@@ -278,10 +356,8 @@
 									<img src="img/partners/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/PPC_logo-bw.jpg" alt="PPC">
 								</div>
@@ -289,10 +365,8 @@
 									<img src="img/partners/PPC_logo.jpg" alt="PPC">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/princess-royal-training-bw.jpg" alt="Princess Royal Training">
 								</div>
@@ -300,10 +374,8 @@
 									<img src="img/partners/princess-royal-training.jpg" alt="Princess Royal Training">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/future-50-bw.jpg" alt="Future 50">
 								</div>
@@ -313,8 +385,7 @@
 							</div><!-- partner -->
 						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/qms-bw.jpg" alt="QMS ISO 9001">
 								</div>
@@ -322,10 +393,8 @@
 									<img src="img/partners/qms.jpg" alt="QMS ISO 9001">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/iso_27001-bw.jpg" alt="QMS ISO 27001">
 								</div>
@@ -333,10 +402,8 @@
 									<img src="img/partners/iso_27001.jpg" alt="QMS ISO 27001">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/skills-of-tomorrow-bw.jpg" alt="Skills of Tomorrow">
 								</div>
@@ -344,10 +411,8 @@
 									<img src="img/partners/skills-of-tomorrow.jpg" alt="Skills of Tomorrow">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
-						<div class="container__partner left">
-							<div class="partner">
+							<div class="owl-item partner">
 								<div class="greyscale">
 									<img src="img/partners/google-partner-bw.jpg" alt="Google Partner">
 								</div>
@@ -355,10 +420,63 @@
 									<img src="img/partners/google-partner.jpg" alt="Google Partner">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
+
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/investing-in-future-growth-bw.jpg" alt="Investing in Future Growth">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/investing-in-future-growth.jpg" alt="Investing in Future Growth">
+								</div>
+							</div><!-- partner -->
+						
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/norfolk-carbon-charter-bw.jpg" alt="Norfolk Carbon Charter">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter">
+								</div>
+							</div><!-- partner -->
+						
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/PPC_logo-bw.jpg" alt="PPC">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/PPC_logo.jpg" alt="PPC">
+								</div>
+							</div><!-- partner -->
+						
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/princess-royal-training-bw.jpg" alt="Princess Royal Training">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/princess-royal-training.jpg" alt="Princess Royal Training">
+								</div>
+							</div><!-- partner -->
+						
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/future-50-bw.jpg" alt="Future 50">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/future-50.jpg" alt="Future 50">
+								</div>
+							</div><!-- partner -->
+						
+							<div class="owl-item partner">
+								<div class="greyscale">
+									<img src="img/partners/qms-bw.jpg" alt="QMS ISO 9001">
+								</div>
+								<div class="coloured">
+									<img src="img/partners/qms.jpg" alt="QMS ISO 9001">
+								</div>
+							</div><!-- partner -->
 					
-					</div><!-- carousel -->
-				</div><!-- wrapper-carousel -->
+					</div><!-- owl-stage -->
+				</div><!-- owl-stage-outer wrapper-carousel -->
 			</div><!-- partner-slideshow -->
 			
 <!-- MAIN CONTENT SECTION -->
@@ -700,7 +818,10 @@
 			</div><!-- wrapper-inner -->
 		</footer><!-- footer -->
 		
-	</div><!-- wrapper-outer -->
+	</div><!-- main -->
+
+<script src="js/jquery/jquery-3.6.3.min.js"></script>
+<script src="js/jquery/owl-carousel/owl.carousel.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

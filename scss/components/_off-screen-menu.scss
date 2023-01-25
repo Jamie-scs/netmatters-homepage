@@ -1,10 +1,8 @@
-// nav	{
-// 	margin-top: 4rem;
-// 	padding: 1rem;
-// 	display: flex;
-// 	justify-content: flex-end;
-// 	align-items: center;
-// }
+// ========================================
+// Off Screen Menu
+// ========================================
+
+// Menu Button
 
 .hamburger-menu	{
 	height: 3.5rem;
@@ -61,20 +59,31 @@
 	top: 50%;
 }
 
+// Sidebar Menu
+
 .off-screen-menu	{
 	position: fixed;
 	top: 0;
-	right: -17.1875rem;
+	z-index: 10;
 	background-color: $color-sec;
 	height: 100dvh;
-	width: 17.1875rem;
+	@include sbw(mobile);
 	transition: right ease .5s;
 	@include mqm(large)	{
-		right: -21.875rem;
-		width: 21.875rem;
+		@include sbw(full);
 	}
 }
 
 .off-screen-menu.active	{
 	right: 0;
+}
+
+.off-screen-menu ul		{
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	padding: 15px 20px;
+	a 						{
+		color: $white;
+
+	}
 }

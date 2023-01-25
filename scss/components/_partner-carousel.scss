@@ -1,0 +1,44 @@
+// ========================================
+// Partner Carousel
+// ========================================
+
+.partner-slideshow	{
+	display: block;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.wrapper-carousel	{
+	position: relative;
+	max-height: 70px;
+	z-index: 1;
+}
+
+.carousel			{
+	display: flex;
+	align-items: center;
+}
+
+.partner			{
+	display: flex;
+	position: relative;
+	max-height: 70px;
+	justify-content: center;
+	align-content: center;
+}
+
+// Partner / Client logos
+
+.greyscale				{
+	position: relative;
+	z-index: 1;
+	&:hover					{
+		opacity: 0;
+	}
+}
+
+.coloured 				{
+	position: absolute;
+	top: 0;
+	z-index: 0;
+} 
