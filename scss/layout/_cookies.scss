@@ -1,0 +1,184 @@
+// ========================================
+// Cookies
+// ========================================
+
+// Cookie Tint
+
+.tint			{
+	position: fixed;
+	width: 100dvw;
+	height: 100dvh;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Cookie Pop Up
+
+.cookies				{
+	width: 544px;
+	height: auto;
+	z-index: 11;
+	background: $white;
+	border-radius: 0.25rem;
+	h2 						{
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin: 1rem auto 1rem 1rem;
+	}
+	p 						{
+		font-size: 1rem;
+		color: $contact;
+		padding: 1rem 1rem 2.5rem;
+		border-top: 1px solid $news-border;
+		border-bottom: 1px solid $news-border;
+		margin: 0;
+	}
+}
+
+// Cookie Policy Buttons
+
+.cp-buttons				{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.cp-btn					{
+	&-change 				{
+		background-color: $contact;
+		@extend %cp-btn;
+	}
+	&-accept 				{
+		background-color: $news;
+		@extend %cp-btn;
+	}
+}
+
+// Cookie Preferences Page
+
+.preferences			{
+	width: 100dvw;
+	min-height: 100dvh;
+	z-index: 11;
+	color: $black;
+	background: $white;
+	overflow-y: scroll;
+	h2 						{
+		font-size: 2.25rem;
+		font-weight: 400;
+		color: $color-sec;
+		margin: 28px 0;
+	}
+	ul 						{
+	    display: block;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	    padding-inline-start: 40px;
+	}
+	p,
+	li 					{
+		font-size: 0.875rem;
+		color: $footer-border;
+	}
+	li 						{
+	    list-style-type: disc;
+	}
+}
+
+// Cookie Preference Buttons
+
+.cs-btn-container	{
+	@include mqm(large)	{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.dp-btn-container	{
+	margin: 2rem 0 1rem;
+}
+
+.cs-btn				{
+	font-size: 1.063rem;
+	line-height: 2.1875rem;
+	text-transform: uppercase;
+	padding: 0.3125rem 0.9375rem;
+	border-radius: 0.1875rem;
+	color: #ddd;
+	background-color: $white;
+	border: 0.0625px solid #ddd;
+}
+
+.cs-btn.active		{
+	color: $white;
+	background-color: $news;
+	border-color: $news;
+}
+
+button.btn-grey		{
+	@extend %cs-btn;
+	color: $white;
+	background-color: $contact;
+	border: 0.0625px solid $contact;
+}
+
+button.cp-submit	{
+	@extend %cs-btn;
+	color: $white;
+	background-color: $news;
+	border: 0.0625px solid $news;
+}
+
+// Table Elements
+
+.detailed-preferences		{
+	margin-bottom: 3rem;
+	table 				{
+		overflow-x: scroll;
+	}
+	td, th 				{
+		min-width: 20px;
+		border: 1px solid #fff;
+		padding: 1rem;
+	}
+	th 					{
+		text-align: left;
+		color: $white;
+		background-color: #aaa;
+	}
+	td 					{
+		color: $footer-border;
+		background-color: #ddd;
+	}
+}
+
+.expand					{
+	cursor: pointer;
+}
+
+.tc-details				{
+	padding-bottom: 0.5rem;
+}
+
+// Detailed Preference Table Buttons
+
+.btn-grey	{
+	@include btn($contact);
+}
+
+.tb-btn				{
+	font-size: 1rem;
+	line-height: 1.25rem;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $contact;
+	padding: 0.3125rem 0.9375rem;
+	border: 0.0625rem solid $contact;
+	border-radius: 0.1875rem;
+	margin: 0.125rem;
+	@include btn($contact);
+}

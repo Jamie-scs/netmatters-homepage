@@ -25,13 +25,6 @@
 	border-radius: 3px;
 	margin-bottom: 0;
 	cursor: pointer;
-	&-software			{
-		background-color: $software;
-		@include btn($software);
-		font-size: 20px;
-		padding: 13px 20px;
-		margin: 31px 0 18px;
-	}
 	&-content 			{
 		background-color: $btn-content;
 		@include btn($btn-content);
@@ -72,22 +65,45 @@
 	}
 }
 
-// .btn-hamburger			{
-// 	height: 56px;
-// 	color: $white;
-// 	background-color: $color-sec;
-// 	@include btn($color-sec);
-// 	padding: 5px 15px;
-// }
+// Hero
 
-// .hamburger-box			{
-// 	display: block;
-// 	position: relative;
-// 	width: 33px;
-// 	height: 40px;
-// 	font-size: 1.438rem;
-// 	line-height: 45px;
-// }
+.hero-btn 				{
+	&-netmatters			{
+		background-color: $news;
+		@include btn($news);
+		@extend %hero-btn;
+	}
+	&-software			{
+		background-color: $software;
+		@include btn($software);
+		@extend %hero-btn;
+	}
+	&-support			{
+		background-color: $support;
+		@include btn($support);
+		@extend %hero-btn;
+	}
+	&-marketing			{
+		background-color: $marketing;
+		@include btn($marketing);
+		@extend %hero-btn;
+	}
+	&-telecoms			{
+		background-color: $telecoms;
+		@include btn($telecoms);
+		@extend %hero-btn;
+	}
+	&-web			{
+		background-color: $web;
+		@include btn($web);
+		@extend %hero-btn;
+	}
+	&-security			{
+		background-color: $security;
+		@include btn($security);
+		@extend %hero-btn;
+	}
+}
 
 // Main Content
 

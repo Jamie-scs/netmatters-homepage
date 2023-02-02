@@ -45,23 +45,58 @@
 	margin: 5px 0;
 }
 
+.initial-header	{
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+.sticky-header	{
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	background-color: $white;
+	transition: top 0.4s ease;
+}
+
+.sticky				{
+	position: fixed;
+	top: -173px;
+	z-index: 10;
+	width: 100%;
+	background-color: $white;
+	transition: top 0.4s ease;
+	@include mqm(small)	{
+		top: -117px;
+	}
+	@include mqm(medium)	{
+		top: -224px;
+	}
+}
+
 // Hero
 
-.hero					{
-	width: 100%;
-	min-height: 550px;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	z-index: 1;
-	&__item					{
-		@extend %overlay;
-		z-index: 2;
+#hero-banner				{
+	margin-top: 173px;
+	@include mqm(medium)	{
+		margin-top: 117px;
 	}
+	@include mqm(medium)	{
+		margin-top: 224px;
+	}
+}
+
+.hero__item					{
+	@extend %overlay;
+	width: 100%;
+	z-index: 2;
 }
 
 .overlay 				{
 	position: relative;
+	width: 100%;
 	min-height: 550px;
 	text-align: center;
 	padding: 60px 0;
@@ -93,4 +128,11 @@
 
 .text *					{
 	color: $white;
+}
+
+.owl-dots			{
+	position: absolute;
+	left: 50%;
+	bottom: 44px;
+	z-index: 7;
 }

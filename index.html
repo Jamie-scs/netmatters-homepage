@@ -16,217 +16,521 @@
 </head>
 
 <body>
+	<div id="tint" class="tint hidden">
+		<div id="consent-popup" class="cookies hidden">
+			<header>
+				<h2>cookies policy</h2>
+			</header>
+			<main>
+				<p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on "Privacy Policy" otherwise click "Accept Cookies" to enter.</p>
+			</main>
+			<footer>
+				<div class="cp-buttons">
+					<div id="cs-change" class="cp-btn-change">change settings</div>
+					<div id="cs-accept" class="cp-btn-accept">accept cookies</div>
+				</div>
+			</footer>
+		</div><!-- cookies -->
+	</div><!-- menu-tint -->
+	<div id="cookie-settings" class="preferences hidden">
+		<div class="wrapper-inner">
+			<h2>cookie preferences</h2>
+			<p>Netmatters uses cookies on their website. Cookies are small text files that are stored on your computer or other device by websites that you visit. This page explains the cookies we use and what we use them for, and lets you turn them on or off. (Some cookies are necessary in order for our website to work properly.) We also explain below which other companies use cookies on our website and what they use them for, and lets you turn those other companies' cookies on or off.</p>
+			<p>Our website uses cookies in order to make the website easier to use, to support the provision of information and functionality to you, as well as to provide us with information about how the website is used so that we can make sure it is as up to date, relevant and error free as we can. We also use cookies to try to ensure that our online adverts reflect the interests of web users. Further information about the types of cookies that are used on our website is set out box below.</p>
+			<p>As well as the options provided below, you can choose to restrict or block cookies through your browser settings at any time. For more information about how to do this, and about cookies in general, you can visit www.cookiepedia.co.uk and www.youronlinechoices.eu. However, please be aware that restricting or blocking cookies set on our website may impact the functionality or performance of the website, or prevent you from using certain services provided through the website.</p>
+			<p>Please note that third parties (including, for example, advertising networks and providers of external services like website analysis services) may also use cookies, over which we have no control, although we may receive services from these third parties (including, for example, for targeted advertising purposes and website analytics). These cookies are likely to be performance cookies or targeting cookies (as described below).</p>
+			<h2>Functional Cookies</h2>
+			<p>Functional cookies allow our website to remember choices you make, such as your user name, log in details or language preferences, and any customisations you make to pages on our website during your visit.</p>
+			<strong>Examples of how we use these cookies include:</strong>
+			<ul>
+				<li>Live chat</li>
+			</ul>
+			<div class="cs-btn-container">
+				<div>
+					<button type="button" class="cs-btn disable active">disable</button>
+					<button type="button" class="cs-btn enable">enable</button>
+				</div>
+			</div>
+			<h2>Performance & Analytics</h2>
+			<p>These cookies help us understand how people use our website. They collect information such as which pages on our website visitors go to most often, which features they use, and which websites people have visited before they visit ours. We use this information to improve our website and provide a better user experience.</p>
+			<strong>Examples of how we use these cookies include:</strong>
+			<ul>
+				<li>Monitoring and providing statistics on how our website is used.</li>
+				<li>Helping us improve our website by measuring any errors that occur.</li>
+				<li>Testing the website's design and operability</li>
+			</ul>
+			<div class="cs-btn-container">
+				<div>
+					<button type="button" class="cs-btn disable active">disable</button>
+					<button type="button" class="cs-btn enable">enable</button>
+				</div>
+			</div>
+			<p>Different web browsers may use different methods for managing cookies. Please follow the instructions below, from the web browser manufacturers directly, to configure your browser settings*.</p>
+			<ul>
+				<li><a href="#">Microsoft Internet Explorer (IE)</a></li>
+				<li><a href="#">Google Chrome</a></li>
+				<li><a href="#">Safari</a></li>
+				<li><a href="#">Firefox</a></li>
+			</ul>
+			<div class="dp-container">
+				<div class="dp-btn-container">
+					<button type="button" id="preferences-show" class="btn-grey">show detailed preferences</button>
+				</div><!-- dp-btn-container -->
+				<table id="detailed-preferences" class="detailed-preferences hidden">
+					<thead>
+						<th>Company</th>
+						<th>Domain</th>
+						<th width="225px"></th>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="expand"><span>+</span> Hotjar Ltd</span></td>
+							<td>hotjar.com</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div class="tb-btn-container">
+									<a href="#" target="_blank" class="tb-btn">terms & conditions</a>
+									<a href="#" target="_blank" class="tb-btn">privacy policy</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="expand"><span>+</span> Linkedin Corporation</span></td>
+							<td>licdn.com</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div class="tb-btn-container">
+									<a href="#" target="_blank" class="tb-btn">terms & conditions</a>
+									<a href="#" target="_blank" class="tb-btn">privacy policy</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="expand"><span>+</span> Facebook Inc</span></td>
+							<td>facebook.com, facebook.net</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div class="tc-details">Facebook is an online social networking service that enables its users to connect with friends and family as well as make new connections.</div>
+								<div class="tb-btn-container">
+									<a href="#" target="_blank" class="tb-btn">terms & conditions</a>
+									<a href="#" target="_blank" class="tb-btn">privacy policy</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="expand"><span>+</span> Google Inc.</span></td>
+							<td>google.com, googletagmanager.com, google-analytics.com</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div class="tb-btn-container">
+									<a href="#" target="_blank" class="tb-btn">terms & conditions</a>
+									<a href="#" target="_blank" class="tb-btn">privacy policy</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="expand"><span>+</span> Lead Forensics</span></td>
+							<td>https://www.leadforensics.com/</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div class="tc-details">Netmatters use a paid for software on our website which allows us access to information on the company you work for. This is done through the business' registered IP address and only allows us access to the information such as contact details, year founded, SIC codes and other information about the business. It also records the behaviour of the user from the company on the website, such as page views, time on the site, "goals" completed and other similar metrics. We use this data to help us improve lead generation through the website as this tool allows us access to see which businesses have visited the website but have not converted by calling, emailing or sending a contact form.</div>
+								<div class="tb-btn-container">
+									<a href="#" target="_blank" class="tb-btn">terms & conditions</a>
+									<a href="#" target="_blank" class="tb-btn">privacy policy</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="expand"><span>+</span> 3CX</span></td>
+							<td>https://netmatters.co.uk/</td>
+							<td>
+								<div class="tb-btn-container">
+									<button type="button" class="cs-btn disable active">disable</button>
+									<button type="button" class="cs-btn enable">enable</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="terms hidden">
+							<td colspan="3">
+								<div>Personal data to be processed and for the use of cookies in order to engage in a chat processed by Netmatters, for the purpose of Chat/Support for the time of 30 day(s) as per the GDPR.</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- dp-container -->
+			<div class="cs-btn-container">
+				<div>
+					<button type="button" id="cs-cancel" class="btn-grey">cancel</button>
+					<button type="submit" id="cs-submit" class="cp-submit">continue to website</button>
+				</div>
+			</div><!-- cp-btn-container -->
+		</div><!-- wrapper-inner -->
+	</div><!-- preferences -->
+
+	<div class="menu-tint"></div>
 	<div class="off-screen-menu">
 		<ul>
 			<li>
-				<a href="#">services</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">services</a></div>
 					<ul>
-						<li><a href="#"><span>bespoke software</span></a></li>
-						<li><a href="#"><span>it support</span></a></li>
-						<li><a href="#"><span>digital marketing</span></a></li>
-						<li><a href="#"><span>telecoms services</span></a></li>
-						<li><a href="#"><span>web design</span></a></li>
-						<li><a href="#"><span>cyber security</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; bespoke software</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; it support</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; digital marketing</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; telecoms services</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; web design</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; cyber security</span></div></a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">our work</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">our work</a></div>
 					<ul>
-						<li><a href="#"><span>case studies</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; case studies</span></div></a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">events</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">events</a></div>
 					<ul>
-						<li><a href="#"><span>how to generate more leads through your website</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; how to generate more leads website<through your /span></a></div></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">our knowledge</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">our knowledge</a></div>
 					<ul>
-						<li><a href="#"><span>technologies</span></a></li>
-						<li><a href="#"><span>industries</span></a></li>
-						<li><a href="#"><span>news</span></a></li>
-						<li><a href="#"><span>insights</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; technologies</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; industries</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; news</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; insights</span></div></a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">training</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">training</a></div>
 					<ul>
-						<li><a href="#"><span>train for a career in tech</span></a></li>
-						<li><a href="#"><span>skills bootcamp</span></a></li>
-						<li><a href="#"><span>scs frequently asked questions</span></a></li>
-						<li><a href="#"><span>scion collaborators</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; train for a career in tech</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; skills bootcamp</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; scs frequently asked questions</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; scion collaborators</span></div></a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">our company</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">our company</a></div>
 					<ul>
-						<li><a href="#"><span>why choose us?</span></a></li>
-						<li><a href="#"><span>our culture</span></a></li>
-						<li><a href="#"><span>our team</span></a></li>
-						<li><a href="#"><span>our careers</span></a></li>
-						<li><a href="#"><span>our benefits</span></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; why choose us?</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; our culture</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; our team</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; our careers</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; our benefits</span></div></a></li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">contact us</a>
 				<div class="sub-menu">
+					<div class="menu-header"><a href="#">contact us</a></div>
 					<ul>
-						<li><a href="#"><span>cambridge office</span></a></li>
-						<li><a href="#"><span>wymondham office</span></a></li>
-						<li><a href="#"><span>great yarmouth office</span></a></li>
-					<ul>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></bspan><span>&nbsp; cambridge office</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; wymondham office</span></div></a></li>
+						<li><a href="#"><div class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; great yarmouth office</span></div></a></li>
+					</ul>
 				</div>
 			</li>
 			<li>
-				<a href="#">covid risk assessments</a>
+				<div class="sub-menu">
+					<div class="menu-header"><a href="#">covid risk assessments</a></div>
+				</div>
 			</li>
 		</ul>
 	</div><!-- off-screen-menu -->
-	<div class="tint">
-	</div><!-- tint -->
-	<div class="main">
-		<header class="header">
-			<div class="header-inner">
-				<div class="container">
-					
-					<div class="container__top">
-						<div class="container__logo">
-							<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
-						</div><!-- container__logo -->
-						
-						
-						<div class="actions">
-							<div class="mobile">
-								<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
-							</div><!-- mobile -->
-							<div class="container__support full">
-								<button type="button" class="btn btn-it">
-									<span class="mouse fa-solid fa-mouse"></span><span>&nbsp; support</span>
-								</button>
-							</div>
-							<div class="container__contact full">
-								<button type="button" class="btn btn-contact">
-									<span class="plane fa fa-paper-plane-o" aria-hidden="true"></span><span>&nbsp; contact</span>
-								</button>
-							</div>
-							<div class="search-wrapper medium">
-								<form action="index.html" action="get" class="search__form">
-									<label for="search" class="hidden">Search:</label>
-									<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
-									<button type="submit" class="search__submit">
-										<span class="search fa-solid fa-magnifying-glass"></span>
-									</button>
-								</form>
-							</div><!-- search__wrapper -->
-							
-								<div class="hamburger-menu">
-									<div class="ham-bar bar-top"></div>
-									<div class="ham-bar bar-mid"></div>
-									<div class="ham-bar bar-bottom"></div>
-								</div><!-- hamburger-menu -->
-						</div><!-- actions -->
-					</div><!-- container__top -->
-					
-					<div class="search-wrapper mobile">
-						<form action="index.html" action="get" class="search__form">
-							<label for="search" class="hidden">Search:</label>
-							<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
-							<button type="submit" class="search__submit">
-								<span class="search fa-solid fa-magnifying-glass"></span>
-							</button>
-						</form>
-					</div><!-- search__wrapper -->
-				</div><!-- container -->
-			</div><!-- header-inner -->
-		</header>
 
-		<nav class="full">
-			<div class="container">
-				<div class="nav-bar">
-					<div class="nav-item software">
-						<a href="#">
-							<span class="nav-icon software"><span class="nav-icn fa-solid fa-table-cells"></span></span>
-							<h3 class="h6">bespoke</h3>
-							<h3 class="h5">software</h3>
-						</a>
-					</div>
-					<div class="nav-item support">
-						<a href="#">
-							<span class="nav-icon support"><span class="nav-icn fa-solid fa-display"></span></span>
-							<h3 class="h6">it</h3>
-							<h3 class="h5">support</h3>
-						</a>
-					</div>
-					<div class="nav-item marketing">
-						<a href="#">
-							<span class="nav-icon marketing"><span class="nav-icn fa-solid fa-chart-simple"></span></span>
-							<h3 class="h6">digital</h3>
-							<h3 class="h5">marketing</h3>
-						</a>
-					</div>
-					<div class="nav-item telecoms">
-						<a href="#">
-							<span class="nav-icon telecoms"><span class="nav-icn fa-solid fa-phone-volume"></span></span>
-							<h3 class="h6">telecoms</h3>
-							<h3 class="h5">services</h3>
-						</a>
-					</div>
-					<div class="nav-item web">
-						<a href="#">
-							<span class="nav-icon web"><span class="nav-icn fa-solid fa-code"></span></span>
-							<h3 class="h6">web</h3>
-							<h3 class="h5">design</h3>
-						</a>
-					</div>
-					<div class="nav-item security">
-						<a href="#">
-							<span class="nav-icon security"><span class="nav-icn fa-solid fa-shield-halved"></span></span>
-							<h3 class="h6">cyber</h3>
-							<h3 class="h5">security</h3>
-						</a>
-					</div>
-					<div class="nav-item training">
-						<a href="#">
-							<span class="nav-icon training"><span class="nav-icn fa-solid fa-graduation-cap"></span></span>
-							<h3 class="h6">developer</h3>
-							<h3 class="h5">course</h3>
-						</a>
-					</div>
-				</div><!-- nav-bar -->
-			</div><!-- container -->
-		</nav>
+	<div class="main">
+		<div id="sticky-header" class="initial-header">
+			<header class="header">
+				<div class="header-inner">
+					<div class="container">
+						
+						<div class="container__top">
+							<div class="container__logo">
+								<a href="#" class="logo"><img src="img/f-logo.png" alt="Netmatters"></a>
+							</div><!-- container__logo -->
+							
+							
+							<div class="actions">
+								<div class="mobile">
+									<a href="#"><span class="phone fa-solid fa-phone-volume"></span></a>
+								</div><!-- mobile -->
+								<div class="container__support full">
+									<button type="button" class="btn btn-it">
+										<span class="mouse fa-solid fa-mouse"></span><span>&nbsp; support</span>
+									</button>
+								</div>
+								<div class="container__contact full">
+									<button type="button" class="btn btn-contact">
+										<span class="plane fa fa-paper-plane-o" aria-hidden="true"></span><span>&nbsp; contact</span>
+									</button>
+								</div>
+								<div class="search-wrapper medium">
+									<form action="index.html" method="get" class="search__form">
+										<label for="search-input" class="hidden">Search:</label>
+										<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
+										<button type="submit" class="search__submit">
+											<span class="search fa-solid fa-magnifying-glass"></span>
+										</button>
+									</form>
+								</div><!-- search__wrapper -->
+								
+									<div class="hamburger-menu">
+										<div class="ham-bar bar-top"></div>
+										<div class="ham-bar bar-mid"></div>
+										<div class="ham-bar bar-bottom"></div>
+									</div><!-- hamburger-menu -->
+							</div><!-- actions -->
+						</div><!-- container__top -->
+						
+						<div class="search-wrapper mobile">
+							<form action="index.html" method="get" class="search__form">
+								<label for="search-input" class="hidden">Search:</label>
+								<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
+								<button type="submit" class="search__submit">
+									<span class="search fa-solid fa-magnifying-glass"></span>
+								</button>
+							</form>
+						</div><!-- search__wrapper -->
+					</div><!-- container -->
+				</div><!-- header-inner -->
+			</header>
+	
+			<nav class="full">
+				<div class="container">
+					<div class="nav-bar">
+						<div class="nav-item software">
+							<a href="#">
+								<span class="nav-icon software"><span class="nav-icn fa-solid fa-table-cells"></span></span>
+								<h3 class="h6">bespoke</h3>
+								<h3 class="h5">software</h3>
+							</a>
+						</div>
+						<div class="nav-item support">
+							<a href="#">
+								<span class="nav-icon support"><span class="nav-icn fa-solid fa-display"></span></span>
+								<h3 class="h6">it</h3>
+								<h3 class="h5">support</h3>
+							</a>
+						</div>
+						<div class="nav-item marketing">
+							<a href="#">
+								<span class="nav-icon marketing"><span class="nav-icn fa-solid fa-chart-simple"></span></span>
+								<h3 class="h6">digital</h3>
+								<h3 class="h5">marketing</h3>
+							</a>
+						</div>
+						<div class="nav-item telecoms">
+							<a href="#">
+								<span class="nav-icon telecoms"><span class="nav-icn fa-solid fa-phone-volume"></span></span>
+								<h3 class="h6">telecoms</h3>
+								<h3 class="h5">services</h3>
+							</a>
+						</div>
+						<div class="nav-item web">
+							<a href="#">
+								<span class="nav-icon web"><span class="nav-icn fa-solid fa-code"></span></span>
+								<h3 class="h6">web</h3>
+								<h3 class="h5">design</h3>
+							</a>
+						</div>
+						<div class="nav-item security">
+							<a href="#">
+								<span class="nav-icon security"><span class="nav-icn fa-solid fa-shield-halved"></span></span>
+								<h3 class="h6">cyber</h3>
+								<h3 class="h5">security</h3>
+							</a>
+						</div>
+						<div class="nav-item training">
+							<a href="#">
+								<span class="nav-icon training"><span class="nav-icn fa-solid fa-graduation-cap"></span></span>
+								<h3 class="h6">developer</h3>
+								<h3 class="h5">course</h3>
+							</a>
+						</div>
+					</div><!-- nav-bar -->
+				</div><!-- container -->
+			</nav>
+		</div><!-- sticky-header -->
 			
 		<main>
 				
 			<header>
-				<div class="hero flex">
-					<div class="hero__item flex">
-						<img src="img/hero-1.jpg" alt="Bespoke Software">
-					</div><!-- hero__item -->
-					<div class="overlay flex">
-						<div class="overlay__content flex">
-							<div class="text">
-								<div class="h1"> Bespoke Software </div>
-								<p>Bring your business togethor with<br> solutions which grow with you.</p>
-								<span class="btn btn-software">Find out more <em class="fa-solid fa-arrow-right"></em></span>
-							</div><!-- text -->
-						</div><!-- overlay__content -->
-					</div><!-- overlay -->
-				</div><!-- hero -->
+
+				<div id="hero-banner" class="owl-carousel">
+					<div class="owl-stage-outer">	
+						<div class="owl-stage">
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/east-of-england.png" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">the east of englands <br class="min-medium">leading <br class="small">technology <br class="min-medium">company</div>
+												<p>Performance-driven digital and technology services<br>with complete transparency.</p>
+												<div class="hero-btn-netmatters">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/bespoke-software.jpeg" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">bespoke software</div>
+												<p>Delivering expert bespoke software<br>solutions across a range of industries.</p>
+												<div class="hero-btn-software">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/it-support.png" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">it support</div>
+												<p>Fast and cost-effective IT support<br>services for your business.</p>
+												<div class="hero-btn-support">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/digital-marketing.png" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">digital marketing</div>
+												<p>Generating your new business through<br>results-driven marketing activities.</p>
+												<div class="hero-btn-marketing">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/telecoms-services.png" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">telecoms services</div>
+												<p>A new approach to connectivity, see<br>how we can help your business.</p>
+												<div class="hero-btn-telecoms">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/web-design.jpeg" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">web design</div>
+												<p>For businesses looking to make a strong<br>and effective first impression.</p>
+												<div class="hero-btn-web">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+							
+							<div class="owl-item">
+								<div class="hero flex">
+									<div class="hero__item flex">
+										<img src="img/hero-imgs/cyber-security.png" alt="Bespoke Software">
+									</div><!-- hero__item -->
+									<div class="overlay flex">
+										<div class="overlay__content flex">
+											<div class="text">
+												<div class="h1">cyber security</div>
+												<p>Keeping businesses and their customers<br>sensitive information protected.</p>
+												<div class="hero-btn-security">Find out more <em class="fa-solid fa-arrow-right"></em></div>
+											</div><!-- text -->
+										</div><!-- overlay__content -->
+									</div><!-- overlay -->
+								</div><!-- hero -->
+							</div><!-- owl-item -->
+
+						</div><!-- owl-stage -->
+					</div><!-- owl-stage-outer -->
+				</div><!-- owl-carousel -->
+
 			</header>
 	
 <!-- OUR SERVICES SECTION -->
@@ -272,6 +576,7 @@
 								<span class="service-icon marketing"><span class="service-icn fa-solid fa-chart-simple"></span></span>
 								<span class="h2">Digital Marketing</span>
 								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
+								<br>
 								<span class="btn-container service-btn<span></span>">
 									<span class="btn marketing">read more</span>
 								</span>
@@ -324,7 +629,7 @@
 
 					</div><!-- services -->
 					
-					<div class="view-all mobile">
+					<div class="view-all mobile margin-top">
 						<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
 					</div><!-- view-all -->
 
@@ -333,10 +638,8 @@
 		
 <!-- PARTNER CAROUSELL SECTION -->
 
-			<div class="owl-carousel partner-slideshow">
-				
+			<div id="partner-banner" class="owl-carousel partner-slideshow">				
 				<div class="owl-stage-outer wrapper-carousel">
-
 					<div class="owl-stage carousel">
 									
 							<div class="owl-item partner">
@@ -383,7 +686,6 @@
 									<img src="img/partners/future-50.jpg" alt="Future 50">
 								</div>
 							</div><!-- partner -->
-						</div><!-- container__partner -->
 						
 							<div class="owl-item partner">
 								<div class="greyscale">
@@ -476,8 +778,8 @@
 							</div><!-- partner -->
 					
 					</div><!-- owl-stage -->
-				</div><!-- owl-stage-outer wrapper-carousel -->
-			</div><!-- partner-slideshow -->
+				</div><!-- owl-stage-outer -->
+			</div><!-- owl-carousel -->
 			
 <!-- MAIN CONTENT SECTION -->
 
@@ -673,30 +975,42 @@
 				<div class="wrapper-inner">
 					
 					
-					<form action="index.html" method="post">
+					<form id="form-news">
+						<div id="name-error" class="error hidden">
+							<div class="error-text"></div>
+						<button type="button" class="close">x</button>
+						</div>
+						<div id="email-error" class="error hidden">
+							<div class="error-text"></div>
+						<button type="button" class="close">x</button>
+						</div>
+						<div id="check-error" class="error hidden">
+							<div class="error-text"></div>
+						<button type="button" class="close">x</button>
+						</div>
+
 						<h2>Email Newsletter Sign-Up</h2>
 						<div class="wrapper__input flex">
-							
 							<div class="sign-up-input">
 								<div class="form-group">
 									<label for="name" class="required">Your Name</label>
-									<input type="text" id="user-name" name="name" class="form-control" required>
+									<input type="text" id="name" name="name" class="form-control">
 								</div><!-- form-group -->
 							</div><!-- sign-up-input -->
 							
 							<div class="sign-up-input">
 								<div class="form-group">
 									<label for="email" class="required">Your Email</label>
-									<input type="email" id="user-email" name="email" class="form-control" required>
+									<input type="email" id="email" name="email" class="form-control">
 								</div><!-- form-group -->
 							</div><!-- sign-up-input -->
 						</div><!-- wrapper__input -->
 						
 						<div class="form-group">
-							<label>
+							<label for="check">
 								<div class="container-privacy flex">
 									<div class="privacy">
-										<span class="privacy-check"><span class="button left"><input type="checkbox" name="check"></span></span>
+										<span class="privacy-check"><span class="button left"><input type="checkbox" id="check" name="check"></span></span>
 									</div><!-- privacy -->
 										
 									<div class="statement">
@@ -706,7 +1020,7 @@
 							</label>
 						</div><!-- form-group -->
 						
-						<button name="submit" class="btn btn-subscribe">Subscribe</button>
+						<button id="submit" name="submit" class="btn btn-subscribe">Subscribe</button>
 
 					</form>
 				</div><!-- wrapper-inner -->
@@ -762,7 +1076,7 @@
 									<li>Cambridge</li>
 									<li>CB4 0WS</li>
 									<li>&nbsp;</li>
-									<li>Tel: <a href="#">01223 37 57 72</a></li>
+									<li>Tel: <a href="tel:[num]">01223 37 57 72</a></li>
 								</ul>
 							</div><!-- office -->
 							
@@ -775,7 +1089,7 @@
 									<li>Wymondham, Norfolk</li>
 									<li>NR18 0WZ</li>
 									<li>&nbsp;</li>
-									<li>Tel: <a href="#">01603 70 40 20</a></li>
+									<li>Tel: <a href="tel:[num]">01603 70 40 20</a></li>
 								</ul>
 							</div><!-- office -->
 							
@@ -788,7 +1102,7 @@
 									<li>Great Yarmouth, Norfolk</li>
 									<li>NR31 7RA</li>
 									<li>&nbsp;</li>
-									<li>Tel: <a href="#">01493 60 32 04</a></li>
+									<li>Tel: <a href="tel:[num]">01493 60 32 04</a></li>
 								</ul>
 							</div><!-- office -->
 						

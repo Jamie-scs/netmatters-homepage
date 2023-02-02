@@ -65,11 +65,11 @@
 	position: fixed;
 	top: 0;
 	z-index: 10;
-	background-color: $color-sec;
 	height: 100dvh;
+	background-color: $color-sec;
 	@include sbw(mobile);
 	transition: right ease .5s;
-	@include mqm(large)	{
+	@include mqm(medium)	{
 		@include sbw(full);
 	}
 }
@@ -79,11 +79,38 @@
 }
 
 .off-screen-menu ul		{
-	font-size: 0.875rem;
 	text-transform: uppercase;
-	padding: 15px 20px;
 	a 						{
 		color: $white;
-
+		text-decoration: none;
 	}
+}
+
+// Menu Items
+
+.menu-header			{
+	font-size: 1rem;
+	padding: 15px 20px;
+	background-color: $color-sec;
+	@extend %menu-bd;
+	transition: background-color ease .1s;
+}
+
+.sub-menu:hover,
+.sub-menu:focus			{
+	.menu-header			{
+		background-color: lighten($color-sec, 5%);
+	}
+}
+
+.menu-item				{
+	font-size: 0.9rem;
+	padding: 15px 20px;
+	background-color: $btn-content;
+	@extend %menu-bd;
+}
+
+.angle-icn				{
+	font-size: 0.5rem;
+	padding-right: 0.5rem;
 }

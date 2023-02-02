@@ -8,6 +8,37 @@
 	margin-right: -15px;
 }
 
+.error		{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.9375rem;
+	background-color: $alert-bg;
+	border: 0.0625rem solid $alert-bd;
+	border-radius: 0.125rem;
+	margin: 0 0 1.25rem;
+}
+
+.error-text				{
+	color: $alert;
+}
+
+.close 					{
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1;
+	color: $black;
+	text-shadow: 0 0.0625rem 0 $white;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	opacity: 0.2;
+	&:hover,
+	&:focus					{
+		opacity: 1;
+	}
+}
+
 .sign-up-input			{
 	flex: 1 1 450px;
 	padding: 0 15px;
@@ -24,9 +55,18 @@
 	vertical-align: top;
 }
 
+.button-left			{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
 [type=checkbox]			{
-	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	line-height: normal;
 	padding: 0;
-	margin: 4px 0 0;
 }
