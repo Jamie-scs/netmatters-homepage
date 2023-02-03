@@ -16,6 +16,10 @@
 	background-color: $news-border;
 	padding: 5px 40px 5px 15px;
 	border: 3px solid $search;
+	&:focus					{
+		border: 3px solid $search-focus;
+		outline: 0;
+	}
 	@include mqm(small)		{
 		height: 56px;
 		background-color: $white;
@@ -47,6 +51,9 @@
 		padding: 0;
 		border-radius: 3px;
 	}
+	@include mqm(large)	{
+		border-radius: 0 3px 3px 0;
+	}
 }
 
 // Newsletter
@@ -64,6 +71,10 @@
 	border: 1px solid $white;
 	border-radius: 2px;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0,.075);
+	&:focus					{
+		border: 3px solid $search-focus;
+		outline: 0;
+	}
 }
 
 .required:after		{

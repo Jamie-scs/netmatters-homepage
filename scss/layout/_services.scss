@@ -82,30 +82,6 @@
 	margin: 0 auto 17px;
 }
 
-.service-icon 				{
-	&.software					{
-		background-color: $software;
-	}
-	&.support					{
-		background-color: $support;
-	}
-	&.marketing					{
-		background-color: $marketing;
-	}
-	&.telecoms					{
-		background-color: $telecoms;
-	}
-	&.web						{
-		background-color: $web;
-	}
-	&.security					{
-		background-color: $security;
-	}
-	&.training					{
-		background-color: $training;
-	}
-}
-
 .service-icn				{
 	font-size: 2.2rem;
 	padding-top: .85rem;
@@ -134,50 +110,25 @@
 	.p 							{
 		color: $white;
 	}
-	.service-icon,
-	.btn 						{
-		background-color: $white;
-		&.software					{
-			color: $software;
-		}
-		&.support					{
-			color: $support;
-		}
-		&.marketing					{
-			color: $marketing;
-		}
-		&.telecoms					{
-			color: $telecoms;
-		}
-		&.web						{
-			color: $web;
-		}
-		&.security					{
-			color: $security;
-		}
-		&.training					{
-			color: $training;
+}
+
+@each $name, $color in $colors {
+	.service-icon		{
+		&.#{$name} 			{
+			background-color: $color;
 		}
 	}
-	&.software					{
-		background-color: $software;
-	}
-	&.support					{
-		background-color: $support;
-	}
-	&.marketing					{
-		background-color: $marketing;
-	}
-	&.telecoms					{
-		background-color: $telecoms;
-	}
-	&.web						{
-		background-color: $web;
-	}
-	&.security					{
-		background-color: $security;
-	}
-	&.training					{
-		background-color: $training;
+	.service:hover,
+	.service:focus		{
+		.service-icon,
+		.btn				{
+			background-color: $white;
+			&.#{$name} 			{
+				color: $color;
+			}
+		}
+		&.#{$name} 			{
+			background-color: $color;
+		}
 	}
 }

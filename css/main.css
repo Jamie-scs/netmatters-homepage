@@ -513,6 +513,11 @@ button.btn-grey, button.cp-submit {
   border-radius: 0.1875rem;
 }
 
+.menu-header, .menu-item {
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.25);
+}
+
 .hero__item {
   position: absolute;
   top: 0;
@@ -521,12 +526,7 @@ button.btn-grey, button.cp-submit {
   right: 0;
 }
 
-.menu-header, .menu-item {
-  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.25);
-}
-
-.hero-btn-netmatters, .hero-btn-software, .hero-btn-support, .hero-btn-marketing, .hero-btn-telecoms, .hero-btn-web, .hero-btn-security {
+.hero-btn {
   display: inline-block;
   color: #ffffff;
   font-size: 1.25rem;
@@ -616,6 +616,11 @@ button.btn-grey, button.cp-submit {
   border: 3px solid #cccccc;
 }
 
+.search__bar:focus {
+  border: 3px solid #e5e5e5;
+  outline: 0;
+}
+
 @media screen and (min-width: 48rem) {
   .search__bar {
     height: 56px;
@@ -657,6 +662,12 @@ button.btn-grey, button.cp-submit {
   }
 }
 
+@media screen and (min-width: 78.75rem) {
+  .search__submit {
+    border-radius: 0 3px 3px 0;
+  }
+}
+
 .form-group {
   margin: 0 0 15px;
 }
@@ -670,6 +681,11 @@ button.btn-grey, button.cp-submit {
   border: 1px solid #ffffff;
   border-radius: 2px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-control:focus {
+  border: 3px solid #e5e5e5;
+  outline: 0;
 }
 
 .required:after {
@@ -774,67 +790,76 @@ button.btn-grey, button.cp-submit {
   }
 }
 
-.hero-btn-netmatters {
-  background-color: #926fb1;
-}
-
-.hero-btn-netmatters:hover, .hero-btn-netmatters:focus {
-  text-decoration: none;
-  background-color: #79539a;
-}
-
-.hero-btn-software {
+.hero-btn.software {
   background-color: #67809f;
 }
 
-.hero-btn-software:hover, .hero-btn-software:focus {
+.hero-btn.software:hover, .hero-btn.software:focus {
   text-decoration: none;
   background-color: #526781;
 }
 
-.hero-btn-support {
+.hero-btn.support {
   background-color: #4183d7;
 }
 
-.hero-btn-support:hover, .hero-btn-support:focus {
+.hero-btn.support:hover, .hero-btn.support:focus {
   text-decoration: none;
   background-color: #286abd;
 }
 
-.hero-btn-marketing {
+.hero-btn.marketing {
   background-color: #2ecc71;
 }
 
-.hero-btn-marketing:hover, .hero-btn-marketing:focus {
+.hero-btn.marketing:hover, .hero-btn.marketing:focus {
   text-decoration: none;
   background-color: #25a25a;
 }
 
-.hero-btn-telecoms {
+.hero-btn.telecoms {
   background-color: #d64541;
 }
 
-.hero-btn-telecoms:hover, .hero-btn-telecoms:focus {
+.hero-btn.telecoms:hover, .hero-btn.telecoms:focus {
   text-decoration: none;
   background-color: #bc2c28;
 }
 
-.hero-btn-web {
+.hero-btn.web {
   background-color: #79539a;
 }
 
-.hero-btn-web:hover, .hero-btn-web:focus {
+.hero-btn.web:hover, .hero-btn.web:focus {
   text-decoration: none;
   background-color: #5f4179;
 }
 
-.hero-btn-security {
+.hero-btn.security {
   background-color: #f62459;
 }
 
-.hero-btn-security:hover, .hero-btn-security:focus {
+.hero-btn.security:hover, .hero-btn.security:focus {
   text-decoration: none;
   background-color: #de093f;
+}
+
+.hero-btn.training {
+  background-color: #ce4125;
+}
+
+.hero-btn.training:hover, .hero-btn.training:focus {
+  text-decoration: none;
+  background-color: #a3331d;
+}
+
+.hero-btn.netmatters {
+  background-color: #926fb1;
+}
+
+.hero-btn.netmatters:hover, .hero-btn.netmatters:focus {
+  text-decoration: none;
+  background-color: #79539a;
 }
 
 .content .btn {
@@ -926,32 +951,12 @@ nav {
   margin: -8px 0 0px;
 }
 
+.nav-icn {
+  font-size: 1.4375rem;
+}
+
 .nav-icon.software {
   color: #67809f;
-}
-
-.nav-icon.support {
-  color: #4183d7;
-}
-
-.nav-icon.marketing {
-  color: #2ecc71;
-}
-
-.nav-icon.telecoms {
-  color: #d64541;
-}
-
-.nav-icon.web {
-  color: #79539a;
-}
-
-.nav-icon.security {
-  color: #f62459;
-}
-
-.nav-icon.training {
-  color: #ce4125;
 }
 
 .nav-item:hover .nav-icon,
@@ -964,9 +969,27 @@ nav {
   background-color: #67809f;
 }
 
+.nav-icon.support {
+  color: #4183d7;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
+}
+
 .nav-item:hover.support,
 .nav-item:focus.support {
   background-color: #4183d7;
+}
+
+.nav-icon.marketing {
+  color: #2ecc71;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
 }
 
 .nav-item:hover.marketing,
@@ -974,9 +997,27 @@ nav {
   background-color: #2ecc71;
 }
 
+.nav-icon.telecoms {
+  color: #d64541;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
+}
+
 .nav-item:hover.telecoms,
 .nav-item:focus.telecoms {
   background-color: #d64541;
+}
+
+.nav-icon.web {
+  color: #79539a;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
 }
 
 .nav-item:hover.web,
@@ -984,9 +1025,27 @@ nav {
   background-color: #79539a;
 }
 
+.nav-icon.security {
+  color: #f62459;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
+}
+
 .nav-item:hover.security,
 .nav-item:focus.security {
   background-color: #f62459;
+}
+
+.nav-icon.training {
+  color: #ce4125;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
 }
 
 .nav-item:hover.training,
@@ -994,8 +1053,18 @@ nav {
   background-color: #ce4125;
 }
 
-.nav-icn {
-  font-size: 1.4375rem;
+.nav-icon.netmatters {
+  color: #926fb1;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:focus .nav-icon {
+  color: #ffffff;
+}
+
+.nav-item:hover.netmatters,
+.nav-item:focus.netmatters {
+  background-color: #926fb1;
 }
 
 .hamburger-menu {
@@ -1160,6 +1229,71 @@ nav {
   position: relative;
   vertical-align: middle;
   padding: 0 20px;
+}
+
+.client:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box {
+  width: max-content;
+  max-width: 260px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background-color: #333645;
+  padding: 20px;
+  margin: 0 auto 50px;
+}
+
+.box h3 {
+  position: relative;
+  font-size: 1.125rem;
+  color: #ffffff;
+  padding-bottom: 17px;
+  margin: 0 0 11px;
+}
+
+.box h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.box p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -36px;
+}
+
+.arrow::after {
+  content: '';
+  display: inline-block;
+  border-width: 35px 36px 0;
+  border-style: solid;
+  border-color: #333645 transparent transparent;
+  margin: auto;
 }
 
 .header-inner {
@@ -1424,34 +1558,6 @@ nav {
   margin: 0 auto 17px;
 }
 
-.service-icon.software {
-  background-color: #67809f;
-}
-
-.service-icon.support {
-  background-color: #4183d7;
-}
-
-.service-icon.marketing {
-  background-color: #2ecc71;
-}
-
-.service-icon.telecoms {
-  background-color: #d64541;
-}
-
-.service-icon.web {
-  background-color: #79539a;
-}
-
-.service-icon.security {
-  background-color: #f62459;
-}
-
-.service-icon.training {
-  background-color: #ce4125;
-}
-
 .service-icn {
   font-size: 2.2rem;
   padding-top: .85rem;
@@ -1483,6 +1589,10 @@ nav {
   color: #ffffff;
 }
 
+.service-icon.software {
+  background-color: #67809f;
+}
+
 .service:hover .service-icon,
 .service:hover .btn,
 .service:focus .service-icon,
@@ -1497,11 +1607,43 @@ nav {
   color: #67809f;
 }
 
+.service:hover.software,
+.service:focus.software {
+  background-color: #67809f;
+}
+
+.service-icon.support {
+  background-color: #4183d7;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
+}
+
 .service:hover .service-icon.support,
 .service:hover .btn.support,
 .service:focus .service-icon.support,
 .service:focus .btn.support {
   color: #4183d7;
+}
+
+.service:hover.support,
+.service:focus.support {
+  background-color: #4183d7;
+}
+
+.service-icon.marketing {
+  background-color: #2ecc71;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
 }
 
 .service:hover .service-icon.marketing,
@@ -1511,11 +1653,43 @@ nav {
   color: #2ecc71;
 }
 
+.service:hover.marketing,
+.service:focus.marketing {
+  background-color: #2ecc71;
+}
+
+.service-icon.telecoms {
+  background-color: #d64541;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
+}
+
 .service:hover .service-icon.telecoms,
 .service:hover .btn.telecoms,
 .service:focus .service-icon.telecoms,
 .service:focus .btn.telecoms {
   color: #d64541;
+}
+
+.service:hover.telecoms,
+.service:focus.telecoms {
+  background-color: #d64541;
+}
+
+.service-icon.web {
+  background-color: #79539a;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
 }
 
 .service:hover .service-icon.web,
@@ -1525,11 +1699,43 @@ nav {
   color: #79539a;
 }
 
+.service:hover.web,
+.service:focus.web {
+  background-color: #79539a;
+}
+
+.service-icon.security {
+  background-color: #f62459;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
+}
+
 .service:hover .service-icon.security,
 .service:hover .btn.security,
 .service:focus .service-icon.security,
 .service:focus .btn.security {
   color: #f62459;
+}
+
+.service:hover.security,
+.service:focus.security {
+  background-color: #f62459;
+}
+
+.service-icon.training {
+  background-color: #ce4125;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
 }
 
 .service:hover .service-icon.training,
@@ -1539,39 +1745,32 @@ nav {
   color: #ce4125;
 }
 
-.service:hover.software,
-.service:focus.software {
-  background-color: #67809f;
-}
-
-.service:hover.support,
-.service:focus.support {
-  background-color: #4183d7;
-}
-
-.service:hover.marketing,
-.service:focus.marketing {
-  background-color: #2ecc71;
-}
-
-.service:hover.telecoms,
-.service:focus.telecoms {
-  background-color: #d64541;
-}
-
-.service:hover.web,
-.service:focus.web {
-  background-color: #79539a;
-}
-
-.service:hover.security,
-.service:focus.security {
-  background-color: #f62459;
-}
-
 .service:hover.training,
 .service:focus.training {
   background-color: #ce4125;
+}
+
+.service-icon.netmatters {
+  background-color: #926fb1;
+}
+
+.service:hover .service-icon,
+.service:hover .btn,
+.service:focus .service-icon,
+.service:focus .btn {
+  background-color: #ffffff;
+}
+
+.service:hover .service-icon.netmatters,
+.service:hover .btn.netmatters,
+.service:focus .service-icon.netmatters,
+.service:focus .btn.netmatters {
+  color: #926fb1;
+}
+
+.service:hover.netmatters,
+.service:focus.netmatters {
+  background-color: #926fb1;
 }
 
 .wrapper-content {
@@ -2056,6 +2255,10 @@ button.cp-submit {
 .detailed-preferences td {
   color: #666666;
   background-color: #ddd;
+}
+
+.tb-col-width {
+  width: 225px;
 }
 
 .expand {

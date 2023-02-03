@@ -67,41 +67,13 @@
 
 // Hero
 
-.hero-btn 				{
-	&-netmatters			{
-		background-color: $news;
-		@include btn($news);
+@each $name, $color in $colors {
+	.hero-btn		{
 		@extend %hero-btn;
-	}
-	&-software			{
-		background-color: $software;
-		@include btn($software);
-		@extend %hero-btn;
-	}
-	&-support			{
-		background-color: $support;
-		@include btn($support);
-		@extend %hero-btn;
-	}
-	&-marketing			{
-		background-color: $marketing;
-		@include btn($marketing);
-		@extend %hero-btn;
-	}
-	&-telecoms			{
-		background-color: $telecoms;
-		@include btn($telecoms);
-		@extend %hero-btn;
-	}
-	&-web			{
-		background-color: $web;
-		@include btn($web);
-		@extend %hero-btn;
-	}
-	&-security			{
-		background-color: $security;
-		@include btn($security);
-		@extend %hero-btn;
+		&.#{$name} 			{
+			background-color: $color;
+			@include btn($color);
+		}
 	}
 }
 

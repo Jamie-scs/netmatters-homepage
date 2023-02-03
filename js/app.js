@@ -161,11 +161,11 @@ console.log(cookieObject);
 
 // Check For Cookies in Storage
 
-	if (shouldShowPopup(storageType)) {
-		tint.classList.remove('hidden');
-		consentPopup.classList.remove('hidden');
-		disableScroll();
-	};
+	// if (shouldShowPopup(storageType)) {
+	// 	tint.classList.remove('hidden');
+	// 	consentPopup.classList.remove('hidden');
+	// 	disableScroll();
+	// };
 };
 
 // Listen for Menu Button Activation

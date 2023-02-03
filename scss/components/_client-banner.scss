@@ -2,14 +2,75 @@
 // Client Banner
 // ========================================
 
-.client-banner				{
+.client-banner			{
 	justify-content: space-between;
 	text-align: center;
 	padding: 50px 0 0;
 }
 
-.client 					{
+.client 				{
 	position: relative;
 	vertical-align: middle;
 	padding: 0 20px;
+}
+
+.client:hover .tooltip		{
+	display: block;
+}
+
+.tooltip				{
+	display: none;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.box 					{
+	width: max-content;
+	max-width: 260px;
+	font-size: 0.875rem;
+	color: $white;
+	background-color: $color-sec;
+	padding: 20px;
+	margin: 0 auto 50px;
+	h3 						{
+		position: relative;
+		font-size: 1.125rem;
+		color: $white;
+		padding-bottom: 17px;
+		margin: 0 0 11px;
+	}
+	h3::after 				{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 28px;
+		height: 3px;
+		background-color: $white;
+		margin: auto;
+	}
+	p 						{
+		font-size: 0.8125rem;
+		line-height: 1.375rem;
+		margin-bottom: 0;
+	}
+}
+
+.arrow 					{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -36px;
+	&::after 				{
+		content: '';
+		display: inline-block;
+		border-width: 35px 36px 0;
+		border-style: solid;
+		border-color: $color-sec transparent transparent;
+		margin: auto;
+	}
 }

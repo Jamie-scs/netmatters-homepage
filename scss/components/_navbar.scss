@@ -18,7 +18,6 @@ nav 						{
 	background: transparent;
 }
 
-
 .nav-item a					{
 	color: $white;
 	&:hover,
@@ -49,58 +48,23 @@ nav 						{
 	margin: -8px 0 0px;
 }
 
-.nav-icon 					{
-	&.software					{
-		color: $software;
-	}
-	&.support					{
-		color: $support;
-	}
-	&.marketing					{
-		color: $marketing;
-	}
-	&.telecoms					{
-		color: $telecoms;
-	}
-	&.web						{
-		color: $web;
-	}
-	&.security					{
-		color: $security;
-	}
-	&.training					{
-		color: $training;
-	}
-}
-
-.nav-item:hover,
-.nav-item:focus				{
-	.nav-icon					{
-		color: $white;
-	}
-	&.software						{
-		background-color: $software;
-	}
-	&.support						{
-		background-color: $support;
-	}
-	&.marketing						{
-		background-color: $marketing;
-	}
-	&.telecoms						{
-		background-color: $telecoms;
-	}
-	&.web							{
-		background-color: $web;
-	}
-	&.security						{
-		background-color: $security;
-	}
-	&.training						{
-		background-color: $training;
-	}
-}
-
 .nav-icn					{
 	font-size: 1.4375rem;
+}
+
+@each $name, $color in $colors {
+	.nav-icon			{
+		&.#{$name} 			{
+			color: $color;
+		}
+	}
+	.nav-item:hover,
+	.nav-item:focus		{
+		.nav-icon			{
+			color: $white;
+		}
+		&.#{$name} 			{
+			background-color: $color;
+		}
+	}	
 }
