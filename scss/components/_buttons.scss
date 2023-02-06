@@ -44,7 +44,22 @@
 
 // Header
 
-.btn-it		{
+.container__support		{
+	@include mqx(large)	{
+		opacity: 0;
+		visibility: hidden;
+		transition: 
+		opacity 0.8s ease,
+		visibility 1s ease;
+	}
+}
+
+.container__support.active	{
+	opacity: 1;
+	visibility: visible;
+}
+
+.btn-it				{
 	width: 150px;
 	height: 56px;
 	background-color: $support;
@@ -54,7 +69,22 @@
 	}
 }
 
-.btn-contact			{
+.container__contact		{
+	@include mqx(large)	{
+		opacity: 0;
+		visibility: hidden;
+		transition: 
+		opacity 0.8s ease,
+		visibility 1s ease;
+	}
+}
+
+.container__contact.active			{
+	opacity: 1;
+	visibility: visible;
+}
+
+.btn-contact		{
 	width: 150px;
 	height: 56px;
 	background-color: $contact;
@@ -73,6 +103,11 @@
 		&.#{$name} 			{
 			background-color: $color;
 			@include btn($color);
+		}
+	}
+	.btn 			{
+		&.#{$name} 			{
+			background-color: $color;
 		}
 	}
 }

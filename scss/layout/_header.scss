@@ -80,7 +80,7 @@
 
 #hero-banner				{
 	margin-top: 173px;
-	@include mqm(medium)	{
+	@include mqm(small)	{
 		margin-top: 117px;
 	}
 	@include mqm(medium)	{

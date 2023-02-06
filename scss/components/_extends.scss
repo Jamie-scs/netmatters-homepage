@@ -3,14 +3,22 @@
 // ========================================
 
 %cp-btn				{
-	width: 232px;
+	width: 100%;
 	font-size: 1.063rem;
 	line-height: 2.1875rem;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 0.3125rem 0.9375rem;
 	border-radius: 0.1875rem;
-	margin: 1.2rem;
+	margin: 1rem;
+	@include mqm(small)	{
+		width: 232px;
+		margin: 1.25rem;
+	}
+
+	&:active			{
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.13);
+	}
 }
 
 %cs-btn				{
@@ -19,6 +27,9 @@
 	text-transform: uppercase;
 	padding: 0.3125rem 0.9375rem;
 	border-radius: 0.1875rem;
+	&:active			{
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 1.0);
+	}
 }
 
 %menu-bd			{

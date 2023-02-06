@@ -64,9 +64,6 @@
 .off-screen-menu	{
 	position: fixed;
 	top: 0;
-	z-index: 10;
-	height: 100dvh;
-	background-color: $color-sec;
 	@include sbw(mobile);
 	transition: right ease .5s;
 	@include mqm(medium)	{
@@ -76,6 +73,10 @@
 
 .off-screen-menu.active	{
 	right: 0;
+	z-index: 10;
+	height: 100%;
+	background-color: $color-sec;
+	overflow-y: scroll;
 }
 
 .off-screen-menu ul		{
@@ -113,4 +114,55 @@
 .angle-icn				{
 	font-size: 0.5rem;
 	padding-right: 0.5rem;
+}
+
+// Sidebar Navigation Medium
+
+.sidebar-nav-min-medium	{
+	text-align: center;
+}
+
+.sub-menu-contact-med	{
+	font-size: 1rem;
+	text-align: center;
+	padding: 1.25rem;
+	background-color: $color-sec;
+	border-radius: 3px;
+	border: 1px solid hsla(0, 0%, 100%, 0.1);
+	outline: 1px solid rgba(0, 0, 0, 0.25);
+	margin: 1.25rem;
+}
+
+.sub-menu-header-med	{
+	text-align: center;
+	padding: 1rem;
+	background-color: $color-sec;
+	border-radius: 3px;
+	border: 1px solid hsla(0, 0%, 100%, 0.1);
+	outline: 1px solid rgba(0, 0, 0, 0.25);
+	.h5						{
+		margin-top: 0.15rem;
+	}
+}
+
+.sub-menu-nav-med			{
+	margin: 1.25rem 0;
+}
+
+.nav-item-med			{
+	margin: 1.25rem;
+	&:hover,
+	&:focus					{
+		.sub-menu-header-med		{
+			background-color: lighten($color-sec, 5%);
+		}
+	}
+}
+
+.menu-item-med				{
+	font-size: 1rem;
+	text-align: center;
+	padding: 10px;
+	background-color: $btn-content;
+	@extend %menu-bd;
 }

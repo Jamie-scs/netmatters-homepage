@@ -8,7 +8,11 @@ const 	hamBtn 			= document.querySelector('.hamburger-menu'),
 		offScreenMenu 	= document.querySelector('.off-screen-menu'),
 		main 			= document.querySelector('.main'),
 		tint 			= document.querySelector('.tint'),
-		menuTint 		= document.querySelector('.menu-tint');
+		menuTint 		= document.querySelector('.menu-tint'),
+		supportBtn		= document.getElementById('support-btn'),
+		contactBtn		= document.getElementById('contact-btn'),
+		searchBtn		= document.getElementById('search-btn'),
+		searchBar		= document.getElementById('search-input');
 
 // Scroll Lock
 
@@ -27,23 +31,25 @@ function enableScroll() {
 	window.onscroll = function() {};
 }
 
+// Search Bar Fullscreen Toggle
+
+const toggleSearch = e => {
+	if (searchBtn.hasAttribute('aria-expanded', 'false')) {
+		supportBtn.classList.remove('active');
+		contactBtn.classList.remove('active');
+		searchBar.classList.add('active');
+		searchBtn.setAttribute('aria-expanded', 'true');
+		return;
+	}
+	supportBtn.classList.add('active');
+	contactBtn.classList.add('active');
+	searchBar.classList.remove('active');
+	searchBtn.setAttribute('aria-expanded', 'false');
+}
+
+// searchBtn.addEventListener('click', toggleSearch);
 
 // Cookies
-
-const setDefault = {
-	hotjar : true,
-	linkedin : true,
-	facebook : true,
-	google : true,
-	lead : true,
-	netmatters : true
-};
-
-const storageType = localStorage;
-let cookieObject;
-
-const shouldShowPopup = () => !storageType.getItem(cookieObject);
-const saveToStorage = () => storageType.setItem(cookieObject, true);
 
 window.onload = () => {
 
@@ -51,49 +57,31 @@ window.onload = () => {
 	const acceptBtn = document.getElementById('cs-accept');
 	const changeBtn = document.getElementById('cs-change');
 	const cookieSetting = document.getElementById('cookie-settings');
-
-// Accept Cookies Button
-
-	const acceptFn = e => {
-		cookieObject = JSON.stringify(setDefault);
-		saveToStorage(storageType);
-		consentPopup.classList.add('hidden');
-		tint.classList.add('hidden');
-		enableScroll();
+	const setDefault = {
+		Functional	: "true",
+		Analytics	: "true",
+		hotjar		: "true",
+		linkedin	: "true",
+		facebook	: "true",
+		google		: "true",
+		lead		: "true",
+		netmatters	: "true"
 	};
-
-// Set Cookies Function
-
-	const setCookieFn = () => {
-		const cookieSettings = document.getElementsByClassName('cs-btn', 'active');
-		let setCookie = {};
-		setCookie.hotjar = cookieSettings[2].value;
-		setCookie.linkedin = cookieSettings[3].value;
-		setCookie.facebook = cookieSettings[4].value;
-		setCookie.google = cookieSettings[5].value;
-		setCookie.lead = cookieSettings[6].value;
-		setCookie.netmatters = cookieSettings[7].value;
-		cookieObject = JSON.stringify(setCookie);
-	};
-
-console.log(cookieObject);
-
-// Accept Cookie Preferences Button
-
-	const acceptPrefFn = e => {
-		setCookieFn();
-		saveToStorage(storageType);
-		consentPopup.classList.add('hidden');
-		cookieSetting.classList.add('hidden');
-		main.classList.remove('hidden');
-		enableScroll();
-	};
+	
+	const saveToStorage = () => localStorage.setItem('cookies', JSON.stringify(setDefault));
 
 // Change Cookie Preferences Button
 
 	const changeFn = e => {
 		const cookieSettingCancel = document.getElementById('cs-cancel');
 		const cookieSettingSubmit = document.getElementById('cs-submit');
+		const disableBtn = document.getElementsByClassName('disable');
+		const enableBtn = document.getElementsByClassName('enable');
+		const showPreferences = document.getElementById('preferences-show');
+		const detailedPreferences = document.getElementById('detailed-preferences');
+		const expand = document.getElementsByClassName('expand');
+		const expandIcn = document.getElementsByClassName('expand-icn');
+		const terms = document.getElementsByClassName('terms');
 
 		consentPopup.classList.add('hidden');
 		tint.classList.add('hidden');
@@ -101,10 +89,24 @@ console.log(cookieObject);
 		main.classList.add('hidden');
 		enableScroll();
 
-// Detailed Preferences Button
+// Cookie Setting Listeners
 
-		const showPreferences = document.getElementById('preferences-show');
-		const detailedPreferences = document.getElementById('detailed-preferences');
+		for (let i = 0; i < disableBtn.length; i++) {
+			disableBtn[i].addEventListener('click', () => {
+				disableBtn[i].classList.add('active');
+				disableBtn[i].setAttribute('aria-disabled', "true");
+				enableBtn[i].classList.remove('active');
+				enableBtn[i].setAttribute('aria-disabled', "false");
+							});
+			enableBtn[i].addEventListener('click', () => {
+				enableBtn[i].classList.add('active');
+				enableBtn[i].setAttribute('aria-disabled', "true");
+				disableBtn[i].classList.remove('active');
+				disableBtn[i].setAttribute('aria-disabled', "false");
+			});
+		};
+
+// Detailed Preferences Button
 		
 		const changeTextFn = e => {
 			detailedPreferences.classList.toggle('hidden');
@@ -119,28 +121,38 @@ console.log(cookieObject);
 
 // Show Terms & Conditions
 
-		const expand = document.getElementsByClassName('expand');
-		const terms = document.getElementsByClassName('terms');
-		for (let i = 0; i < expand.length; i++) {
-			expand[i].addEventListener('click', () => {
+		for (let i = 0; i < expand.length; i++)		{
+			expand[i].addEventListener('click', () =>	{
 				terms[i].classList.toggle('hidden');
+				if (expandIcn[i].innerHTML == '+') 			{
+					expandIcn[i].innerHTML = '-';
+					return;
+				}
+				expandIcn[i].innerHTML = '+';
 			});
 		};
 
-// Cookie Setting Listeners
+// Accept Cookie Preferences Function
 
-		const disableBtn = document.getElementsByClassName('disable');
-		const enableBtn = document.getElementsByClassName('enable');
-
-		for (let i = 0; i < disableBtn.length; i++) {
-			disableBtn[i].addEventListener('click', () => {
-				disableBtn[i].classList.add('active');
-				enableBtn[i].classList.remove('active');	
+		const acceptPrefFn = e => {
+			// for (let i = 0; i < enableBtn.length; i++) {
+			// 	if (enableBtn[i].hasAttribute('aria-disabled="true"')) {
+			// 		appendCookie(i, "true");
+			// 		return;
+			// 	};
+			// 	appendCookie(i, "false");
+			// };
+			enableBtn.forEach ((button, index) => {
+				if (button.hasAttribute('aria-disabled="true"')) {
+					setDefault.index = "true";
+					return;
+				};
+				setDefault.index = "false";
 			});
-			enableBtn[i].addEventListener('click', () => {
-				enableBtn[i].classList.add('active');
-				disableBtn[i].classList.remove('active');
-			});
+			saveToStorage();
+			cookieSetting.classList.add('hidden');
+			main.classList.remove('hidden');
+			enableScroll();
 		};
 
 // Cancel / Submit Button Listeners
@@ -156,16 +168,25 @@ console.log(cookieObject);
 		cookieSettingSubmit.addEventListener('click', acceptPrefFn);
 	};
 
+// Accept Cookies Button
+
+	const acceptFn = e => {
+		saveToStorage();
+		consentPopup.classList.add('hidden');
+		tint.classList.add('hidden');
+		enableScroll();
+	};
+
 	acceptBtn.addEventListener('click', acceptFn);
 	changeBtn.addEventListener('click', changeFn);
 
 // Check For Cookies in Storage
 
-	// if (shouldShowPopup(storageType)) {
-	// 	tint.classList.remove('hidden');
-	// 	consentPopup.classList.remove('hidden');
-	// 	disableScroll();
-	// };
+	if (!localStorage.cookies) {
+		tint.classList.remove('hidden');
+		consentPopup.classList.remove('hidden');
+		disableScroll();
+	};
 };
 
 // Listen for Menu Button Activation
