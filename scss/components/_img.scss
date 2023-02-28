@@ -25,7 +25,22 @@
 
 // Client Banner
 
-// .client img			{
-// 	width: 100%;
-// 	height: auto;
-// }
+.client img			{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.client img.colour	{
+	display: none;
+}
+
+.client:hover,
+.client:focus		{
+	.greyscale			{
+		display: none;
+	}
+	.colour 			{
+		display: block;
+	}
+}
