@@ -8,7 +8,6 @@ nav 						{
 
 .nav-bar					{
 	display: flex;
-	flex-direction: row;
 }
 
 .nav-item					{
@@ -37,7 +36,7 @@ nav 						{
 .nav-item:hover,
 .nav-item:focus				{
 	.sub-menu-nav				{
-		display: block;
+		display: flex;
 	}
 }
 
@@ -85,13 +84,13 @@ nav 						{
 	min-width: 100%;
 	height: auto;
 	margin: 0;
-	h2 							{
+	h2 						{
 		font-size: 2rem;
 		font-weight: 500;
 		color: $white;
 		margin: 0 0 10px;
 	}
-	ul 							{
+	ul 						{
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -99,11 +98,11 @@ nav 						{
 		padding: 0;
 		margin-top: -15px;
 	}
-	li 							{
+	li 						{
 		width: 33%;
 		margin-top: 15px;
 	}
-	a 							{
+	a 						{
 		display: flex;
 		align-items: center;
 		font-size: 1.2rem;
