@@ -7,8 +7,9 @@ footer * 				{
 }
 
 .footer-content			{
+	display: flex;
+	flex-direction: column;
 	@include mqm(large)		{
-		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -20,16 +21,20 @@ footer * 				{
 }
 
 .footer-services		{
+	flex-direction: column;
 	justify-content: center;
 	@include mqm(small)		{
+		flex-direction: row;
 		justify-content: space-evenly;
 	}
 }
 
 .offices				{
+	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 	@include mqm(small)		{
+		flex-direction: row;
 		justify-content: space-evenly;
 	}
 }

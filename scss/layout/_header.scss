@@ -46,8 +46,6 @@
 }
 
 .initial-header	{
-	position: absolute;
-	top: 0;
 	z-index: 10;
 	width: 100%;
 }
@@ -78,26 +76,19 @@
 
 // Hero
 
-#hero-banner				{
-	margin-top: 173px;
-	@include mqm(small)	{
-		margin-top: 117px;
-	}
-	@include mqm(medium)	{
-		margin-top: 224px;
-	}
-}
-
 .hero__item					{
 	@extend %overlay;
 	width: 100%;
 	z-index: 2;
+	img 					{
+		object-fit: cover;
+	}
 }
 
 .overlay 				{
 	position: relative;
 	width: 100%;
-	min-height: 550px;
+	min-height: 590px;
 	text-align: center;
 	padding: 60px 0;
 	z-index: 3;
@@ -130,9 +121,32 @@
 	color: $white;
 }
 
-.owl-dots			{
+.owl-theme .owl-dots			{
 	position: absolute;
 	left: 50%;
 	bottom: 44px;
-	z-index: 7;
+	transform: translateX(-50%);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+	background: hsla(0, 0%, 100%, 0.5);
+	width: 11px;
+	height: 11px;
+	margin: 0 10px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span  		{
+	position: relative;
+	background: #fff;
+}
+
+.owl-dot.active span::after {
+	content: "";
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	border: 2px solid #fff;
 }

@@ -34,7 +34,6 @@
         $sq-sidebar-width: map-get($sq-sidebar-widths, $sq-sidebar-width);
     }
     width: #{$sq-sidebar-width};
-    right:-#{$sq-sidebar-width};
 }
 
 @mixin mmw($sq-sidebar-width, $sq-sidebar-widths: $sidebar-widths) {

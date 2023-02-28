@@ -5,7 +5,6 @@
 // Declaring Variables
 
 const 	hamBtn 			= document.querySelector('.hamburger-menu'),
-		offScreenMenu 	= document.querySelector('.off-screen-menu'),
 		main 			= document.querySelector('.main'),
 		tint 			= document.querySelector('.tint'),
 		menuTint 		= document.querySelector('.menu-tint'),
@@ -193,7 +192,6 @@ window.onload = () => {
 
 hamBtn.addEventListener('click', () => {
 	hamBtn.classList.toggle('active');
-	offScreenMenu.classList.toggle('active');
 	main.classList.toggle('active');
 	menuTint.classList.toggle('active');
 	disableScroll();
@@ -203,7 +201,6 @@ hamBtn.addEventListener('click', () => {
 
 $("a, .menu-tint").on("click", function() {
     $(".hamburger-menu").removeClass("active");
-    $(".off-screen-menu").removeClass("active");
     $(".main").removeClass("active");
     $(".menu-tint").removeClass("active");
     enableScroll();
@@ -221,7 +218,7 @@ $(document).ready(function(){
 	  	items:1,
 	  	loop:true,
 	   	autoplay:true,
-	   	autoplayTimeout:4200,
+	   	autoplayTimeout:4300,
 	   	autoplayHoverPause:true
  	});
 
@@ -257,7 +254,7 @@ $(document).ready(function(){
 
 let scroll;
 let currentPosition = 0;
-const offset = 5;
+const offset = 2;
 const heightHeader = $('#sticky-header').outerHeight();
 $(window).scroll(function(event){
     scroll = true;
@@ -271,11 +268,12 @@ setInterval(function() {
 }, 250);
 
 function hasScrolled() {
-    var toTop = $(this).scrollTop();
+    let toTop = $(this).scrollTop();
     if(Math.abs(currentPosition - toTop) <= offset)
+    	$('#sticky-header').removeClass('sticky');
         return;
     
-    if (toTop > currentPosition && toTop > heightHeader){
+    if (toTop > currentPosition && toTop > heightHeader * 2) {
         // Scroll Down
         $('#sticky-header').removeClass('sticky-header').addClass('sticky');
     } else {
@@ -296,7 +294,7 @@ let formNews	= document.getElementById("form-news"),
 	check		= document.getElementById("check"),
 	errorMsg	= document.getElementsByClassName("error-text"),
 	close		= document.getElementsByClassName("close"),
-	parent		= document.getElementsByClassName("error")
+	parent		= document.getElementsByClassName("error");
 
 const indexMsg	=
 	[

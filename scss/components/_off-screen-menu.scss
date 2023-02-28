@@ -64,26 +64,19 @@
 .off-screen-menu	{
 	position: fixed;
 	top: 0;
-	@include sbw(mobile);
-	transition: right ease .5s;
-	@include mqm(medium)	{
-		@include sbw(full);
-	}
-}
-
-.off-screen-menu.active	{
 	right: 0;
-	z-index: 10;
+	z-index: -1;
 	height: 100%;
 	background-color: $color-sec;
-	overflow-y: scroll;
-}
-
-.off-screen-menu ul		{
+	overflow: auto;
 	text-transform: uppercase;
 	a 						{
 		color: $white;
 		text-decoration: none;
+	}
+	@include sbw(mobile);
+	@include mqm(medium)	{
+		@include sbw(full);
 	}
 }
 
@@ -105,6 +98,8 @@
 }
 
 .menu-item				{
+	display: block;
+	width: 100%;
 	font-size: 0.9rem;
 	padding: 15px 20px;
 	background-color: $btn-content;
@@ -118,7 +113,7 @@
 
 // Sidebar Navigation Medium
 
-.sidebar-nav-min-medium	{
+.sidebar-nav	{
 	text-align: center;
 }
 
@@ -131,6 +126,10 @@
 	border: 1px solid hsla(0, 0%, 100%, 0.1);
 	outline: 1px solid rgba(0, 0, 0, 0.25);
 	margin: 1.25rem;
+	&:hover,
+	&:focus					{
+		background-color: lighten($color-sec, 5%);
+	}
 }
 
 .sub-menu-header-med	{
@@ -160,6 +159,8 @@
 }
 
 .menu-item-med				{
+	display: block;
+	width: 100%;
 	font-size: 1rem;
 	text-align: center;
 	padding: 10px;

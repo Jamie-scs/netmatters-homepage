@@ -130,6 +130,12 @@ label 				{
 	}
 }
 
+.min-large				{
+	@include mqx(large)	{
+		display: none;
+	}
+}
+
 .hidden	{
 	display: none!important;
 	visibility: hidden!important;
