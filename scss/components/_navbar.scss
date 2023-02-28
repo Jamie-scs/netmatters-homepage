@@ -12,22 +12,21 @@ nav 						{
 
 .nav-item					{
 	width: 14.29%;
-	padding: 1.1875rem 0 1.125rem;
 	background: transparent;
 }
 
-.nav-item:hover > a::before,
-.nav-item:focus > a::before			{
+.nav-item:hover > a::after,
+.nav-item:focus > a::after			{
 	content: '';
 	position: absolute;
-	left: 50%;
+	right: 50%;
 	bottom: -35px;
 	width: 0;
 	height: 0;
 	z-index: 90;
 	border-width: 35px 68px 0;
 	border-style: solid;
-	transform: translateX(-50%) translateY(1.125rem);
+	transform: translateX(50%);
 	@include mqm(large)	{
 		border-width: 35px 83.5px 0;
 	}
@@ -42,9 +41,16 @@ nav 						{
 
 .nav-item > a					{
 	position: relative;
+	display: block;
 	text-align: center;
 	text-transform: uppercase;
 	color: $white;
+	.nav-icon					{
+		padding: 1.1875rem 0 0;
+	}
+	.h5							{
+		padding: 0 0 1.125rem;
+	}
 	&:hover,
 	&:focus						{
 		text-decoration: none;
@@ -143,7 +149,7 @@ nav 						{
 		}
 	}
 	.nav-item.#{$name}	{
-		& a::before 		{
+		& a::after 		{
 			border-color: $color transparent transparent;
 		}
 		& .sub-menu-nav		{
