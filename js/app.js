@@ -14,14 +14,11 @@ const 	hamBtn 			= document.querySelector('.hamburger-menu'),
 		searchBar		= document.getElementById('search-input'),
 		body            = document.body,
 		header          = document.getElementById('sticky-header'),
-		heightHeader    = $(header).outerHeight(),
-		hero            = document.getElementById('hero-banner');
+		heightHeader    = $(header).outerHeight();
 
 // Sticky Header
 
-body.style.marginTop = heightHeader;
 let lastScroll       = 0;
-
 
 window.addEventListener('scroll', () => {
     const currentScroll   = window.pageYOffset;
@@ -30,7 +27,7 @@ window.addEventListener('scroll', () => {
     	return;
     }
 
-	if (currentScroll <= heightHeader * 1.5) {
+	if (currentScroll <= heightHeader * 1.3) {
 		body.classList.remove('scroll-up');
 		body.classList.remove('scroll-down');
 		return;
@@ -41,7 +38,7 @@ window.addEventListener('scroll', () => {
 		body.classList.add('scroll-down');
 	}
 
-	else if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
+	else if (currentScroll < lastScroll - 5 && body.classList.contains('scroll-down')) {
 		body.classList.remove('scroll-down');
 		body.classList.add('scroll-up');
 	}
@@ -67,21 +64,170 @@ function enableScroll() {
 
 // Search Bar Fullscreen Toggle
 
-const toggleSearch = e => {
-	if (searchBtn.hasAttribute('aria-expanded', 'false')) {
-		supportBtn.classList.add('inactive');
-		contactBtn.classList.add('inactive');
-		searchBar.classList.add('active');
+function toggleSearch () {
+	searchBtn.classList.toggle('active')
+	if (searchBtn.classList.contains('active')) {
 		searchBtn.setAttribute('aria-expanded', 'true');
+		searchBtn.classList.add('active');
+		contactBtn.classList.add('inactive');
+		supportBtn.classList.add('inactive');
+		searchBar.classList.remove('max-medium');
 		return;
 	}
-	supportBtn.classList.remove('inactive');
-	contactBtn.classList.remove('inactive');
-	searchBar.classList.remove('active');
 	searchBtn.setAttribute('aria-expanded', 'false');
+	searchBtn.classList.remove('active');
+	contactBtn.classList.remove('inactive');
+	supportBtn.classList.remove('inactive');
+	searchBar.classList.add('max-medium');
 }
 
-searchBtn.addEventListener('click', toggleSearch);
+searchBtn.addEventListener('click', () => {
+	if ((window.outerWidth >= 992) && (window.outerWidth < 1260)) {
+		toggleSearch();
+		return;
+	}
+	searchBtn.classList.remove('active');
+});
+
+
+// Listen for Menu Button Activation
+
+hamBtn.addEventListener('click', () => {
+	hamBtn.classList.toggle('active');
+	hamBtn.setAttribute('aria-expanded', 'true');
+	main.classList.toggle('active');
+	menuTint.classList.toggle('active');
+	disableScroll();
+});
+
+// Auto Hide Menu
+
+$("a, .menu-tint").on("click", function() {
+    $(".hamburger-menu").removeClass("active");
+    $(".main").removeClass("active");
+    $(".menu-tint").removeClass("active");
+    hamBtn.setAttribute('aria-expanded', 'false');
+    enableScroll();
+});
+
+// Call Owl Carousel
+
+$(document).ready(function(){
+	const heroBanner = $('#hero-banner');
+	const partnerBanner = $('#partner-banner');
+ 
+// --Hero Banner
+
+	heroBanner.owlCarousel({
+	  	items:1,
+	  	loop:true,
+	   	autoplay:true,
+	   	autoplayTimeout:4300,
+	   	autoplayHoverPause:true
+ 	});
+
+// --Partner Banner
+
+ 	partnerBanner.owlCarousel({
+	    loop:true,
+	    margin:10,
+	    autoplay:true,
+	    autoplayTimeout:3000,
+	    autoplayHoverPause:true,
+	  	responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:5
+	        },
+	        2000:{
+	            items:8
+	        },
+	        3000:{
+	        	items:12
+	        }
+	    }
+ 	});
+});
+
+// Newsletter Sign-Up Validation
+
+let formNews	= document.getElementById("form-news"),
+	name		= document.getElementById("name"),
+	email		= document.getElementById("email"),
+	check		= document.getElementById("check"),
+	errorMsg	= document.getElementsByClassName("error-text"),
+	close		= document.getElementsByClassName("close"),
+	parent		= document.getElementsByClassName("error");
+
+const indexMsg	=
+	[
+ 	"The name",
+ 	"Email",
+ 	"The marketing preference"
+]
+
+const errMsg	=
+	{
+	noContent		: " field is required.",
+	hasInvalid		: " format is invalid.",
+	isLong			: " is too long, max 254 characters"
+}
+
+const 
+	nameErr		= document.getElementById("name-error"),
+	emailErr	= document.getElementById("email-error"),
+	checkErr	= document.getElementById("check-error");
+
+const regExpTx	= new RegExp(/^[a-zA-Z ]*$/),
+	  regExpEm	= new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+let validate	= (id, index) => {
+	let val = id.value.trim();
+
+	if (val === "" && id === name)	{
+		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
+		nameErr.classList.remove('hidden');
+	    return;
+	}
+	if (val === "" && id === email)	{
+		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
+		emailErr.classList.remove('hidden');
+	    return;
+	}
+	if (!id.checked && id === check)	{
+		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
+		checkErr.classList.remove('hidden');
+	    return;
+	}
+	if (!val.match(regExpTx) && id === name)	{
+		errorMsg[index].innerHTML = indexMsg[index] + errMsg.hasInvalid;
+	    nameErr.classList.remove('hidden');
+	    return;
+	}
+	if (!val.match(regExpEm) && id === email)	{
+		errorMsg[index].innerHTML = indexMsg[index] + errMsg.hasInvalid;
+	    emailErr.classList.remove('hidden');
+	    return;
+	}
+};
+
+formNews.addEventListener('submit', (e) => {
+	e.preventDefault();
+	validate(name, 0);
+	validate(email, 1);
+	validate(check, 2);
+});
+
+for (let i = 0; i < close.length; i++) {
+	close[i].addEventListener('click', () => {
+		parent[i].classList.add('hidden');
+	})
+};
 
 // Cookies
 
@@ -221,143 +367,4 @@ window.onload = () => {
 		consentPopup.classList.remove('hidden');
 		disableScroll();
 	};
-};
-
-// Listen for Menu Button Activation
-
-hamBtn.addEventListener('click', () => {
-	hamBtn.classList.toggle('active');
-	hamBtn.setAttribute('aria-expanded', 'true');
-	main.classList.toggle('active');
-	menuTint.classList.toggle('active');
-	disableScroll();
-});
-
-// Auto Hide Menu
-
-$("a, .menu-tint").on("click", function() {
-    $(".hamburger-menu").removeClass("active");
-    $(".main").removeClass("active");
-    $(".menu-tint").removeClass("active");
-    hamBtn.setAttribute('aria-expanded', 'false');
-    enableScroll();
-});
-
-// Call Owl Carousel
-
-$(document).ready(function(){
-	const heroBanner = $('#hero-banner');
-	const partnerBanner = $('#partner-banner');
- 
-// --Hero Banner
-
-	heroBanner.owlCarousel({
-	  	items:1,
-	  	loop:true,
-	   	autoplay:true,
-	   	autoplayTimeout:4300,
-	   	autoplayHoverPause:true
- 	});
-
-// --Partner Banner
-
- 	partnerBanner.owlCarousel({
-	    loop:true,
-	    margin:10,
-	    autoplay:true,
-	    autoplayTimeout:3000,
-	    autoplayHoverPause:true,
-	  	responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:3
-	        },
-	        1000:{
-	            items:5
-	        },
-	        2000:{
-	            items:8
-	        },
-	        3000:{
-	        	items:12
-	        }
-	    }
- 	});
-});
-
-// Newsletter Sign-Up Validation
-
-let formNews	= document.getElementById("form-news"),
-	name		= document.getElementById("name"),
-	email		= document.getElementById("email"),
-	check		= document.getElementById("check"),
-	errorMsg	= document.getElementsByClassName("error-text"),
-	close		= document.getElementsByClassName("close"),
-	parent		= document.getElementsByClassName("error");
-
-const indexMsg	=
-	[
- 	"The name",
- 	"Email",
- 	"The marketing preference"
-]
-
-const errMsg	=
-	{
-	noContent		: " field is required.",
-	hasInvalid		: " format is invalid.",
-	isLong			: " is too long, max 254 characters"
-}
-
-const 
-	nameErr		= document.getElementById("name-error"),
-	emailErr	= document.getElementById("email-error"),
-	checkErr	= document.getElementById("check-error");
-
-const regExpTx	= new RegExp(/^[a-zA-Z ]*$/),
-	  regExpEm	= new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-
-let validate	= (id, index) => {
-	let val = id.value.trim();
-
-	if (val === "" && id === name)	{
-		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
-		nameErr.classList.remove('hidden');
-	    return;
-	}
-	if (val === "" && id === email)	{
-		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
-		emailErr.classList.remove('hidden');
-	    return;
-	}
-	if (!id.checked && id === check)	{
-		errorMsg[index].innerHTML = indexMsg[index] + errMsg.noContent;
-		checkErr.classList.remove('hidden');
-	    return;
-	}
-	if (!val.match(regExpTx) && id === name)	{
-		errorMsg[index].innerHTML = indexMsg[index] + errMsg.hasInvalid;
-	    nameErr.classList.remove('hidden');
-	    return;
-	}
-	if (!val.match(regExpEm) && id === email)	{
-		errorMsg[index].innerHTML = indexMsg[index] + errMsg.hasInvalid;
-	    emailErr.classList.remove('hidden');
-	    return;
-	}
-};
-
-formNews.addEventListener('submit', (e) => {
-	e.preventDefault();
-	validate(name, 0);
-	validate(email, 1);
-	validate(check, 2);
-});
-
-for (let i = 0; i < close.length; i++) {
-	close[i].addEventListener('click', () => {
-		parent[i].classList.add('hidden');
-	})
 };

@@ -7,6 +7,9 @@
 .search__form	{
 	margin-top: 11px;
 	position: relative;
+	@include mqm(small) {
+		display: flex;
+	}
 }
 
 .search__bar	{
@@ -26,55 +29,6 @@
 		height: 56px;
 		background-color: $white;
 		border-width: 1px;
-	}
-	@include mqm(medium)	{
-		@include mqx(large)		{
-		visibility: hidden;
-		width: 60px;
-		}
-	}
-}
-
-.search__bar	{
-	@include mqm(medium)	{
-		@include mqx(large)	{
-			opacity: 0;
-			visibility: hidden;
-			transition: 
-			opacity 0.8s ease,
-			visibility 1s ease;
-		}
-	}
-}
-
-.search__bar.active	{
-	opacity: 1;
-	visibility: visible;
-}
-
-.search__submit		{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 5px;
-	font-size: 1em;
-	background: none;
-	border: none;
-	@include mqm(small)	{	
-		right: 0;
-		width: 60px;
-		font-size: 1em;
-		color: $white;
-		background-color: $search-submit;
-		padding: 0;
-		border-radius: 0 3px 3px 0;
-		@include btn($search-submit);
-	}
-	@include mqm(medium)	{	
-		border-radius: 3px;
-	}
-	@include mqm(large)	{
-		border-radius: 0 3px 3px 0;
 	}
 }
 

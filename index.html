@@ -209,7 +209,7 @@
 	<div class="menu-tint"></div>
 	<div class="off-screen-menu">
 		
-		<div class="sidebar-nav min-medium">
+		<div class="sidebar-nav max-medium">
 			<a href="#"><div class="sub-menu-contact-med">contact us</div></a>
 			<div class="nav-item-med">
 				<div class="sub-menu-header-med">
@@ -349,7 +349,7 @@
 				</div><!-- sub-menu-nav-med -->
 			</div><!-- nav-item-med -->
 		</div><!-- sidebar-nav -->
-		<div class="sub-menu full">
+		<div class="sub-menu min-medium">
 			<div class="menu-header"><a href="#">services</a></div>
 			<ul>
 				<li><a href="#" class="menu-item"><span class="angle-icn fa-solid fa-angles-right"></span><span>&nbsp; bespoke software</span></a></li>
@@ -411,7 +411,7 @@
 		<div class="sub-menu">
 			<div class="menu-header"><a href="#">covid risk assessments</a></div>
 		</div><!-- sub-menu -->
-		<div class="sub-menu min-medium">
+		<div class="sub-menu max-medium">
 			<div class="menu-header"><a href="#">support</a></div>
 		</div><!-- sub-menu -->
 	</div><!-- off-screen-menu -->
@@ -429,24 +429,33 @@
 							
 							
 							<div class="actions">
-								<div class="mobile">
+								<div class="max-small">
 									<a href="tel:#"><span class="phone fa-solid fa-phone-volume"></span></a>
-								</div><!-- mobile -->
-								<div id="support-btn" class="container__support full">
+								</div><!-- max-small -->
+								<div id="support-btn" class="container__support min-medium">
 									<button type="button" class="btn btn-it active">
 										<span class="mouse fa-solid fa-mouse"></span><span>&nbsp; support</span>
 									</button>
 								</div>
-								<div id="contact-btn" class="container__contact full">
+								<div id="contact-btn" class="container__contact min-medium">
 									<button type="button" class="btn btn-contact active">
 										<span class="plane fa fa-paper-plane-o" aria-hidden="true"></span><span>&nbsp; contact</span>
 									</button>
 								</div>
-								<div class="search-wrapper medium">
-									<form action="index.html" method="get" class="search__form">
+								<div class="search-wrapper min-small max-large">
+									<form class="search__form">
 										<label for="search-input" class="hidden">Search:</label>
-										<input class="search__bar" type="text" name="search" id="search-input" placeholder="Search...">
-										<button type="button" id="search-btn" class="search__submit" aria-expanded="false">
+										<input class="search__bar max-medium" type="text" name="search" id="search-input" placeholder="Search...">
+										<button type="button" id="search-btn" class="search-btn">
+											<span class="search fa-solid fa-magnifying-glass"></span>
+										</button>
+									</form>
+								</div><!-- search__wrapper -->
+								<div class="search-wrapper min-large">
+									<form class="search__form">
+										<label for="search-input-full" class="hidden">Search:</label>
+										<input class="search__bar" type="text" name="search" id="search-input-full" placeholder="Search...">
+										<button type="button" id="search-btn-full" class="search-btn">
 											<span class="search fa-solid fa-magnifying-glass"></span>
 										</button>
 									</form>
@@ -460,7 +469,7 @@
 							</div><!-- actions -->
 						</div><!-- container__top -->
 						
-						<div class="search-wrapper mobile">
+						<div class="search-wrapper max-small">
 							<form action="index.html" method="get" class="search__form">
 								<label for="search-input-mobile" class="hidden">Search:</label>
 								<input class="search__bar" type="text" name="search" id="search-input-mobile" placeholder="Search...">
@@ -473,7 +482,7 @@
 				</div><!-- header-inner -->
 			</header>
 	
-			<nav class="full">
+			<nav class="min-medium">
 				<div class="container">
 					<div class="nav-bar">
 						<div class="nav-item software">
@@ -766,7 +775,7 @@
 					<header>
 						<div class="services-container">
 							<h1>Our Services</h1>
-							<div class="view-all medium">
+							<div class="view-all min-small">
 							<a href="#"><h3 class="view-all__view">View Our Work <em class="fa-solid fa-arrow-right"></em></h3></a>
 							</div><!-- view-all -->
 						</div><!-- heading-container -->
@@ -801,7 +810,7 @@
 								<span class="service-icon marketing"><span class="service-icn fa-solid fa-chart-simple"></span></span>
 								<span class="h2">Digital Marketing</span>
 								<span class="p">Driven brand awareness & ROI through creative digital marketing campaigns.</span>
-								<br class="min-large">
+								<br class="max-large">
 								<span class="btn-container service-btn<span></span>">
 									<span class="btn marketing">read more</span>
 								</span>
@@ -854,7 +863,7 @@
 
 					</div><!-- services -->
 					
-					<div class="view-all mobile margin-top">
+					<div class="view-all max-small margin-top">
 						<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
 					</div><!-- view-all -->
 
@@ -1064,7 +1073,7 @@
 					<header>
 						<div class="heading-container">
 							<h2 class="h1">Latest News</h2>
-							<div class="view-all medium">
+							<div class="view-all min-small">
 							<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
 							</div><!-- view-all -->
 						</div><!-- heading-container -->
@@ -1144,15 +1153,15 @@
 
 					</div><!-- news-list -->
 					
-					<div class="view-all mobile">
+					<div class="view-all max-small">
 						<a href="#"><h3 class="view-all__view">View All <em class="fa-solid fa-arrow-right"></em></h3></a>
 					</div><!-- view-all -->
 				
 <!-- CLIENT BANNER -->
 
-					<div class="client-banner flex medium clearfix">
+					<div class="client-banner flex clearfix">
 									
-						<div class="client">
+						<div class="client min-small">
 							<div class="tooltip">
 								<div class="box">
 									<h3>Busseys</h3>
@@ -1164,7 +1173,7 @@
 							<img src="img/clients/busseys-bw.jpg" alt="Busseys Logo" class="greyscale">
 						</div><!-- client -->
 
-						<div class="client">
+						<div class="client min-small">
 							<div class="tooltip">
 								<div class="box">
 									<h3>Crane Garden Builders</h3>
@@ -1176,7 +1185,7 @@
 							<img src="img/clients/crane-bw.jpg" alt="Crane Logo" class="greyscale">
 						</div><!-- client -->
 
-						<div class="client">
+						<div class="client min-small">
 							<div class="tooltip">
 								<div class="box">
 									<h3>Beat</h3>
@@ -1188,7 +1197,7 @@
 							<img src="img/clients/beat-bw.jpg" alt="Beat Logo" class="greyscale">
 						</div><!-- client -->
 
-						<div class="client">
+						<div class="client min-small">
 							<div class="tooltip">
 								<div class="box">
 									<h3>Northern Diver</h3>
@@ -1207,7 +1216,7 @@
 
 <!-- SIGN UP SECTION -->
 
-			<section class="sign-up">
+			<section class="sign-up clearfix">
 				
 				<div class="wrapper-inner">
 					
@@ -1347,7 +1356,7 @@
 					<div class="footer-bottom flex">
 						
 						<div class="copyright flex">
-							&copy; Copyright Netmatters 2023. <br class="mobile">All rights reserved.
+							&copy; Copyright Netmatters 2023. <br class="max-small">All rights reserved.
 							<span>&nbsp; - &nbsp;</span>
 							<ul>
 								<li><a href="#"> Sitemap </a></li>

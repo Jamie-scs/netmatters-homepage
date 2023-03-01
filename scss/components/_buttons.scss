@@ -44,13 +44,14 @@
 
 // Header
 
-.container__support.inactive	{
+#support-btn.inactive,
+#contact-btn.inactive	{
 	display: none;
 }
 
 .btn-it				{
 	width: 150px;
-	height: 56px;
+	min-height: 56px;
 	background-color: $support;
 	@include btn($support);
 	@include mqx(medium)	{
@@ -58,18 +59,54 @@
 	}
 }
 
-.container__contact.inactive	{
-	display: none;
-}
-
 .btn-contact		{
 	width: 150px;
-	height: 56px;
+	min-height: 56px;
 	background-color: $contact;
 	@include btn($contact);
 	margin-right: 20px;
 	@include mqx(medium)	{
 		display: none;
+	}
+}
+
+.search-btn			{
+	min-width: 56px;
+	min-height: 56px;
+	font-size: 1em;
+	color: $white;
+	background-color: $search-submit;
+	border: none;
+	border-radius: 0 3px 3px 0;
+	@include btn($search-submit);
+	@include mqm(medium)	{
+		@include mqx(large)	{
+			border-radius: 3px;
+		}
+	}
+}
+
+.search-btn.active	{
+	border-radius: 0 3px 3px 0;
+}
+
+.search__submit		{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 5px;
+	font-size: 1em;
+	background: none;
+	border: none;
+	@include mqm(small)	{	
+		right: 0;
+		width: 60px;
+		font-size: 1em;
+		color: $white;
+		background-color: $search-submit;
+		padding: 0;
+		border-radius: 0 3px 3px 0;
+		@include btn($search-submit);
 	}
 }
 

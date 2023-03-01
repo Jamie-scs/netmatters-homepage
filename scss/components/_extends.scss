@@ -11,6 +11,7 @@
 	padding: 0.3125rem 0.9375rem;
 	border-radius: 0.1875rem;
 	margin: 1rem;
+	cursor: pointer;
 	@include mqm(small)	{
 		width: 232px;
 		margin: 1.25rem;

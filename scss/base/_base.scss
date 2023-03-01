@@ -100,38 +100,38 @@ label 				{
 	margin-top: 2rem;
 }
 
-.mobile				{
+.min-small			{
+	@include mqx(small)	{
+		display: none;
+	}
+}
+
+.max-small				{
 	@include mqm(small)	{
 		display: none;
 	}
 }
 
-.max-small			{
-	@include mqx(small)	{
-		display: none;
-	}
-}
-
-.medium				{
-	@include mqx(small)	{
-		display: none;
-	}
-}
-
-.min-medium				{
-	@include mqm(medium)	{
-		display: none;
-	}
-}
-
-.full 				{
+.min-medium 				{
 	@include mqx(medium)	{
 		display: none;
 	}
 }
 
-.min-large				{
+.max-medium				{
+	@include mqm(medium)	{
+		display: none;
+	}
+}
+
+.min-large			{
 	@include mqx(large)	{
+		display: none;
+	}
+}
+
+.max-large			{
+	@include mqm(large)	{
 		display: none;
 	}
 }
