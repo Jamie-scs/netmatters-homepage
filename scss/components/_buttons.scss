@@ -44,19 +44,8 @@
 
 // Header
 
-.container__support		{
-	@include mqx(large)	{
-		opacity: 0;
-		visibility: hidden;
-		transition: 
-		opacity 0.8s ease,
-		visibility 1s ease;
-	}
-}
-
-.container__support.active	{
-	opacity: 1;
-	visibility: visible;
+.container__support.inactive	{
+	display: none;
 }
 
 .btn-it				{
@@ -69,19 +58,8 @@
 	}
 }
 
-.container__contact		{
-	@include mqx(large)	{
-		opacity: 0;
-		visibility: hidden;
-		transition: 
-		opacity 0.8s ease,
-		visibility 1s ease;
-	}
-}
-
-.container__contact.active			{
-	opacity: 1;
-	visibility: visible;
+.container__contact.inactive	{
+	display: none;
 }
 
 .btn-contact		{

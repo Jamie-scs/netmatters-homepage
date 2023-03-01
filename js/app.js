@@ -11,18 +11,53 @@ const 	hamBtn 			= document.querySelector('.hamburger-menu'),
 		supportBtn		= document.getElementById('support-btn'),
 		contactBtn		= document.getElementById('contact-btn'),
 		searchBtn		= document.getElementById('search-btn'),
-		searchBar		= document.getElementById('search-input');
+		searchBar		= document.getElementById('search-input'),
+		body            = document.body,
+		header          = document.getElementById('sticky-header'),
+		heightHeader    = $(header).outerHeight(),
+		hero            = document.getElementById('hero-banner');
+
+// Sticky Header
+
+body.style.marginTop = heightHeader;
+let lastScroll       = 0;
+
+
+window.addEventListener('scroll', () => {
+    const currentScroll   = window.pageYOffset;
+
+    if (hamBtn.hasAttribute('aria-expanded', 'true',)) {
+    	return;
+    }
+
+	if (currentScroll <= heightHeader * 1.5) {
+		body.classList.remove('scroll-up');
+		body.classList.remove('scroll-down');
+		return;
+	}
+
+	if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+		body.classList.remove('scroll-up');
+		body.classList.add('scroll-down');
+	}
+
+	else if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
+		body.classList.remove('scroll-down');
+		body.classList.add('scroll-up');
+	}
+	lastScroll = currentScroll;
+});
+
 
 // Scroll Lock
 
 function disableScroll() {
 	// Get the current page scroll position
-	scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;		
+	scrollTop = window.pageYOffset;	
 
 		// if any scroll is attempted, set this to the previous value
 		window.onscroll = function() {
-			window.scrollTo(scrollLeft, scrollTop);
+			window.scrollTo(scrollTop);
 		};
 }
 
@@ -34,19 +69,19 @@ function enableScroll() {
 
 const toggleSearch = e => {
 	if (searchBtn.hasAttribute('aria-expanded', 'false')) {
-		supportBtn.classList.remove('active');
-		contactBtn.classList.remove('active');
+		supportBtn.classList.add('inactive');
+		contactBtn.classList.add('inactive');
 		searchBar.classList.add('active');
 		searchBtn.setAttribute('aria-expanded', 'true');
 		return;
 	}
-	supportBtn.classList.add('active');
-	contactBtn.classList.add('active');
+	supportBtn.classList.remove('inactive');
+	contactBtn.classList.remove('inactive');
 	searchBar.classList.remove('active');
 	searchBtn.setAttribute('aria-expanded', 'false');
 }
 
-// searchBtn.addEventListener('click', toggleSearch);
+searchBtn.addEventListener('click', toggleSearch);
 
 // Cookies
 
@@ -192,6 +227,7 @@ window.onload = () => {
 
 hamBtn.addEventListener('click', () => {
 	hamBtn.classList.toggle('active');
+	hamBtn.setAttribute('aria-expanded', 'true');
 	main.classList.toggle('active');
 	menuTint.classList.toggle('active');
 	disableScroll();
@@ -203,6 +239,7 @@ $("a, .menu-tint").on("click", function() {
     $(".hamburger-menu").removeClass("active");
     $(".main").removeClass("active");
     $(".menu-tint").removeClass("active");
+    hamBtn.setAttribute('aria-expanded', 'false');
     enableScroll();
 });
 
@@ -249,42 +286,6 @@ $(document).ready(function(){
 	    }
  	});
 });
-
-// Sticky Header
-
-let scroll;
-let currentPosition = 0;
-const offset = 2;
-const heightHeader = $('#sticky-header').outerHeight();
-$(window).scroll(function(event){
-    scroll = true;
-});
-
-setInterval(function() {
-    if (scroll) {
-        hasScrolled();
-        scroll = false;
-    }
-}, 250);
-
-function hasScrolled() {
-    let toTop = $(this).scrollTop();
-    if(Math.abs(currentPosition - toTop) <= offset)
-    	$('#sticky-header').removeClass('sticky');
-        return;
-    
-    if (toTop > currentPosition && toTop > heightHeader * 2) {
-        // Scroll Down
-        $('#sticky-header').removeClass('sticky-header').addClass('sticky');
-    } else {
-        // Scroll Up
-        if(toTop + $(window).height() < $(document).height()) {
-            $('#sticky-header').removeClass('sticky').addClass('sticky-header');
-        }
-    }
-    
-    currentPosition = toTop;
-}
 
 // Newsletter Sign-Up Validation
 
